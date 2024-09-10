@@ -1,0 +1,80 @@
+{
+  "homebrew_version": "4.3.12-52-g53e3632",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "loaded_from_api": true,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+    "lib/pkgconfig/libpqxx.pc"
+  ],
+  "time": 1725947829,
+  "source_modified_time": 1722538307,
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+    {
+      "full_name": "icu4c",
+      "version": "74.2",
+      "revision": 0,
+      "pkg_version": "74.2",
+      "declared_directly": false
+    },
+    {
+      "full_name": "ca-certificates",
+      "version": "2024-07-02",
+      "revision": 0,
+      "pkg_version": "2024-07-02",
+      "declared_directly": false
+    },
+    {
+      "full_name": "openssl@3",
+      "version": "3.3.2",
+      "revision": 0,
+      "pkg_version": "3.3.2",
+      "declared_directly": false
+    },
+    {
+      "full_name": "krb5",
+      "version": "1.21.3",
+      "revision": 0,
+      "pkg_version": "1.21.3",
+      "declared_directly": false
+    },
+    {
+      "full_name": "libpq",
+      "version": "16.4",
+      "revision": 0,
+      "pkg_version": "16.4",
+      "declared_directly": true
+    }
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "7.9.2",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/Users/dmitro/Library/Caches/Homebrew/api/formula.jws.json",
+    "tap_git_head": null,
+    "tap": "homebrew/core"
+  },
+  "arch": "arm64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 14.4",
+    "cpu_family": "dunno",
+    "xcode": "15.3",
+    "clt": "15.3.0.0.1.1708646388",
+    "preferred_perl": "5.34"
+  }
+}
