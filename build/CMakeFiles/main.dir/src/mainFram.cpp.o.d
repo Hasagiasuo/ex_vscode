@@ -1127,7 +1127,4 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/animate.h \
-  /opt/homebrew/include/wx-3.2/wx/animdecod.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/animate.h
+  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h

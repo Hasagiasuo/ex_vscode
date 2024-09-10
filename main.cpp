@@ -1,6 +1,5 @@
 #include <wx/wx.h>
 #include "mainFrame.h"
-#include <pqxx/pqxx>
 
 class Application : public wxApp {
 public:
