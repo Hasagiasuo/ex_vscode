@@ -21,6 +21,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/__stddef_max_align_t.h \
   /opt/homebrew/include/wx-3.2/wx/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/appleapiopts.h \
@@ -812,24 +813,22 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
   /opt/homebrew/include/wx-3.2/wx/afterstd.h \
   /opt/homebrew/include/wx-3.2/wx/stringops.h \
-  /opt/homebrew/include/wx-3.2/wx/iosfwrap.h \
-  /opt/homebrew/include/wx-3.2/wx/msgout.h \
-  /opt/homebrew/include/wx-3.2/wx/xti.h \
-  /opt/homebrew/include/wx-3.2/wx/rtti.h \
-  /opt/homebrew/include/wx-3.2/wx/flags.h \
-  /opt/homebrew/include/wx-3.2/wx/xti2.h \
-  /opt/homebrew/include/wx-3.2/wx/dynarray.h \
-  /opt/homebrew/include/wx-3.2/wx/vector.h \
-  /opt/homebrew/include/wx-3.2/wx/scopeguard.h \
-  /opt/homebrew/include/wx-3.2/wx/except.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/movable.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/pod.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/if.h \
-  /opt/homebrew/include/wx-3.2/wx/list.h \
-  /opt/homebrew/include/wx-3.2/wx/hash.h \
-  /opt/homebrew/include/wx-3.2/wx/hashmap.h \
-  /opt/homebrew/include/wx-3.2/wx/wxcrt.h \
-  /opt/homebrew/include/wx-3.2/wx/arrstr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/functional \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binary_negate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind_back.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind_front.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binder1st.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binder2nd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/array \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/formatter.h \
@@ -856,7 +855,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/unicode.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/extended_grapheme_cluster_table.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/width_estimation_table.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/clocale \
@@ -893,6 +891,35 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/compose.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/default_searcher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/builtin_new_allocator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/strip_signature.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/mem_fn.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/mem_fun_ref.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/not_fn.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
+  /opt/homebrew/include/wx-3.2/wx/iosfwrap.h \
+  /opt/homebrew/include/wx-3.2/wx/msgout.h \
+  /opt/homebrew/include/wx-3.2/wx/xti.h \
+  /opt/homebrew/include/wx-3.2/wx/rtti.h \
+  /opt/homebrew/include/wx-3.2/wx/flags.h \
+  /opt/homebrew/include/wx-3.2/wx/xti2.h \
+  /opt/homebrew/include/wx-3.2/wx/dynarray.h \
+  /opt/homebrew/include/wx-3.2/wx/vector.h \
+  /opt/homebrew/include/wx-3.2/wx/scopeguard.h \
+  /opt/homebrew/include/wx-3.2/wx/except.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/movable.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/pod.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/if.h \
+  /opt/homebrew/include/wx-3.2/wx/list.h \
+  /opt/homebrew/include/wx-3.2/wx/hash.h \
+  /opt/homebrew/include/wx-3.2/wx/hashmap.h \
+  /opt/homebrew/include/wx-3.2/wx/wxcrt.h \
+  /opt/homebrew/include/wx-3.2/wx/arrstr.h \
   /opt/homebrew/include/wx-3.2/wx/intl.h \
   /opt/homebrew/include/wx-3.2/wx/localedefs.h \
   /opt/homebrew/include/wx-3.2/wx/translation.h \
@@ -1103,4 +1130,154 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
   /opt/homebrew/include/wx-3.2/wx/animate.h \
   /opt/homebrew/include/wx-3.2/wx/animdecod.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/animate.h
+  /opt/homebrew/include/wx-3.2/wx/generic/animate.h \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/pqxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/config-public-compiler.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ciso646 \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/array.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cassert \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/connection.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/list \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ranges \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/errorhandler.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/types.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/except.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/concat.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/strconv.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/charconv \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/chars_format.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/from_chars_integral.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/from_chars_result.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/to_chars.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__charconv/to_chars_floating_point.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/all.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/owning_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/range_adaptor.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/ref_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/as_rvalue_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/common_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/counted.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/span \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__fwd/span.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/drop_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/empty_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/iota_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/movable_box.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/non_propagating_cache.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/repeat_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/drop_while_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/elements_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/filter_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/join_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/iterator_with_data.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/lazy_split_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/single_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/rbegin.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/rend.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/reverse_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/split_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/take_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/take_while_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/to.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/transform_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/views.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/zip_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__ranges/istream_view.h \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/util.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/version.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/libpq-forward.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/ignore-deprecated-pre.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/ignore-deprecated-post.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/zview.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/conversions.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/midpoint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/pstl_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/params.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/statement_parameters.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/binarystring.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/result.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/encodings.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iomanip \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/encoding_group.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/separated_list.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/array-composite.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/blob.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/dbtransaction.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/transaction_base.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/stream_query.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/gates/connection-stream_from.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/callgate.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/stream_iterator.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/transaction_focus.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/isolation.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/row.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/field.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/composite.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/stream_query_impl.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/cursor.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/sql_cursor.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/largeobject.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/nontransaction.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/transaction.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/notification.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/pipeline.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/prepared_statement.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/range.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/result_iterator.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/result_iter.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/robusttransaction.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/stream_from.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/stream_to.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/subtransaction.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/time.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/calendar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/convert_to_tm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/concepts.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/hh_mm_ss.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/day.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/month.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/month_weekday.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/weekday.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/monthday.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/statically_widen.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_day.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/transactor.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx

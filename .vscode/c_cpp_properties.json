@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "/opt/homebrew/Cellar/wxwidgets/3.2.5/lib/wx/include/osx_cocoa-unicode-3.2",
                 "/opt/homebrew/Cellar/wxwidgets/3.2.5/include/wx-3.2",
-                "/Users/dmitro/data/Code/new/cpp/ex/libpqxx/include/pqxx"            
+                "${workspaceFolder}/libpqxx/7.9.2/include"       
             ],
             "defines": [
                 "WX_PRECOMP",

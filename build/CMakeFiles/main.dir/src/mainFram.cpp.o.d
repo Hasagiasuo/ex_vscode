@@ -22,6 +22,7 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/__stddef_max_align_t.h \
   /opt/homebrew/include/wx-3.2/wx/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/appleapiopts.h \
@@ -813,24 +814,22 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
   /opt/homebrew/include/wx-3.2/wx/afterstd.h \
   /opt/homebrew/include/wx-3.2/wx/stringops.h \
-  /opt/homebrew/include/wx-3.2/wx/iosfwrap.h \
-  /opt/homebrew/include/wx-3.2/wx/msgout.h \
-  /opt/homebrew/include/wx-3.2/wx/xti.h \
-  /opt/homebrew/include/wx-3.2/wx/rtti.h \
-  /opt/homebrew/include/wx-3.2/wx/flags.h \
-  /opt/homebrew/include/wx-3.2/wx/xti2.h \
-  /opt/homebrew/include/wx-3.2/wx/dynarray.h \
-  /opt/homebrew/include/wx-3.2/wx/vector.h \
-  /opt/homebrew/include/wx-3.2/wx/scopeguard.h \
-  /opt/homebrew/include/wx-3.2/wx/except.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/movable.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/pod.h \
-  /opt/homebrew/include/wx-3.2/wx/meta/if.h \
-  /opt/homebrew/include/wx-3.2/wx/list.h \
-  /opt/homebrew/include/wx-3.2/wx/hash.h \
-  /opt/homebrew/include/wx-3.2/wx/hashmap.h \
-  /opt/homebrew/include/wx-3.2/wx/wxcrt.h \
-  /opt/homebrew/include/wx-3.2/wx/arrstr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/functional \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binary_negate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind_back.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/bind_front.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binder1st.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/binder2nd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/array \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/formatter.h \
@@ -857,7 +856,6 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/unicode.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/extended_grapheme_cluster_table.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__format/width_estimation_table.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/clocale \
@@ -894,6 +892,35 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/compose.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/default_searcher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/builtin_new_allocator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__type_traits/strip_signature.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/mem_fn.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/mem_fun_ref.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/not_fn.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
+  /opt/homebrew/include/wx-3.2/wx/iosfwrap.h \
+  /opt/homebrew/include/wx-3.2/wx/msgout.h \
+  /opt/homebrew/include/wx-3.2/wx/xti.h \
+  /opt/homebrew/include/wx-3.2/wx/rtti.h \
+  /opt/homebrew/include/wx-3.2/wx/flags.h \
+  /opt/homebrew/include/wx-3.2/wx/xti2.h \
+  /opt/homebrew/include/wx-3.2/wx/dynarray.h \
+  /opt/homebrew/include/wx-3.2/wx/vector.h \
+  /opt/homebrew/include/wx-3.2/wx/scopeguard.h \
+  /opt/homebrew/include/wx-3.2/wx/except.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/movable.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/pod.h \
+  /opt/homebrew/include/wx-3.2/wx/meta/if.h \
+  /opt/homebrew/include/wx-3.2/wx/list.h \
+  /opt/homebrew/include/wx-3.2/wx/hash.h \
+  /opt/homebrew/include/wx-3.2/wx/hashmap.h \
+  /opt/homebrew/include/wx-3.2/wx/wxcrt.h \
+  /opt/homebrew/include/wx-3.2/wx/arrstr.h \
   /opt/homebrew/include/wx-3.2/wx/intl.h \
   /opt/homebrew/include/wx-3.2/wx/localedefs.h \
   /opt/homebrew/include/wx-3.2/wx/translation.h \

@@ -221,9 +221,6 @@ Examen_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Examen_SOURCE_DIR:STATIC=/Users/dmitro/data/Code/new/cpp/ex
 
-//The directory containing a CMake configuration file for PQXX.
-PQXX_DIR:PATH=PQXX_DIR-NOTFOUND
-
 //Location of wxWidgets library configuration provider binary (wx-config).
 wxWidgets_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/wx-config
 

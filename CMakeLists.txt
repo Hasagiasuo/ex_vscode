@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 project(Examen)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 set(INCL_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
 set(SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src/*.cpp)
 set(PQXX_INC ${CMAKE_CURRENT_LIST_DIR}/libpqxx/7.9.2/include)
@@ -11,7 +14,7 @@ file(GLOB SOURCES ${SRC_DIR})
 include(${wxWidgets_USE_FILE})
 
 add_executable(main 
-  main.cpp
+  main.cpp  
   ${SOURCES}
 )
 
