@@ -12,12 +12,17 @@ LoginFrame::LoginFrame() : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition
   bg_img.Blur(10);
   this->bg_image = new wxBitmap(bg_img);
   wxStaticText* login_l = new wxStaticText(this, wxID_ANY, "Email", wxPoint(32, 30));
+  login_l->SetForegroundColour(*wxWHITE);
   this->login = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 30), wxSize(150, 25), wxTE_CENTRE | wxTE_NO_VSCROLL);
   this->login->SetBackgroundColour(*wxBLACK);
+  this->login->SetForegroundColour(*wxWHITE);
   wxStaticText* password_l = new wxStaticText(this, wxID_ANY, "Password", wxPoint(22, 80));
+  password_l->SetForegroundColour(*wxWHITE);
   this->password = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 80), wxSize(150, 25), wxTE_PASSWORD | wxTE_CENTRE | wxTE_NO_VSCROLL);
   this->password->SetBackgroundColour(*wxBLACK);
+  this->password->SetForegroundColour(*wxWHITE);
   wxButton* btn_commit = new wxButton(this, wxID_ANY, "Login", wxPoint(100, 110), wxSize(100, 30));
+  btn_commit->SetForegroundColour(*wxBLACK);
   btn_commit->SetBackgroundColour(*wxBLACK);
   Bind(wxEVT_PAINT, &LoginFrame::draw_bg, this);
 }
