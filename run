@@ -1,0 +1,4 @@
+clang++ $(wx-config --cxxflags) -I./include -o main main.cpp ./src/*.cpp $(wx-config --libs)
+clear
+./main
+rm -rf main
