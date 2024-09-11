@@ -7,8 +7,10 @@ LoginFrame::~LoginFrame() {
 }
 
 LoginFrame::LoginFrame() : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition, wxSize(300, 200)) {
-  this->bg_image = new wxBitmap();
-  this->bg_image->LoadFile("../assets/bg_login.jpeg", wxBITMAP_TYPE_JPEG);
+  wxImage bg_img("../assets/bg_login.jpeg");
+  bg_img.Rescale(300, 200);
+  bg_img.Blur(10);
+  this->bg_image = new wxBitmap(bg_img);
   wxStaticText* login_l = new wxStaticText(this, wxID_ANY, "Email", wxPoint(32, 30));
   this->login = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 30), wxSize(150, 20));
   wxStaticText* password_l = new wxStaticText(this, wxID_ANY, "Password", wxPoint(22, 70));
