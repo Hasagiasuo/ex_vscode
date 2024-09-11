@@ -4,9 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/wxwidgets/3.2.5/include/wx-3.2/wx"
-                // "/opt/homebrew/Cellar/wxwidgets/3.2.5/lib/wx/include/osx_cocoa-unicode-3.2",
-                // "/opt/homebrew/Cellar/wxwidgets/3.2.5/include/wx-3.2"   
+                "/opt/homebrew/Cellar/wxwidgets/3.2.5/lib/wx/include/osx_cocoa-unicode-3.2",
+                "/opt/homebrew/Cellar/wxwidgets/3.2.5/include/wx-3.2"   
             ],
             "defines": [
                 "WX_PRECOMP",
