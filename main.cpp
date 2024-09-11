@@ -9,6 +9,7 @@ public:
 wxIMPLEMENT_APP(Application);
 
 bool Application::OnInit() {
+  wxApp::SetNativeTheme("dark");
   wxInitAllImageHandlers();
   LoginFrame* login_fr = new LoginFrame();
   login_fr->Show();

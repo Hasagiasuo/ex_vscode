@@ -12,9 +12,9 @@ LoginFrame::LoginFrame() : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition
   bg_img.Blur(10);
   this->bg_image = new wxBitmap(bg_img);
   wxStaticText* login_l = new wxStaticText(this, wxID_ANY, "Email", wxPoint(32, 30));
-  this->login = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 30), wxSize(150, 20));
-  wxStaticText* password_l = new wxStaticText(this, wxID_ANY, "Password", wxPoint(22, 70));
-  this->password = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 70), wxSize(150, 20));
+  this->login = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 30), wxSize(150, 25), wxTE_CENTRE | wxTE_NO_VSCROLL);
+  wxStaticText* password_l = new wxStaticText(this, wxID_ANY, "Password", wxPoint(22, 80));
+  this->password = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 80), wxSize(150, 25), wxTE_PASSWORD | wxTE_CENTRE | wxTE_NO_VSCROLL);
   wxButton* btn_commit = new wxButton(this, wxID_ANY, "Login", wxPoint(100, 110), wxSize(100, 30));
   Bind(wxEVT_PAINT, &LoginFrame::draw_bg, this);
 }
