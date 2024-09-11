@@ -1,6 +1,6 @@
-CMakeFiles/main.dir/src/mainFram.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/mainFram.cpp \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+CMakeFiles/main.dir/src/selectFileFrame.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/selectFileFrame.cpp \
+  /Users/dmitro/data/Code/new/cpp/ex/include/selectFileFrame.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1128,17 +1128,40 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/selectFileFrame.h \
-  /opt/homebrew/include/wx-3.2/wx/filectrl.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/filectrlg.h \
-  /opt/homebrew/include/wx-3.2/wx/listctrl.h \
-  /opt/homebrew/include/wx-3.2/wx/listbase.h \
-  /opt/homebrew/include/wx-3.2/wx/itemattr.h \
-  /opt/homebrew/include/wx-3.2/wx/systhemectrl.h \
-  /opt/homebrew/include/wx-3.2/wx/withimages.h \
-  /opt/homebrew/include/wx-3.2/wx/imaglist.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/imaglist.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/listctrl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iomanip \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /opt/homebrew/include/wx-3.2/wx/filepicker.h \
+  /opt/homebrew/include/wx-3.2/wx/pickerbase.h \
   /opt/homebrew/include/wx-3.2/wx/filename.h \
   /opt/homebrew/include/wx-3.2/wx/file.h \
-  /opt/homebrew/include/wx-3.2/wx/convauto.h
+  /opt/homebrew/include/wx-3.2/wx/convauto.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/filepickerg.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextctrl.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextbuffer.h \
+  /opt/homebrew/include/wx-3.2/wx/cmdproc.h \
+  /opt/homebrew/include/wx-3.2/wx/txtstrm.h \
+  /opt/homebrew/include/wx-3.2/wx/position.h \
+  /opt/homebrew/include/wx-3.2/wx/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/overlay.h \
+  /opt/homebrew/include/wx-3.2/wx/dnd.h \
+  /opt/homebrew/include/wx-3.2/wx/osx/dnd.h

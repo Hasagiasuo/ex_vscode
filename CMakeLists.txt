@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(INCL_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
 set(SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
 
-find_package(wxWidgets REQUIRED COMPONENTS gl core base OPTIONAL_COMPONENTS net)
+find_package(wxWidgets REQUIRED COMPONENTS gl core base richtext OPTIONAL_COMPONENTS net)
 include(${wxWidgets_USE_FILE})
 file(GLOB SOURCES ${SRC_DIR}/*.cpp)
 

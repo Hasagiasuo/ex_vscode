@@ -153,29 +153,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/mainFram.o: src/mainFram.cpp.o
-.PHONY : src/mainFram.o
+src/mainFrame.o: src/mainFrame.cpp.o
+.PHONY : src/mainFrame.o
 
 # target to build an object file
-src/mainFram.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFram.cpp.o
-.PHONY : src/mainFram.cpp.o
+src/mainFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.o
+.PHONY : src/mainFrame.cpp.o
 
-src/mainFram.i: src/mainFram.cpp.i
-.PHONY : src/mainFram.i
+src/mainFrame.i: src/mainFrame.cpp.i
+.PHONY : src/mainFrame.i
 
 # target to preprocess a source file
-src/mainFram.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFram.cpp.i
-.PHONY : src/mainFram.cpp.i
+src/mainFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.i
+.PHONY : src/mainFrame.cpp.i
 
-src/mainFram.s: src/mainFram.cpp.s
-.PHONY : src/mainFram.s
+src/mainFrame.s: src/mainFrame.cpp.s
+.PHONY : src/mainFrame.s
 
 # target to generate assembly for a file
-src/mainFram.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFram.cpp.s
-.PHONY : src/mainFram.cpp.s
+src/mainFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.s
+.PHONY : src/mainFrame.cpp.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/mainFram.o"
-	@echo "... src/mainFram.i"
-	@echo "... src/mainFram.s"
+	@echo "... src/mainFrame.o"
+	@echo "... src/mainFrame.i"
+	@echo "... src/mainFrame.s"
 .PHONY : help
 
 

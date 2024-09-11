@@ -1,5 +1,5 @@
-CMakeFiles/main.dir/src/mainFram.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/mainFram.cpp \
+CMakeFiles/main.dir/src/mainFrame.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
@@ -1127,18 +1127,4 @@ CMakeFiles/main.dir/src/mainFram.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/selectFileFrame.h \
-  /opt/homebrew/include/wx-3.2/wx/filectrl.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/filectrlg.h \
-  /opt/homebrew/include/wx-3.2/wx/listctrl.h \
-  /opt/homebrew/include/wx-3.2/wx/listbase.h \
-  /opt/homebrew/include/wx-3.2/wx/itemattr.h \
-  /opt/homebrew/include/wx-3.2/wx/systhemectrl.h \
-  /opt/homebrew/include/wx-3.2/wx/withimages.h \
-  /opt/homebrew/include/wx-3.2/wx/imaglist.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/imaglist.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/listctrl.h \
-  /opt/homebrew/include/wx-3.2/wx/filename.h \
-  /opt/homebrew/include/wx-3.2/wx/file.h \
-  /opt/homebrew/include/wx-3.2/wx/convauto.h
+  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h
