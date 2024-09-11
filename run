@@ -1,4 +1,4 @@
-clang++ $(wx-config --cxxflags) -I./include -o main main.cpp ./src/*.cpp $(wx-config --libs)
+clang++ $(wx-config --cxxflags) -I./include -o main main.cpp ./src/*.cpp $(wx-config --libs richtext gl core base)
 clear
 ./main
 rm -rf main
