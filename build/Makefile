@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/loginFrame.o: src/loginFrame.cpp.o
+.PHONY : src/loginFrame.o
+
+# target to build an object file
+src/loginFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.o
+.PHONY : src/loginFrame.cpp.o
+
+src/loginFrame.i: src/loginFrame.cpp.i
+.PHONY : src/loginFrame.i
+
+# target to preprocess a source file
+src/loginFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.i
+.PHONY : src/loginFrame.cpp.i
+
+src/loginFrame.s: src/loginFrame.cpp.s
+.PHONY : src/loginFrame.s
+
+# target to generate assembly for a file
+src/loginFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.s
+.PHONY : src/loginFrame.cpp.s
+
 src/mainFrame.o: src/mainFrame.cpp.o
 .PHONY : src/mainFrame.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/loginFrame.o"
+	@echo "... src/loginFrame.i"
+	@echo "... src/loginFrame.s"
 	@echo "... src/mainFrame.o"
 	@echo "... src/mainFrame.i"
 	@echo "... src/mainFrame.s"

@@ -1,5 +1,5 @@
 #include <wx/wx.h>
-#include "mainFrame.h"
+#include "loginFrame.h"
 
 class Application : public wxApp {
 public:
@@ -9,7 +9,8 @@ public:
 wxIMPLEMENT_APP(Application);
 
 bool Application::OnInit() {
-  MainFrame* main_fr = new MainFrame();
-  main_fr->Show();
+  wxInitAllImageHandlers();
+  LoginFrame* login_fr = new LoginFrame();
+  login_fr->Show();
   return 1;
 }

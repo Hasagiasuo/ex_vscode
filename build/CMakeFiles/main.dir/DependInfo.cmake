@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/dmitro/data/Code/new/cpp/ex/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
+  "/Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp" "CMakeFiles/main.dir/src/loginFrame.cpp.o" "gcc" "CMakeFiles/main.dir/src/loginFrame.cpp.o.d"
   "/Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp" "CMakeFiles/main.dir/src/mainFrame.cpp.o" "gcc" "CMakeFiles/main.dir/src/mainFrame.cpp.o.d"
   )
 

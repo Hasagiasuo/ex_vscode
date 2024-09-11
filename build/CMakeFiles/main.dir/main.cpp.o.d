@@ -1127,4 +1127,4 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h
+  /Users/dmitro/data/Code/new/cpp/ex/include/loginFrame.h

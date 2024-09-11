@@ -1,6 +1,6 @@
-CMakeFiles/main.dir/src/mainFrame.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+CMakeFiles/main.dir/src/loginFrame.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp \
+  /Users/dmitro/data/Code/new/cpp/ex/include/loginFrame.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1127,15 +1127,4 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/richtext/richtextctrl.h \
-  /opt/homebrew/include/wx-3.2/wx/richtext/richtextbuffer.h \
-  /opt/homebrew/include/wx-3.2/wx/cmdproc.h \
-  /opt/homebrew/include/wx-3.2/wx/txtstrm.h \
-  /opt/homebrew/include/wx-3.2/wx/convauto.h \
-  /opt/homebrew/include/wx-3.2/wx/position.h \
-  /opt/homebrew/include/wx-3.2/wx/caret.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/caret.h \
-  /opt/homebrew/include/wx-3.2/wx/overlay.h \
-  /opt/homebrew/include/wx-3.2/wx/dnd.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/dnd.h
+  /opt/homebrew/include/wx-3.2/wx/osx/mdi.h
