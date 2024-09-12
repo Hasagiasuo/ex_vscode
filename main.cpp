@@ -1,5 +1,5 @@
 #include <wx/wx.h>
-#include "loginFrame.h"
+#include "signupFrame.h"
 #include "dbControll.h"
 
 class Application : public wxApp {
@@ -12,7 +12,7 @@ wxIMPLEMENT_APP(Application);
 bool Application::OnInit() {
   wxInitAllImageHandlers();
   DBControll* db_controller = new DBControll("dbname=trpz_db user=trpz password=ex1234");
-  LoginFrame* login_fr = new LoginFrame(db_controller);
+  SignupFrame* login_fr = new SignupFrame(db_controller);
   login_fr->Show();
   return 1;
 }

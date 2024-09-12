@@ -1,17 +1,15 @@
-#include "loginFrame.h"
+#include "signupFrame.h"
 
-LoginFrame::~LoginFrame() {
+SignupFrame::~SignupFrame() {
   delete this->bg_image;
   delete this->login;
   delete this->password;
   delete this->db_controller;
 }
 
-LoginFrame::LoginFrame(DBControll* db_controller) : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition, wxSize(300, 200)) {
+SignupFrame::SignupFrame(DBControll* db_controller) : wxFrame(nullptr, wxID_ANY, "SignUp", wxDefaultPosition, wxSize(300, 300)) {
   this->db_controller = db_controller;
   this->db_controller->create_user_table();
-  // this->db_controller->push_user("admin@gmail.com", "admin1234", "admin");
-  this->db_controller->show_table("users");
   wxImage bg_img("../assets/bg_login.jpeg");
   bg_img.Rescale(300, 200);
   bg_img.Blur(10);
@@ -26,13 +24,22 @@ LoginFrame::LoginFrame(DBControll* db_controller) : wxFrame(nullptr, wxID_ANY, "
   this->password = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 80), wxSize(150, 25), wxTE_PASSWORD | wxTE_CENTRE | wxTE_NO_VSCROLL);
   this->password->SetBackgroundColour(*wxBLACK);
   this->password->SetForegroundColour(*wxWHITE);
-  wxButton* btn_commit = new wxButton(this, wxID_ANY, "Login", wxPoint(100, 110), wxSize(100, 30));
-  btn_commit->SetForegroundColour(*wxBLACK);
-  btn_commit->SetBackgroundColour(*wxBLACK);
-  Bind(wxEVT_PAINT, &LoginFrame::draw_bg, this);
+  wxStaticText* name_l = new wxStaticText(this, wxID_ANY, "Name", wxPoint(32, 110));
+  this->name = new wxTextCtrl(this, wxID_ANY, wxEmptyString, wxPoint(120, 110), wxSize(150, 25), wxTE_CENTRE);
+  wxButton* btn_commit = new wxButton(this, wxID_ANY, "SignUp", wxPoint(100, 210), wxSize(100, 30));
+  btn_commit->Bind(wxEVT_BUTTON, &SignupFrame::signup, this);
+  Bind(wxEVT_PAINT, &SignupFrame::draw_bg, this);
 }
 
-void LoginFrame::draw_bg(wxPaintEvent&) {
+void SignupFrame::draw_bg(wxPaintEvent&) {
   wxPaintDC dc(this);
   dc.DrawBitmap(*this->bg_image, 0, 0, false);
+}
+
+void SignupFrame::signup(wxCommandEvent &) {
+  this->db_controller->push_user(std::string(this->login->GetValue()), std::string(this->password->GetValue()), std::string(this->name->GetValue()));
+  this->login->SetValue("");
+  this->password->SetValue("");
+  this->name->SetValue("");
+  wxMessageBox("User created!");
 }

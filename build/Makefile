@@ -177,30 +177,6 @@ src/dbControll.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.s
 .PHONY : src/dbControll.cpp.s
 
-src/loginFrame.o: src/loginFrame.cpp.o
-.PHONY : src/loginFrame.o
-
-# target to build an object file
-src/loginFrame.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.o
-.PHONY : src/loginFrame.cpp.o
-
-src/loginFrame.i: src/loginFrame.cpp.i
-.PHONY : src/loginFrame.i
-
-# target to preprocess a source file
-src/loginFrame.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.i
-.PHONY : src/loginFrame.cpp.i
-
-src/loginFrame.s: src/loginFrame.cpp.s
-.PHONY : src/loginFrame.s
-
-# target to generate assembly for a file
-src/loginFrame.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginFrame.cpp.s
-.PHONY : src/loginFrame.cpp.s
-
 src/mainFrame.o: src/mainFrame.cpp.o
 .PHONY : src/mainFrame.o
 
@@ -225,6 +201,30 @@ src/mainFrame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.s
 .PHONY : src/mainFrame.cpp.s
 
+src/signupFrame.o: src/signupFrame.cpp.o
+.PHONY : src/signupFrame.o
+
+# target to build an object file
+src/signupFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.o
+.PHONY : src/signupFrame.cpp.o
+
+src/signupFrame.i: src/signupFrame.cpp.i
+.PHONY : src/signupFrame.i
+
+# target to preprocess a source file
+src/signupFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.i
+.PHONY : src/signupFrame.cpp.i
+
+src/signupFrame.s: src/signupFrame.cpp.s
+.PHONY : src/signupFrame.s
+
+# target to generate assembly for a file
+src/signupFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.s
+.PHONY : src/signupFrame.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,12 +240,12 @@ help:
 	@echo "... src/dbControll.o"
 	@echo "... src/dbControll.i"
 	@echo "... src/dbControll.s"
-	@echo "... src/loginFrame.o"
-	@echo "... src/loginFrame.i"
-	@echo "... src/loginFrame.s"
 	@echo "... src/mainFrame.o"
 	@echo "... src/mainFrame.i"
 	@echo "... src/mainFrame.s"
+	@echo "... src/signupFrame.o"
+	@echo "... src/signupFrame.i"
+	@echo "... src/signupFrame.s"
 .PHONY : help
 
 

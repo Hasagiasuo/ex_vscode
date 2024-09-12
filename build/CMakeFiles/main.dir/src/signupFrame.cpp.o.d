@@ -1,5 +1,6 @@
-CMakeFiles/main.dir/main.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/main.cpp \
+CMakeFiles/main.dir/src/signupFrame.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp \
+  /Users/dmitro/data/Code/new/cpp/ex/include/signupFrame.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1127,7 +1128,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/signupFrame.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \

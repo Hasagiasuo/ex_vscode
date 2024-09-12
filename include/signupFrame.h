@@ -4,15 +4,17 @@
 #include <wx/wx.h>
 #include "dbControll.h"
 
-class LoginFrame : public wxFrame {
+class SignupFrame : public wxFrame {
   DBControll* db_controller;
   wxTextCtrl* login;
   wxTextCtrl* password;
+  wxTextCtrl* name;
   wxBitmap* bg_image;
   void draw_bg(wxPaintEvent&);
+  void signup(wxCommandEvent&);
 public:
-  LoginFrame(DBControll* db_controller);
-  ~LoginFrame();
+  SignupFrame(DBControll* db_controller);
+  ~SignupFrame();
 };
 
 #endif

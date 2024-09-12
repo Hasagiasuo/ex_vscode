@@ -3,10 +3,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o.d"
   "CMakeFiles/main.dir/src/dbControll.cpp.o"
   "CMakeFiles/main.dir/src/dbControll.cpp.o.d"
-  "CMakeFiles/main.dir/src/loginFrame.cpp.o"
-  "CMakeFiles/main.dir/src/loginFrame.cpp.o.d"
   "CMakeFiles/main.dir/src/mainFrame.cpp.o"
   "CMakeFiles/main.dir/src/mainFrame.cpp.o.d"
+  "CMakeFiles/main.dir/src/signupFrame.cpp.o"
+  "CMakeFiles/main.dir/src/signupFrame.cpp.o.d"
   "main"
   "main.pdb"
 )
