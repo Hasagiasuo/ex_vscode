@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/dbControll.o: src/dbControll.cpp.o
+.PHONY : src/dbControll.o
+
+# target to build an object file
+src/dbControll.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.o
+.PHONY : src/dbControll.cpp.o
+
+src/dbControll.i: src/dbControll.cpp.i
+.PHONY : src/dbControll.i
+
+# target to preprocess a source file
+src/dbControll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.i
+.PHONY : src/dbControll.cpp.i
+
+src/dbControll.s: src/dbControll.cpp.s
+.PHONY : src/dbControll.s
+
+# target to generate assembly for a file
+src/dbControll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.s
+.PHONY : src/dbControll.cpp.s
+
 src/loginFrame.o: src/loginFrame.cpp.o
 .PHONY : src/loginFrame.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/dbControll.o"
+	@echo "... src/dbControll.i"
+	@echo "... src/dbControll.s"
 	@echo "... src/loginFrame.o"
 	@echo "... src/loginFrame.i"
 	@echo "... src/loginFrame.s"

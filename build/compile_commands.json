@@ -1,19 +1,25 @@
 [
 {
   "directory": "/Users/dmitro/data/Code/new/cpp/ex/build",
-  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/main.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/main.cpp",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/opt/homebrew/Cellar/libpqxx/7.9.2/include -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/main.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/main.cpp",
   "file": "/Users/dmitro/data/Code/new/cpp/ex/main.cpp",
   "output": "CMakeFiles/main.dir/main.cpp.o"
 },
 {
   "directory": "/Users/dmitro/data/Code/new/cpp/ex/build",
-  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/src/loginFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/opt/homebrew/Cellar/libpqxx/7.9.2/include -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/src/dbControll.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp",
+  "file": "/Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp",
+  "output": "CMakeFiles/main.dir/src/dbControll.cpp.o"
+},
+{
+  "directory": "/Users/dmitro/data/Code/new/cpp/ex/build",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/opt/homebrew/Cellar/libpqxx/7.9.2/include -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/src/loginFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp",
   "file": "/Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp",
   "output": "CMakeFiles/main.dir/src/loginFrame.cpp.o"
 },
 {
   "directory": "/Users/dmitro/data/Code/new/cpp/ex/build",
-  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp",
+  "command": "/usr/bin/clang++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__ -I/opt/homebrew/Cellar/libpqxx/7.9.2/include -I/Users/dmitro/data/Code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2 -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp",
   "file": "/Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp",
   "output": "CMakeFiles/main.dir/src/mainFrame.cpp.o"
 }

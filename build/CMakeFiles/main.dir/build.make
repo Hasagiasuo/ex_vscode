@@ -83,10 +83,24 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
+CMakeFiles/main.dir/src/dbControll.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/dbControll.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp
+CMakeFiles/main.dir/src/dbControll.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/dbControll.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/dbControll.cpp.o -MF CMakeFiles/main.dir/src/dbControll.cpp.o.d -o CMakeFiles/main.dir/src/dbControll.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp
+
+CMakeFiles/main.dir/src/dbControll.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dbControll.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp > CMakeFiles/main.dir/src/dbControll.cpp.i
+
+CMakeFiles/main.dir/src/dbControll.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dbControll.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp -o CMakeFiles/main.dir/src/dbControll.cpp.s
+
 CMakeFiles/main.dir/src/loginFrame.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/loginFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp
 CMakeFiles/main.dir/src/loginFrame.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/loginFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/loginFrame.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/loginFrame.cpp.o -MF CMakeFiles/main.dir/src/loginFrame.cpp.o.d -o CMakeFiles/main.dir/src/loginFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/loginFrame.cpp
 
 CMakeFiles/main.dir/src/loginFrame.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/main.dir/src/loginFrame.cpp.s: cmake_force
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mainFrame.cpp.o -MF CMakeFiles/main.dir/src/mainFrame.cpp.o.d -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
 
 CMakeFiles/main.dir/src/mainFrame.cpp.i: cmake_force
@@ -114,6 +128,7 @@ CMakeFiles/main.dir/src/mainFrame.cpp.s: cmake_force
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
+"CMakeFiles/main.dir/src/dbControll.cpp.o" \
 "CMakeFiles/main.dir/src/loginFrame.cpp.o" \
 "CMakeFiles/main.dir/src/mainFrame.cpp.o"
 
@@ -121,11 +136,12 @@ main_OBJECTS = \
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
+main: CMakeFiles/main.dir/src/dbControll.cpp.o
 main: CMakeFiles/main.dir/src/loginFrame.cpp.o
 main: CMakeFiles/main.dir/src/mainFrame.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -4,9 +4,14 @@ LoginFrame::~LoginFrame() {
   delete this->bg_image;
   delete this->login;
   delete this->password;
+  delete this->db_controller;
 }
 
-LoginFrame::LoginFrame() : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition, wxSize(300, 200)) {
+LoginFrame::LoginFrame(DBControll* db_controller) : wxFrame(nullptr, wxID_ANY, "Login", wxDefaultPosition, wxSize(300, 200)) {
+  this->db_controller = db_controller;
+  this->db_controller->create_user_table();
+  // this->db_controller->push_user("admin@gmail.com", "admin1234", "admin");
+  this->db_controller->show_table("users");
   wxImage bg_img("../assets/bg_login.jpeg");
   bg_img.Rescale(300, 200);
   bg_img.Blur(10);

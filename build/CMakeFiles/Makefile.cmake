@@ -26,6 +26,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/Compiler/GNU.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/FindPackageMessage.cmake"
+  "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/FindPkgConfig.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/FindwxWidgets.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.3/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"

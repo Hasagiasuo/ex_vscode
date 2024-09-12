@@ -221,6 +221,15 @@ Examen_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Examen_SOURCE_DIR:STATIC=/Users/dmitro/data/Code/new/cpp/ex
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/pkg-config
+
+//Path to a library.
+pkgcfg_lib_LIBPQXX_pqxx:FILEPATH=/opt/homebrew/Cellar/libpqxx/7.9.2/lib/libpqxx.dylib
+
 //Location of wxWidgets library configuration provider binary (wx-config).
 wxWidgets_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/wx-config
 
@@ -374,6 +383,51 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/homebrew/bin/pkg-config][v0.29.2()]
 //Details about finding wxWidgets
 FIND_PACKAGE_MESSAGE_DETAILS_wxWidgets:INTERNAL=[-L/opt/homebrew/lib;;;-framework IOKit;-framework Carbon;-framework Cocoa;-framework QuartzCore;-framework AudioToolbox;-framework System;-framework OpenGL;-lwx_osx_cocoau_gl-3.2;-lwx_osx_cocoau_core-3.2;-lwx_baseu-3.2;-lwx_osx_cocoau_richtext-3.2;-lwx_baseu_net-3.2][/opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2;/opt/homebrew/include/wx-3.2][v3.2.5()]
+LIBPQXX_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/libpqxx/7.9.2/include
+LIBPQXX_CFLAGS_I:INTERNAL=
+LIBPQXX_CFLAGS_OTHER:INTERNAL=
+LIBPQXX_FOUND:INTERNAL=1
+LIBPQXX_INCLUDEDIR:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/include
+LIBPQXX_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/include
+LIBPQXX_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/libpqxx/7.9.2/lib;-lpqxx
+LIBPQXX_LDFLAGS_OTHER:INTERNAL=
+LIBPQXX_LIBDIR:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/lib
+LIBPQXX_LIBRARIES:INTERNAL=pqxx
+LIBPQXX_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/lib
+LIBPQXX_LIBS:INTERNAL=
+LIBPQXX_LIBS_L:INTERNAL=
+LIBPQXX_LIBS_OTHER:INTERNAL=
+LIBPQXX_LIBS_PATHS:INTERNAL=
+LIBPQXX_MODULE_NAME:INTERNAL=libpqxx
+LIBPQXX_PREFIX:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2
+LIBPQXX_STATIC_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/libpqxx/7.9.2/include
+LIBPQXX_STATIC_CFLAGS_I:INTERNAL=
+LIBPQXX_STATIC_CFLAGS_OTHER:INTERNAL=
+LIBPQXX_STATIC_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/include
+LIBPQXX_STATIC_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/libpqxx/7.9.2/lib;-lpqxx
+LIBPQXX_STATIC_LDFLAGS_OTHER:INTERNAL=
+LIBPQXX_STATIC_LIBDIR:INTERNAL=
+LIBPQXX_STATIC_LIBRARIES:INTERNAL=pqxx
+LIBPQXX_STATIC_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/lib
+LIBPQXX_STATIC_LIBS:INTERNAL=
+LIBPQXX_STATIC_LIBS_L:INTERNAL=
+LIBPQXX_STATIC_LIBS_OTHER:INTERNAL=
+LIBPQXX_STATIC_LIBS_PATHS:INTERNAL=
+LIBPQXX_VERSION:INTERNAL=7.9.2
+LIBPQXX_libpqxx_INCLUDEDIR:INTERNAL=
+LIBPQXX_libpqxx_LIBDIR:INTERNAL=
+LIBPQXX_libpqxx_PREFIX:INTERNAL=
+LIBPQXX_libpqxx_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+__pkg_config_checked_LIBPQXX:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_LIBPQXX_pqxx
+pkgcfg_lib_LIBPQXX_pqxx-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/opt/homebrew/Cellar/libpqxx/7.9.2/lib
 
