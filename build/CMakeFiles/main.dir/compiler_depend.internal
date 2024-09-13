@@ -5881,6 +5881,8 @@ CMakeFiles/main.dir/src/signupWin.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h
  /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h
+ /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h
+ /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h
  /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h
  /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/array.hxx
  /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/binarystring.hxx

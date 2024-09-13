@@ -58,7 +58,7 @@ void DBControll::push_user(std::string email, std::string password, std::string 
       "INSERT INTO users (email, password, name) VALUES ('" + email + "', '" + password + "', '" + name + "');"
     );
     this->curs->commit();
-    std::cout << "INFO: User (" << email << "|" << password << "|" << name << "|" << ") append!" << std::endl;
+    std::cout << "INFO: User (" << email << "|" << password << "|" << name << ") append!" << std::endl;
   } catch (const std::exception& ex) {
     std::cout << "ERROR: " << ex.what() << std::endl;
     this->curs->commit();

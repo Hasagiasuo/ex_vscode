@@ -1280,4 +1280,6 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transactor.hxx \
-  /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx
+  /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
+  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h
