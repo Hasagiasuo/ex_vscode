@@ -1,5 +1,6 @@
-CMakeFiles/main.dir/main.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/main.cpp \
+CMakeFiles/main.dir/src/loginWin.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp \
+  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1127,6 +1128,8 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
+  /opt/homebrew/include/wx-3.2/wx/display.h \
+  /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \
@@ -1278,8 +1281,5 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__chrono/literals.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transactor.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
-  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
-  /opt/homebrew/include/wx-3.2/wx/display.h \
-  /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h

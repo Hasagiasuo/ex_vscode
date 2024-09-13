@@ -177,6 +177,30 @@ src/dbControll.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.s
 .PHONY : src/dbControll.cpp.s
 
+src/loginWin.o: src/loginWin.cpp.o
+.PHONY : src/loginWin.o
+
+# target to build an object file
+src/loginWin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginWin.cpp.o
+.PHONY : src/loginWin.cpp.o
+
+src/loginWin.i: src/loginWin.cpp.i
+.PHONY : src/loginWin.i
+
+# target to preprocess a source file
+src/loginWin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginWin.cpp.i
+.PHONY : src/loginWin.cpp.i
+
+src/loginWin.s: src/loginWin.cpp.s
+.PHONY : src/loginWin.s
+
+# target to generate assembly for a file
+src/loginWin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/loginWin.cpp.s
+.PHONY : src/loginWin.cpp.s
+
 src/mainFrame.o: src/mainFrame.cpp.o
 .PHONY : src/mainFrame.o
 
@@ -201,29 +225,29 @@ src/mainFrame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.s
 .PHONY : src/mainFrame.cpp.s
 
-src/signupFrame.o: src/signupFrame.cpp.o
-.PHONY : src/signupFrame.o
+src/signupWin.o: src/signupWin.cpp.o
+.PHONY : src/signupWin.o
 
 # target to build an object file
-src/signupFrame.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.o
-.PHONY : src/signupFrame.cpp.o
+src/signupWin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupWin.cpp.o
+.PHONY : src/signupWin.cpp.o
 
-src/signupFrame.i: src/signupFrame.cpp.i
-.PHONY : src/signupFrame.i
+src/signupWin.i: src/signupWin.cpp.i
+.PHONY : src/signupWin.i
 
 # target to preprocess a source file
-src/signupFrame.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.i
-.PHONY : src/signupFrame.cpp.i
+src/signupWin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupWin.cpp.i
+.PHONY : src/signupWin.cpp.i
 
-src/signupFrame.s: src/signupFrame.cpp.s
-.PHONY : src/signupFrame.s
+src/signupWin.s: src/signupWin.cpp.s
+.PHONY : src/signupWin.s
 
 # target to generate assembly for a file
-src/signupFrame.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupFrame.cpp.s
-.PHONY : src/signupFrame.cpp.s
+src/signupWin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/signupWin.cpp.s
+.PHONY : src/signupWin.cpp.s
 
 # Help Target
 help:
@@ -240,12 +264,15 @@ help:
 	@echo "... src/dbControll.o"
 	@echo "... src/dbControll.i"
 	@echo "... src/dbControll.s"
+	@echo "... src/loginWin.o"
+	@echo "... src/loginWin.i"
+	@echo "... src/loginWin.s"
 	@echo "... src/mainFrame.o"
 	@echo "... src/mainFrame.i"
 	@echo "... src/mainFrame.s"
-	@echo "... src/signupFrame.o"
-	@echo "... src/signupFrame.i"
-	@echo "... src/signupFrame.s"
+	@echo "... src/signupWin.o"
+	@echo "... src/signupWin.i"
+	@echo "... src/signupWin.s"
 .PHONY : help
 
 

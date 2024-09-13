@@ -97,10 +97,24 @@ CMakeFiles/main.dir/src/dbControll.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dbControll.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp -o CMakeFiles/main.dir/src/dbControll.cpp.s
 
+CMakeFiles/main.dir/src/loginWin.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/loginWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp
+CMakeFiles/main.dir/src/loginWin.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/loginWin.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/loginWin.cpp.o -MF CMakeFiles/main.dir/src/loginWin.cpp.o.d -o CMakeFiles/main.dir/src/loginWin.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp
+
+CMakeFiles/main.dir/src/loginWin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/loginWin.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp > CMakeFiles/main.dir/src/loginWin.cpp.i
+
+CMakeFiles/main.dir/src/loginWin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/loginWin.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp -o CMakeFiles/main.dir/src/loginWin.cpp.s
+
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mainFrame.cpp.o -MF CMakeFiles/main.dir/src/mainFrame.cpp.o.d -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
 
 CMakeFiles/main.dir/src/mainFrame.cpp.i: cmake_force
@@ -111,37 +125,39 @@ CMakeFiles/main.dir/src/mainFrame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/mainFrame.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp -o CMakeFiles/main.dir/src/mainFrame.cpp.s
 
-CMakeFiles/main.dir/src/signupFrame.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/signupFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp
-CMakeFiles/main.dir/src/signupFrame.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/signupFrame.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/signupFrame.cpp.o -MF CMakeFiles/main.dir/src/signupFrame.cpp.o.d -o CMakeFiles/main.dir/src/signupFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp
+CMakeFiles/main.dir/src/signupWin.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp
+CMakeFiles/main.dir/src/signupWin.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/signupWin.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/signupWin.cpp.o -MF CMakeFiles/main.dir/src/signupWin.cpp.o.d -o CMakeFiles/main.dir/src/signupWin.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp
 
-CMakeFiles/main.dir/src/signupFrame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/signupFrame.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp > CMakeFiles/main.dir/src/signupFrame.cpp.i
+CMakeFiles/main.dir/src/signupWin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/signupWin.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp > CMakeFiles/main.dir/src/signupWin.cpp.i
 
-CMakeFiles/main.dir/src/signupFrame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/signupFrame.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp -o CMakeFiles/main.dir/src/signupFrame.cpp.s
+CMakeFiles/main.dir/src/signupWin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/signupWin.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp -o CMakeFiles/main.dir/src/signupWin.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/src/dbControll.cpp.o" \
+"CMakeFiles/main.dir/src/loginWin.cpp.o" \
 "CMakeFiles/main.dir/src/mainFrame.cpp.o" \
-"CMakeFiles/main.dir/src/signupFrame.cpp.o"
+"CMakeFiles/main.dir/src/signupWin.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/src/dbControll.cpp.o
+main: CMakeFiles/main.dir/src/loginWin.cpp.o
 main: CMakeFiles/main.dir/src/mainFrame.cpp.o
-main: CMakeFiles/main.dir/src/signupFrame.cpp.o
+main: CMakeFiles/main.dir/src/signupWin.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

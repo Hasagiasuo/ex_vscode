@@ -10,8 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/dmitro/data/Code/new/cpp/ex/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   "/Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp" "CMakeFiles/main.dir/src/dbControll.cpp.o" "gcc" "CMakeFiles/main.dir/src/dbControll.cpp.o.d"
+  "/Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp" "CMakeFiles/main.dir/src/loginWin.cpp.o" "gcc" "CMakeFiles/main.dir/src/loginWin.cpp.o.d"
   "/Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp" "CMakeFiles/main.dir/src/mainFrame.cpp.o" "gcc" "CMakeFiles/main.dir/src/mainFrame.cpp.o.d"
-  "/Users/dmitro/data/Code/new/cpp/ex/src/signupFrame.cpp" "CMakeFiles/main.dir/src/signupFrame.cpp.o" "gcc" "CMakeFiles/main.dir/src/signupFrame.cpp.o.d"
+  "/Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp" "CMakeFiles/main.dir/src/signupWin.cpp.o" "gcc" "CMakeFiles/main.dir/src/signupWin.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
