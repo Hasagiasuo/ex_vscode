@@ -9,6 +9,8 @@
 
 namespace Application {
   class LoginWindow : public wxFrame {
+    wxPanel* panel;
+    wxBoxSizer* sizer;
     wxButton* btn_close;
     wxTextCtrl* email;
     wxTextCtrl* password;
