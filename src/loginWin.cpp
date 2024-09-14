@@ -22,8 +22,8 @@ Application::LoginWindow::LoginWindow(DBControll* db_controll) : wxFrame(nullptr
 void Application::LoginWindow::gen_widgets() {
   this->panel = new wxPanel(this, wxID_ANY);
   this->sizer = new wxBoxSizer(wxVERTICAL);
-  this->btn_close = new wxButton(this->panel, wxID_CLOSE, "X", wxPoint(475, 5), wxSize(25, 20), wxBORDER_NONE);
-  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->btn_close = new wxButton(this->panel, wxID_CLOSE, "X", wxPoint(470, 5), wxSize(25, 20), wxBORDER_NONE);
+  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &LoginWindow::close_window, this);
   this->email_l = new wxStaticText(this->panel, wxID_ANY, "Ел. пошта", wxPoint(30, 40), wxSize(50, 30), wxTE_CENTRE);
   this->email_l->SetFont(wxFont(20, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
@@ -34,7 +34,7 @@ void Application::LoginWindow::gen_widgets() {
   this->password = new wxTextCtrl(this->panel, wxID_ANY, "", wxPoint(150, 90), wxSize(300, 30), wxTE_PASSWORD | wxTE_CENTRE);
   this->password->SetFont(wxFont(20, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_commit = new wxButton(this->panel, wxID_ANY, "Увійти", wxPoint(75, 140), wxSize(350, 40));
-  this->btn_commit->SetFont(wxFont(18, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_MAX, wxFONTWEIGHT_MAX));
+  this->btn_commit->SetFont(wxFont(18, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_MAX, wxFONTWEIGHT_MEDIUM));
   this->btn_commit->Bind(wxEVT_BUTTON, &LoginWindow::check_user_in_system, this);
   this->message_for_signup = new wxStaticText(this->panel, wxID_ANY, "Якщо у вас немає акаунту - ", wxPoint(122, 185), wxSize(100, 17), wxTE_CENTRE | wxTE_CENTER);
   this->message_for_signup->SetFont(wxFont(13, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));

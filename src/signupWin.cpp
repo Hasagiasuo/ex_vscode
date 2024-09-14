@@ -22,7 +22,7 @@ Application::SignWindow::SignWindow(DBControll* db_controll) : wxFrame(nullptr, 
 void Application::SignWindow::gen_widgets() {
   this->panel = new wxPanel(this, wxID_ANY);
   this->sizer = new wxBoxSizer(wxVERTICAL);
-  this->btn_close = new wxButton(this->panel, wxID_CLOSE, "X", wxPoint(475, 5), wxSize(25, 20), wxBORDER_NONE);
+  this->btn_close = new wxButton(this->panel, wxID_CLOSE, "X", wxPoint(470, 5), wxSize(25, 20), wxBORDER_NONE);
   this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &SignWindow::close_window, this);
   this->name_l = new wxStaticText(this->panel, wxID_ANY, "Імʼя користувача", wxPoint(10, 40), wxSize(50, 30), wxTE_CENTRE);
@@ -49,7 +49,6 @@ void Application::SignWindow::gen_widgets() {
 
 void Application::SignWindow::close_window(wxCommandEvent&) {
   this->Close();
-  this->~SignWindow();
 }
 
 void Application::SignWindow::registr_user(wxCommandEvent&) {
@@ -75,5 +74,4 @@ void Application::SignWindow::registr_user(wxCommandEvent&) {
   LoginWindow* lw = new LoginWindow(this->db_controller);
   this->Close();
   lw->Show();
-  this->~SignWindow();
 }
