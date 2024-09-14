@@ -1130,9 +1130,6 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
-  /opt/homebrew/include/wx-3.2/wx/display.h \
-  /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
@@ -1153,6 +1150,9 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
+  /opt/homebrew/include/wx-3.2/wx/display.h \
+  /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \

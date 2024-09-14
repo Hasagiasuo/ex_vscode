@@ -18,7 +18,7 @@ namespace Application {
   bool MApplication::OnInit() {
     wxInitAllImageHandlers();
     read_user_data();
-    DBControll* db_controller = new DBControll("dbname=trpz_db user=trpz password=ex1234");
+    DBControll* db_controller = new DBControll("host=localhost dbname=trpz_db user=trpz password=ex1234");
     db_controller->create_user_table();
     if(this->user_data.empty()) {
       LoginWindow* login_window = new LoginWindow(db_controller);
