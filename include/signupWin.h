@@ -4,6 +4,7 @@
 
 #include <wx/wx.h>
 #include <wx/display.h>
+#include <wx/font.h>
 #include "dbControll.h"
 #include "loginWin.h"
 

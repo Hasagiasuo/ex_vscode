@@ -1121,6 +1121,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/main.cpp \
   /opt/homebrew/include/wx-3.2/wx/generic/msgdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/panelg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/scrolwin.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/statusbr.h \
   /opt/homebrew/include/wx-3.2/wx/generic/textdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/geometry.h \
@@ -1241,6 +1242,7 @@ CMakeFiles/main.dir/main.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/main.cpp \
   /opt/homebrew/include/wx-3.2/wx/sharedptr.h \
   /opt/homebrew/include/wx-3.2/wx/sizer.h \
   /opt/homebrew/include/wx-3.2/wx/slider.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/statbmp.h \
   /opt/homebrew/include/wx-3.2/wx/statbox.h \
   /opt/homebrew/include/wx-3.2/wx/stattext.h \
@@ -3437,6 +3439,7 @@ CMakeFiles/main.dir/src/loginWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/l
   /opt/homebrew/include/wx-3.2/wx/generic/msgdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/panelg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/scrolwin.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/statusbr.h \
   /opt/homebrew/include/wx-3.2/wx/generic/textdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/geometry.h \
@@ -3557,6 +3560,7 @@ CMakeFiles/main.dir/src/loginWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/l
   /opt/homebrew/include/wx-3.2/wx/sharedptr.h \
   /opt/homebrew/include/wx-3.2/wx/sizer.h \
   /opt/homebrew/include/wx-3.2/wx/slider.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/statbmp.h \
   /opt/homebrew/include/wx-3.2/wx/statbox.h \
   /opt/homebrew/include/wx-3.2/wx/stattext.h \
@@ -4723,6 +4727,7 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
   /opt/homebrew/include/wx-3.2/wx/generic/msgdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/panelg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/scrolwin.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/statusbr.h \
   /opt/homebrew/include/wx-3.2/wx/generic/textdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/geometry.h \
@@ -4843,6 +4848,7 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
   /opt/homebrew/include/wx-3.2/wx/sharedptr.h \
   /opt/homebrew/include/wx-3.2/wx/sizer.h \
   /opt/homebrew/include/wx-3.2/wx/slider.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/statbmp.h \
   /opt/homebrew/include/wx-3.2/wx/statbox.h \
   /opt/homebrew/include/wx-3.2/wx/stattext.h \
@@ -6009,6 +6015,7 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
   /opt/homebrew/include/wx-3.2/wx/generic/msgdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/panelg.h \
   /opt/homebrew/include/wx-3.2/wx/generic/scrolwin.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/statusbr.h \
   /opt/homebrew/include/wx-3.2/wx/generic/textdlgg.h \
   /opt/homebrew/include/wx-3.2/wx/geometry.h \
@@ -6129,6 +6136,7 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
   /opt/homebrew/include/wx-3.2/wx/sharedptr.h \
   /opt/homebrew/include/wx-3.2/wx/sizer.h \
   /opt/homebrew/include/wx-3.2/wx/slider.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/statbmp.h \
   /opt/homebrew/include/wx-3.2/wx/statbox.h \
   /opt/homebrew/include/wx-3.2/wx/stattext.h \
@@ -6224,6 +6232,8 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
 /opt/homebrew/include/wx-3.2/wx/statbox.h:
 
 /opt/homebrew/include/wx-3.2/wx/statbmp.h:
+
+/opt/homebrew/include/wx-3.2/wx/splitter.h:
 
 /opt/homebrew/include/wx-3.2/wx/slider.h:
 
@@ -7680,6 +7690,8 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__concepts/swappable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__concepts/semiregular.h:
+
+/opt/homebrew/include/wx-3.2/wx/generic/splitter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/libkern/_OSByteOrder.h:
 
