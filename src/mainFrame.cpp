@@ -26,6 +26,8 @@ void Application::MainFrame::gen_top_bar() {
   this->img_for_profbtn = new wxBitmap("../assets/profile.png", wxBITMAP_TYPE_PNG);
   this->btn_profile = new wxBitmapButton(this, wxID_ANY, *this->img_for_profbtn, wxPoint(5, 7), wxSize(20, 20), wxBORDER_NONE);
   this->btn_profile->Bind(wxEVT_BUTTON, &MainFrame::show_burger_menu, this);
+  this->burger_menu = new wxMenu;
+  // this->burger_menu->Append("")
 
   this->username_l = new wxStaticText(this, wxID_ANY, this->username, wxPoint(350, 5), wxSize(100, 20), wxTE_CENTRE);
   this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));

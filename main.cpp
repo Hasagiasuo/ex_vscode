@@ -5,7 +5,7 @@
 #include "signupWin.h"
 
 #include <fstream>
-#include <strstream>
+#include <sstream>
 
 namespace Application {
   class MApplication : public wxApp {

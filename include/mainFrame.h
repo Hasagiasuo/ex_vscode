@@ -17,6 +17,7 @@ namespace Application {
     wxPanel* top_menu_bar;
     wxBitmap* img_for_profbtn;
     wxBitmapButton* btn_profile;
+    wxMenu* burger_menu;
     wxButton* btn_close;
     // Main
     wxPanel* main_menu;
