@@ -1283,5 +1283,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/fstream \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/strstream

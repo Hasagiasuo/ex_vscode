@@ -1283,4 +1283,6 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
   /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/fstream \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h
+  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h

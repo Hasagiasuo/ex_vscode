@@ -1128,6 +1128,8 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
   /opt/homebrew/include/wx-3.2/wx/display.h \
   /opt/homebrew/include/wx-3.2/wx/vidmode.h \

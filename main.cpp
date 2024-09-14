@@ -19,6 +19,7 @@ namespace Application {
     wxInitAllImageHandlers();
     read_user_data();
     DBControll* db_controller = new DBControll("dbname=trpz_db user=trpz password=ex1234");
+    db_controller->create_user_table();
     if(this->user_data.empty()) {
       LoginWindow* login_window = new LoginWindow(db_controller);
       login_window->Show();

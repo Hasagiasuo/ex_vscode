@@ -16,8 +16,15 @@ Application::MainFrame::MainFrame(DBControll* db_controll, std::string name) : w
 }
 
 void Application::MainFrame::gen_widgets() {
+  this->main_window = new wxWindow(this, wxID_ANY, wxPoint(0, 0), wxSize());
   this->gen_top_bar();
   this->gen_main_menu();
+}
+
+void Application::MainFrame::gen_user_menu() {
+  // this->user_menu = new wxSplitterWindow(this, wxID_ANY, wxPoint(0, 0), wxSize(100, 800), wxBORDER | wxSP_LIVE_UPDATE);
+  // this->user_menu->SetMinimumPaneSize(0);
+  // this->user_menu->SplitVertically();
 }
 
 void Application::MainFrame::gen_top_bar() {
