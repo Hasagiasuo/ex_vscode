@@ -4,7 +4,6 @@
 #include <wx/wx.h>
 #include <wx/bmpbuttn.h>
 #include <wx/splitter.h>
-#include <wx/font.h>
 #include "loginWin.h"
 #include "signupWin.h"
 

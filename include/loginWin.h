@@ -4,7 +4,6 @@
 #include <wx/wx.h>
 #include <wx/display.h>
 #include <fstream>
-#include <wx/font.h>
 #include "dbControll.h"
 #include "mainFrame.h"
 #include "signupWin.h"

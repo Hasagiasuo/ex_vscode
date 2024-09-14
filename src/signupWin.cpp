@@ -23,7 +23,7 @@ void Application::SignWindow::gen_widgets() {
   this->panel = new wxPanel(this, wxID_ANY);
   this->sizer = new wxBoxSizer(wxVERTICAL);
   this->btn_close = new wxButton(this->panel, wxID_CLOSE, "X", wxPoint(475, 5), wxSize(25, 20), wxBORDER_NONE);
-  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &SignWindow::close_window, this);
   this->name_l = new wxStaticText(this->panel, wxID_ANY, "Імʼя користувача", wxPoint(10, 40), wxSize(50, 30), wxTE_CENTRE);
   this->name_l->SetFont(wxFont(20, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
@@ -38,7 +38,7 @@ void Application::SignWindow::gen_widgets() {
   this->password = new wxTextCtrl(this->panel, wxID_ANY, "", wxPoint(180, 140), wxSize(300, 30), wxTE_PASSWORD | wxTE_CENTRE);
   this->password->SetFont(wxFont(18, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_commit = new wxButton(this->panel, wxID_ANY, "Зареєструватися", wxPoint(75, 190), wxSize(350, 40));
-  this->btn_commit->SetFont(wxFont(18, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_MAX, wxFONTWEIGHT_MEDIUM));
+  this->btn_commit->SetFont(wxFont(18, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_MAX, wxFONTWEIGHT_MAX));
   this->btn_commit->Bind(wxEVT_BUTTON, &SignWindow::registr_user, this);
   this->error_message = new wxStaticText(this->panel, wxID_ANY, "", wxPoint(0, 240), wxSize(500, 10), wxTE_CENTRE);
   this->error_message->SetFont(wxFont(14, wxFONTFAMILY_SCRIPT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_LIGHT));

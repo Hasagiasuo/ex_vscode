@@ -28,10 +28,10 @@ void Application::MainFrame::gen_top_bar() {
   this->btn_profile->Bind(wxEVT_BUTTON, &MainFrame::show_burger_menu, this);
 
   this->username_l = new wxStaticText(this, wxID_ANY, this->username, wxPoint(350, 5), wxSize(100, 20), wxTE_CENTRE);
-  this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->btn_close = new wxButton(this, wxID_CLOSE, "X", wxPoint(775, 5), wxSize(25, 20), wxBORDER_NONE);
-  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &MainFrame::close_window, this);
 }
 
