@@ -1285,4 +1285,5 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
   /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h
+  /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/card.h

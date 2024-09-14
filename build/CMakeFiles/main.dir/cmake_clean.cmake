@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/main.cpp.o.d"
+  "CMakeFiles/main.dir/src/card.cpp.o"
+  "CMakeFiles/main.dir/src/card.cpp.o.d"
   "CMakeFiles/main.dir/src/dbControll.cpp.o"
   "CMakeFiles/main.dir/src/dbControll.cpp.o.d"
   "CMakeFiles/main.dir/src/loginWin.cpp.o"

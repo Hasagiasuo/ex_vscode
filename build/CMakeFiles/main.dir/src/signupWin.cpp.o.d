@@ -1285,4 +1285,5 @@ CMakeFiles/main.dir/src/signupWin.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/fstream \
   /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
   /opt/homebrew/include/wx-3.2/wx/splitter.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/card.h

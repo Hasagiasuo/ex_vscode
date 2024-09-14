@@ -66,6 +66,7 @@ void Application::MainFrame::logout_profile(wxCommandEvent&) {
 
 void Application::MainFrame::gen_main_menu() {
   this->main_menu = new wxPanel(this, wxID_ANY, wxPoint(0, 30), wxSize(800, 770), wxBORDER_SUNKEN);
+  // Card* c1 = new Card("../assets/test.jpeg", "Test description", "Price: 100000$", this->main_menu, wxPoint(0, 30), wxSize(400, 200));
 }
 
 void Application::MainFrame::close_window(wxCommandEvent&) {

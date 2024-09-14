@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/card.o: src/card.cpp.o
+.PHONY : src/card.o
+
+# target to build an object file
+src/card.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card.cpp.o
+.PHONY : src/card.cpp.o
+
+src/card.i: src/card.cpp.i
+.PHONY : src/card.i
+
+# target to preprocess a source file
+src/card.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card.cpp.i
+.PHONY : src/card.cpp.i
+
+src/card.s: src/card.cpp.s
+.PHONY : src/card.s
+
+# target to generate assembly for a file
+src/card.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card.cpp.s
+.PHONY : src/card.cpp.s
+
 src/dbControll.o: src/dbControll.cpp.o
 .PHONY : src/dbControll.o
 
@@ -261,6 +285,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/card.o"
+	@echo "... src/card.i"
+	@echo "... src/card.s"
 	@echo "... src/dbControll.o"
 	@echo "... src/dbControll.i"
 	@echo "... src/dbControll.s"

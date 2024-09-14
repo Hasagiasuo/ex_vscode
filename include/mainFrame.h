@@ -8,6 +8,7 @@
 #include <iostream>
 #include "loginWin.h"
 #include "signupWin.h"
+#include "card.h"
 
 namespace Application {
   enum MainFrameID {
