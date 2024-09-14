@@ -51,7 +51,10 @@ void Application::LoginWindow::gen_widgets() {
 void Application::LoginWindow::check_user_in_system(wxCommandEvent&) {
   std::vector<std::string> user_data = this->db_controller->get_user_by_login(std::string(this->email->GetValue()), std::string(this->password->GetValue()));
   if(!user_data.empty()) {
-    MainFrame* mf = new MainFrame(this->db_controller);
+    std::ofstream file("../data/cu");
+    if(file.is_open()) file << user_data[2] << "|" << user_data[0] << "|" << user_data[1] << "|";
+    file.close();
+    MainFrame* mf = new MainFrame(this->db_controller, user_data[2]);
     this->Close();
     mf->Show();
   } else {

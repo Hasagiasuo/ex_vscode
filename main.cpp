@@ -4,19 +4,46 @@
 #include "mainFrame.h"
 #include "signupWin.h"
 
+#include <fstream>
+#include <strstream>
+
 namespace Application {
   class MApplication : public wxApp {
+    std::vector<std::string> user_data;
+    void read_user_data();
   public:
     virtual bool OnInit();
   };
 
   bool MApplication::OnInit() {
     wxInitAllImageHandlers();
+    read_user_data();
     DBControll* db_controller = new DBControll("dbname=trpz_db user=trpz password=ex1234");
-    LoginWindow* login_window = new LoginWindow(db_controller);
-    login_window->Show();
-
+    if(this->user_data.empty()) {
+      LoginWindow* login_window = new LoginWindow(db_controller);
+      login_window->Show();
+    } else {
+      MainFrame* mf = new MainFrame(db_controller, this->user_data[0]);
+      mf->Show();
+    }
     return 1;
+  }
+
+  void MApplication::read_user_data() {
+    std::ifstream file("../data/cu");
+    std::stringstream ss;
+    ss << file.rdbuf();
+    std::string data_from_file = ss.str();
+    std::string tmp;
+    for(char ch : data_from_file) {
+      if(ch == '|') {
+        this->user_data.push_back(tmp);
+        tmp = "";
+      } else {
+        tmp.push_back(ch);
+      }
+    }
+    file.close();
   }
 };
 

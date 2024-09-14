@@ -3,6 +3,7 @@
 
 #include <wx/wx.h>
 #include <wx/display.h>
+#include <fstream>
 #include "dbControll.h"
 #include "mainFrame.h"
 #include "signupWin.h"
