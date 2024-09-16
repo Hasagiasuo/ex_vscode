@@ -25,6 +25,7 @@ Application::CardViewDialog::CardViewDialog(wxWindow* parent, std::string path, 
   this->note->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->btn_close = new wxButton(this, wxID_ANY, "X", wxPoint(470, 5), wxSize(20, 20), wxBORDER_NONE);
+  this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &CardViewDialog::close_callback, this);
   this->Bind(wxEVT_PAINT, &CardViewDialog::draw_image, this);
 }
