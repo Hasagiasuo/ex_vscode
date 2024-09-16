@@ -177,6 +177,30 @@ src/card.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card.cpp.s
 .PHONY : src/card.cpp.s
 
+src/card_view.o: src/card_view.cpp.o
+.PHONY : src/card_view.o
+
+# target to build an object file
+src/card_view.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card_view.cpp.o
+.PHONY : src/card_view.cpp.o
+
+src/card_view.i: src/card_view.cpp.i
+.PHONY : src/card_view.i
+
+# target to preprocess a source file
+src/card_view.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card_view.cpp.i
+.PHONY : src/card_view.cpp.i
+
+src/card_view.s: src/card_view.cpp.s
+.PHONY : src/card_view.s
+
+# target to generate assembly for a file
+src/card_view.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/card_view.cpp.s
+.PHONY : src/card_view.cpp.s
+
 src/dbControll.o: src/dbControll.cpp.o
 .PHONY : src/dbControll.o
 
@@ -288,6 +312,9 @@ help:
 	@echo "... src/card.o"
 	@echo "... src/card.i"
 	@echo "... src/card.s"
+	@echo "... src/card_view.o"
+	@echo "... src/card_view.i"
+	@echo "... src/card_view.s"
 	@echo "... src/dbControll.o"
 	@echo "... src/dbControll.i"
 	@echo "... src/dbControll.s"

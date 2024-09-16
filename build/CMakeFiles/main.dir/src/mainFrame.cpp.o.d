@@ -1286,4 +1286,5 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transactor.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
   /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/card.h
+  /Users/dmitro/data/Code/new/cpp/ex/include/card.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/card_view.h
