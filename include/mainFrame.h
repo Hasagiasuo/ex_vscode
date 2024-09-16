@@ -4,6 +4,7 @@
 #include <wx/wx.h>
 #include <wx/bmpbuttn.h>
 #include <wx/splitter.h>
+#include <wx/scrolwin.h>
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -35,7 +36,8 @@ namespace Application {
     wxBitmapButton* btn_add;
     wxButton* btn_close;
     // Main
-    wxPanel* main_menu;
+    wxScrolledWindow* main_menu;
+    wxFlexGridSizer* sizer_main;
     std::vector<Card*> cards;
     // Callbacks
     void gen_widgets();

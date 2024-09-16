@@ -78,7 +78,13 @@ void Application::MainFrame::logout_profile(wxCommandEvent&) {
 }
 
 void Application::MainFrame::gen_main_menu() {
-  this->main_menu = new wxPanel(this, wxID_ANY, wxPoint(0, 30), wxSize(800, 770), wxBORDER_SUNKEN);
+  this->main_menu = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 30), wxSize(800, 770), wxBORDER_SUNKEN);
+  this->main_menu->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
+  this->sizer_main = new wxFlexGridSizer(0, 2, 0, 0);
+  this->main_menu->SetScrollRate(10, 10);
+  this->main_menu->SetVirtualSize(wxSize(800, 800));
+  this->main_menu->SetSizer(this->sizer_main);
+  this->main_menu->Layout();
 }
 
 void Application::MainFrame::close_window(wxCommandEvent&) {
@@ -103,7 +109,15 @@ void Application::MainFrame::search_some(wxKeyEvent& ev) {
 void Application::MainFrame::add_card(std::string path_to_img, std::string title, std::string description) {
   Card* tmp_card = new Card(path_to_img, title, description, "balalbalabdlbasjfhlasjdflkjsaldfksadfljsaklfsjkdfsj", this->main_menu, wxPoint(this->card_x, this->card_y));
   this->cards.push_back(tmp_card);
-  if(this->card_x == 400) {
+  if(this->cards.size() > 6 && this->cards.size() % 2 == 0) {
+    int x, y;
+    this->main_menu->GetVirtualSize(&x, &y);
+    this->main_menu->SetVirtualSize(x, y + 200);
+  }
+  this->sizer_main->Add(tmp_card);
+  this->main_menu->SetSizer(this->sizer_main);
+  this->main_menu->Layout();
+  if(this->card_x == 380) {
     this->card_y += 210;
     this->card_x = 0;
   } else {
