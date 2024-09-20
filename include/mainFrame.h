@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include "profile_win.h"
 #include "loginWin.h"
 #include "signupWin.h"
 #include "card.h"
@@ -22,6 +23,8 @@ namespace Application {
     // another data
     DBControll* db_controller;
     std::string username;
+    std::string user_email;
+    std::string user_password;
     // BURGER MENU
     wxMenu* burger_menu;
     // Tool bar
@@ -32,27 +35,27 @@ namespace Application {
     wxBitmap* img_for_search;
     wxBitmapButton* btn_search;
     wxTextCtrl* search_entry;
-    wxBitmap* img_add;
-    wxBitmapButton* btn_add;
     wxButton* btn_close;
     // Main
     wxScrolledWindow* main_menu;
     wxFlexGridSizer* sizer_main;
     std::vector<Card*> cards;
     // Callbacks
+    void draw_offers();
     void gen_widgets();
     void gen_top_bar();
     void gen_main_menu();
-    void add_callback(wxCommandEvent&);
     void logout_profile(wxCommandEvent&);
+    void profile_callback(wxCommandEvent&);
     void close_window(wxCommandEvent&);
     void gen_burger(wxCommandEvent&);
     void search_open(wxCommandEvent&);
     void search_some(wxKeyEvent& ev);
-    void add_card(std::string path_to_img, std::string title, std::string description);
+    void add_card(std::string path_to_img, std::string title, std::string description, std::string note);
   public:
-    MainFrame(DBControll* db_controll, std::string name);
+    MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password);
     ~MainFrame();
+    void set_title(std::string new_val);
   };
 }; 
 

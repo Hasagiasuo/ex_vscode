@@ -273,6 +273,30 @@ src/mainFrame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.s
 .PHONY : src/mainFrame.cpp.s
 
+src/profile_win.o: src/profile_win.cpp.o
+.PHONY : src/profile_win.o
+
+# target to build an object file
+src/profile_win.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/profile_win.cpp.o
+.PHONY : src/profile_win.cpp.o
+
+src/profile_win.i: src/profile_win.cpp.i
+.PHONY : src/profile_win.i
+
+# target to preprocess a source file
+src/profile_win.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/profile_win.cpp.i
+.PHONY : src/profile_win.cpp.i
+
+src/profile_win.s: src/profile_win.cpp.s
+.PHONY : src/profile_win.s
+
+# target to generate assembly for a file
+src/profile_win.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/profile_win.cpp.s
+.PHONY : src/profile_win.cpp.s
+
 src/signupWin.o: src/signupWin.cpp.o
 .PHONY : src/signupWin.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... src/mainFrame.o"
 	@echo "... src/mainFrame.i"
 	@echo "... src/mainFrame.s"
+	@echo "... src/profile_win.o"
+	@echo "... src/profile_win.i"
+	@echo "... src/profile_win.s"
 	@echo "... src/signupWin.o"
 	@echo "... src/signupWin.i"
 	@echo "... src/signupWin.s"

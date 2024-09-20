@@ -3,29 +3,33 @@
 Application::MainFrame::~MainFrame() {
   try {
     for(Card* card : this->cards) if(card) delete card;
-    if(this->img_for_search) delete this->img_for_search;
-    if(this->img_add) delete this->img_add;
-    if(this->btn_add) delete this->btn_add;
-    if(this->search_entry) delete this->search_entry;
-    if(this->btn_search) delete this->btn_search;
-    if(this->username_l) delete this->username_l;
-    if(this->img_for_profbtn) delete this->img_for_profbtn;
-    if(this->btn_profile) delete this->btn_profile;
-    if(this->btn_close) delete this->btn_close;
-    if(this->top_menu_bar) delete this->top_menu_bar;
-    if(this->main_menu) delete this->main_menu;
-    if(this->burger_menu) delete this->burger_menu;
+    delete this->img_for_search;
+    delete this->search_entry;
+    delete this->btn_search;
+    delete this->username_l;
+    delete this->img_for_profbtn;
+    delete this->btn_profile;
+    delete this->btn_close;
+    delete this->top_menu_bar;
+    delete this->main_menu;
   } catch (const std::exception& er) {
     std::cout << "Delete MainFrame error" << std::endl;
   }
 }
 
-Application::MainFrame::MainFrame(DBControll* db_controll, std::string name) : wxFrame(nullptr, wxID_ANY, "Index", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 400), wxSize(800, 800), wxBORDER_NONE) {
+Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password) : wxFrame(nullptr, wxID_ANY, "Index", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 400), wxSize(800, 800), wxBORDER_NONE) {
   this->db_controller = db_controll; 
   this->card_x = 0;
   this->card_y = 0;
   this->username = name;
+  this->user_email = email;
+  this->user_password = password;
   this->gen_widgets();
+}
+
+void Application::MainFrame::draw_offers() {
+  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers();
+  for(std::vector<std::string> row : offers) this->add_card(row[0], row[1], row[2], row[3]);
 }
 
 void Application::MainFrame::gen_widgets() {
@@ -48,11 +52,7 @@ void Application::MainFrame::gen_top_bar() {
   this->search_entry->Hide();
   this->btn_search->Bind(wxEVT_BUTTON, &MainFrame::search_open, this);
 
-  this->img_add = new wxBitmap("../assets/add.png", wxBITMAP_TYPE_PNG);
-  this->btn_add = new wxBitmapButton(this->top_menu_bar, wxID_ANY, *this->img_add, wxPoint(230, 7), wxSize(20, 20), wxBORDER_NONE);
-  this->btn_add->Bind(wxEVT_BUTTON, &MainFrame::add_callback, this);
-
-  this->username_l = new wxStaticText(this->top_menu_bar, wxID_ANY, this->username, wxPoint(350, 5), wxSize(100, 20), wxTE_CENTRE);
+  this->username_l = new wxStaticText(this->top_menu_bar, wxID_ANY, "MTP|" + this->username, wxPoint(350, 5), wxSize(100, 20), wxTE_CENTRE);
   this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->btn_close = new wxButton(this->top_menu_bar, wxID_CLOSE, "X", wxPoint(770, 5), wxSize(25, 20), wxBORDER_NONE);
@@ -64,8 +64,15 @@ void Application::MainFrame::gen_burger(wxCommandEvent&) {
   this->burger_menu = new wxMenu;
   this->burger_menu->Append(MainFrameID::idPROFILE, "Профіль");
   this->burger_menu->Append(MainFrameID::idLOGOUT, "Вийти");
+  Bind(wxEVT_MENU, &MainFrame::profile_callback, this, idPROFILE);
   Bind(wxEVT_MENU, &MainFrame::logout_profile, this, idLOGOUT);
   this->PopupMenu(this->burger_menu, wxPoint(0, 30));
+}
+
+void Application::MainFrame::profile_callback(wxCommandEvent&) {
+  ProfileWindow* pw = new ProfileWindow(this->db_controller, this->username, this->user_email, this->user_password);
+  pw->Show();
+  this->Close();
 }
 
 void Application::MainFrame::logout_profile(wxCommandEvent&) {
@@ -85,11 +92,11 @@ void Application::MainFrame::gen_main_menu() {
   this->main_menu->SetVirtualSize(wxSize(800, 800));
   this->main_menu->SetSizer(this->sizer_main);
   this->main_menu->Layout();
+  this->draw_offers();
 }
 
 void Application::MainFrame::close_window(wxCommandEvent&) {
   this->Close();
-  this->~MainFrame();
 }
 
 void Application::MainFrame::search_open(wxCommandEvent&) {
@@ -106,8 +113,8 @@ void Application::MainFrame::search_some(wxKeyEvent& ev) {
   ev.Skip();
 }
 
-void Application::MainFrame::add_card(std::string path_to_img, std::string title, std::string description) {
-  Card* tmp_card = new Card(path_to_img, title, description, "balalbalabdlbasjfhlasjdflkjsaldfksadfljsaklfsjkdfsj", this->main_menu, wxPoint(this->card_x, this->card_y));
+void Application::MainFrame::add_card(std::string path_to_img, std::string title, std::string description, std::string note) {
+  Card* tmp_card = new Card(path_to_img, title, description, note, this->main_menu, wxPoint(this->card_x, this->card_y));
   this->cards.push_back(tmp_card);
   if(this->cards.size() > 6 && this->cards.size() % 2 == 0) {
     int x, y;
@@ -125,6 +132,6 @@ void Application::MainFrame::add_card(std::string path_to_img, std::string title
   }
 }
 
-void Application::MainFrame::add_callback(wxCommandEvent&) {
-  this->add_card("../assets/test1.png", "Title2", "About u....");
+void Application::MainFrame::set_title(std::string new_val) {
+  this->username_l->SetLabel(new_val);
 }

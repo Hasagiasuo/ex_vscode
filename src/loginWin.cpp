@@ -54,7 +54,7 @@ void Application::LoginWindow::check_user_in_system(wxCommandEvent&) {
     std::ofstream file("../data/cu");
     if(file.is_open()) file << user_data[2] << "|" << user_data[0] << "|" << user_data[1] << "|";
     file.close();
-    MainFrame* mf = new MainFrame(this->db_controller, user_data[2]);
+    MainFrame* mf = new MainFrame(this->db_controller, user_data[2], user_data[0], user_data[1]);
     this->Close();
     mf->Show();
   } else {

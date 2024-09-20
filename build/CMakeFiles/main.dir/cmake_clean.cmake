@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/loginWin.cpp.o.d"
   "CMakeFiles/main.dir/src/mainFrame.cpp.o"
   "CMakeFiles/main.dir/src/mainFrame.cpp.o.d"
+  "CMakeFiles/main.dir/src/profile_win.cpp.o"
+  "CMakeFiles/main.dir/src/profile_win.cpp.o.d"
   "CMakeFiles/main.dir/src/signupWin.cpp.o"
   "CMakeFiles/main.dir/src/signupWin.cpp.o.d"
   "main"

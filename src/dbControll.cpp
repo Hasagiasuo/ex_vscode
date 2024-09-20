@@ -69,16 +69,82 @@ std::vector<std::string> DBControll::get_user_by_login(std::string email, std::s
   try {
     this->curs = new pqxx::work(*this->con);
     pqxx::result search_value = this->curs->exec("SELECT * FROM users WHERE email='" + email +"';");
+    this->curs->commit();
     // 0 0 - get? | 0 1 - email | 0 2 - password | 0 3 - name
     std::vector<std::string> user_data;
     user_data.push_back(std::string(search_value.at(0).at(1).c_str())); // email
     user_data.push_back(std::string(search_value.at(0).at(2).c_str())); // password
     user_data.push_back(std::string(search_value.at(0).at(3).c_str())); // name
     if(std::string(search_value.at(0).at(2).c_str()) == password) return user_data;
-    this->curs->commit();
   } catch (const std::exception& ex) {
     std::cout << "ERROR: " << ex.what() << std::endl;
     this->curs->commit();
   }
   return std::vector<std::string>();
+}
+
+void DBControll::set_value_users(std::string target, std::string n_value, std::string clue_name, std::string clue) {
+  try {
+    this->curs = new pqxx::work(*this->con);
+    this->curs->exec("UPDATE users SET " + target + " = '" + n_value + "' WHERE " + clue_name + " = '" + clue + "';");
+    this->curs->commit();
+  } catch (const std::exception& er) {
+    std::cout << "ERROR: " << er.what() << std::endl;
+    this->curs->commit();
+  }
+}
+
+void DBControll::push_offer(std::string owner, std::string path_img, std::string offer_title, std::string offer_desc, std::string offer_note) {
+  try {
+    this->curs = new pqxx::work(*this->con);
+    pqxx::result user_id = this->curs->exec("SELECT id FROM users WHERE name = '" + owner +"');");
+    this->curs->exec("INSERT INTO offers (user_id, img_path, title, description, note) VALUES (" + std::string(user_id.at(0).at(0).c_str()) + ", '" + path_img + "', '" + offer_title + "', '" + offer_desc + "', '" + offer_note + "');");
+    this->curs->commit();
+  } catch (const std::exception& er) {
+    std::cout << "ERROR: " << er.what() << std::endl;
+    this->curs->commit();
+  }
+}
+
+std::vector<std::vector<std::string>> DBControll::get_offers(std::string owner) {
+  try {
+    std::vector<std::vector<std::string>> res;
+    this->curs = new pqxx::work(*this->con);
+    pqxx::result user_id = this->curs->exec("SELECT id FROM users WHERE name = '" + owner +"';");
+    pqxx::result offers = this->curs->exec("SELECT img_path, title, description, note FROM offers WHERE user_id = " + std::string(user_id.at(0).at(0).c_str()) + ";");
+    for(auto col : offers) {
+      std::vector<std::string> tmp;
+      for(auto row : col) {
+        tmp.push_back(std::string(row.c_str()));
+      }
+      res.push_back(tmp);
+    }
+    this->curs->commit();
+    return res;
+  } catch (const std::exception& er) {
+    std::cout << "ERROR: " << er.what() << std::endl;
+    this->curs->commit();
+    return std::vector<std::vector<std::string>>();
+  }
+}
+
+std::vector<std::vector<std::string>> DBControll::get_all_offers() {
+  try {
+    std::vector<std::vector<std::string>> res;
+    this->curs = new pqxx::work(*this->con);
+    pqxx::result offers = this->curs->exec("SELECT img_path, title, description, note FROM offers;");
+    for(auto col : offers) {
+      std::vector<std::string> tmp;
+      for(auto row : col) {
+        tmp.push_back(std::string(row.c_str()));
+      }
+      res.push_back(tmp);
+    }
+    this->curs->commit();
+    return res;
+  } catch (const std::exception& er) {
+    std::cout << "ERROR: " << er.what() << std::endl;
+    this->curs->commit();
+    return std::vector<std::vector<std::string>>();
+  }
 }

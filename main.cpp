@@ -23,7 +23,7 @@ namespace Application {
       LoginWindow* login_window = new LoginWindow(db_controller);
       login_window->Show();
     } else {
-      MainFrame* mf = new MainFrame(db_controller, this->user_data[0]);
+      MainFrame* mf = new MainFrame(db_controller, this->user_data[0], this->user_data[1], this->user_data[2]);
       mf->Show();
     }
     return 1;
