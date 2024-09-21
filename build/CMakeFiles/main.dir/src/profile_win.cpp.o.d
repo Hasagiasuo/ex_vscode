@@ -1368,4 +1368,21 @@ CMakeFiles/main.dir/src/profile_win.cpp.o: \
   /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/card.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/card_view.h
+  /Users/dmitro/data/Code/new/cpp/ex/include/card_view.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/add_offer_win.h \
+  /opt/homebrew/include/wx-3.2/wx/filepicker.h \
+  /opt/homebrew/include/wx-3.2/wx/pickerbase.h \
+  /opt/homebrew/include/wx-3.2/wx/filename.h \
+  /opt/homebrew/include/wx-3.2/wx/file.h \
+  /opt/homebrew/include/wx-3.2/wx/convauto.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/filepickerg.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextctrl.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextbuffer.h \
+  /opt/homebrew/include/wx-3.2/wx/cmdproc.h \
+  /opt/homebrew/include/wx-3.2/wx/txtstrm.h \
+  /opt/homebrew/include/wx-3.2/wx/position.h \
+  /opt/homebrew/include/wx-3.2/wx/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/overlay.h \
+  /opt/homebrew/include/wx-3.2/wx/dnd.h \
+  /opt/homebrew/include/wx-3.2/wx/osx/dnd.h

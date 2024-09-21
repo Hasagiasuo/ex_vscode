@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/add_offer_win.o: src/add_offer_win.cpp.o
+.PHONY : src/add_offer_win.o
+
+# target to build an object file
+src/add_offer_win.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add_offer_win.cpp.o
+.PHONY : src/add_offer_win.cpp.o
+
+src/add_offer_win.i: src/add_offer_win.cpp.i
+.PHONY : src/add_offer_win.i
+
+# target to preprocess a source file
+src/add_offer_win.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add_offer_win.cpp.i
+.PHONY : src/add_offer_win.cpp.i
+
+src/add_offer_win.s: src/add_offer_win.cpp.s
+.PHONY : src/add_offer_win.s
+
+# target to generate assembly for a file
+src/add_offer_win.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/add_offer_win.cpp.s
+.PHONY : src/add_offer_win.cpp.s
+
 src/card.o: src/card.cpp.o
 .PHONY : src/card.o
 
@@ -333,6 +357,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/add_offer_win.o"
+	@echo "... src/add_offer_win.i"
+	@echo "... src/add_offer_win.s"
 	@echo "... src/card.o"
 	@echo "... src/card.i"
 	@echo "... src/card.s"

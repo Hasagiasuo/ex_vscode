@@ -5,6 +5,7 @@
 #include <wx/display.h>
 #include "dbControll.h"
 #include "mainFrame.h"
+#include "add_offer_win.h"
 
 #define CENTER_DISPLAY_X wxDisplay().GetGeometry().GetSize().x / 2
 #define CENTER_DISPLAY_Y wxDisplay().GetGeometry().GetSize().y / 2

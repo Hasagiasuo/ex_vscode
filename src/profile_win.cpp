@@ -47,7 +47,7 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->btn_pedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(95 + (this->password.length() * 10) - 5, 60), wxSize(15, 15), wxBORDER_NONE);
   this->btn_pedit->Bind(wxEVT_BUTTON, &ProfileWindow::pedit_callback, this);
 
-  this->btn_add = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(20, 100), wxSize(100, 20));
+  this->btn_add = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(20, 100), wxSize(200, 20));
   this->btn_add->Bind(wxEVT_BUTTON, &ProfileWindow::add_callback, this);
 
   this->user_cards = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 200), wxSize(800, 770), wxBORDER_SUNKEN);
@@ -216,5 +216,11 @@ void Application::ProfileWindow::draw_cards() {
 }
 
 void Application::ProfileWindow::add_callback(wxCommandEvent&) {
-  
+  try {
+    OfferWinAdd* ow = new OfferWinAdd(this->db_controller, this->name, this->email, this->password);
+    ow->Show();
+    this->Close();
+  } catch (const std::exception& ex) {
+    std::cout << ex.what() << std::endl;
+  }
 }

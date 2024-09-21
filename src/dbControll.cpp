@@ -97,7 +97,7 @@ void DBControll::set_value_users(std::string target, std::string n_value, std::s
 void DBControll::push_offer(std::string owner, std::string path_img, std::string offer_title, std::string offer_desc, std::string offer_note) {
   try {
     this->curs = new pqxx::work(*this->con);
-    pqxx::result user_id = this->curs->exec("SELECT id FROM users WHERE name = '" + owner +"');");
+    pqxx::result user_id = this->curs->exec("SELECT id FROM users WHERE name = '" + owner +"';");
     this->curs->exec("INSERT INTO offers (user_id, img_path, title, description, note) VALUES (" + std::string(user_id.at(0).at(0).c_str()) + ", '" + path_img + "', '" + offer_title + "', '" + offer_desc + "', '" + offer_note + "');");
     this->curs->commit();
   } catch (const std::exception& er) {

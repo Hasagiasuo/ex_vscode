@@ -1,6 +1,6 @@
-CMakeFiles/main.dir/src/mainFrame.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+CMakeFiles/main.dir/src/add_offer_win.cpp.o: \
+  /Users/dmitro/data/Code/new/cpp/ex/src/add_offer_win.cpp \
+  /Users/dmitro/data/Code/new/cpp/ex/include/add_offer_win.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1210,31 +1210,24 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /opt/homebrew/include/wx-3.2/wx/splitter.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/profile_win.h \
   /opt/homebrew/include/wx-3.2/wx/display.h \
   /opt/homebrew/include/wx-3.2/wx/vidmode.h \
+  /opt/homebrew/include/wx-3.2/wx/filepicker.h \
+  /opt/homebrew/include/wx-3.2/wx/pickerbase.h \
+  /opt/homebrew/include/wx-3.2/wx/filename.h \
+  /opt/homebrew/include/wx-3.2/wx/file.h \
+  /opt/homebrew/include/wx-3.2/wx/convauto.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/filepickerg.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextctrl.h \
+  /opt/homebrew/include/wx-3.2/wx/richtext/richtextbuffer.h \
+  /opt/homebrew/include/wx-3.2/wx/cmdproc.h \
+  /opt/homebrew/include/wx-3.2/wx/txtstrm.h \
+  /opt/homebrew/include/wx-3.2/wx/position.h \
+  /opt/homebrew/include/wx-3.2/wx/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/caret.h \
+  /opt/homebrew/include/wx-3.2/wx/overlay.h \
+  /opt/homebrew/include/wx-3.2/wx/dnd.h \
+  /opt/homebrew/include/wx-3.2/wx/osx/dnd.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \
@@ -1315,10 +1308,29 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/binarystring.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/result.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/encodings.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/encoding_group.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/separated_list.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/array-composite.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/blob.hxx \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/dbtransaction.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transaction_base.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/stream_query.hxx \
@@ -1365,23 +1377,11 @@ CMakeFiles/main.dir/src/mainFrame.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transactor.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
-  /Users/dmitro/data/Code/new/cpp/ex/include/add_offer_win.h \
-  /opt/homebrew/include/wx-3.2/wx/filepicker.h \
-  /opt/homebrew/include/wx-3.2/wx/pickerbase.h \
-  /opt/homebrew/include/wx-3.2/wx/filename.h \
-  /opt/homebrew/include/wx-3.2/wx/file.h \
-  /opt/homebrew/include/wx-3.2/wx/convauto.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/filepickerg.h \
-  /opt/homebrew/include/wx-3.2/wx/richtext/richtextctrl.h \
-  /opt/homebrew/include/wx-3.2/wx/richtext/richtextbuffer.h \
-  /opt/homebrew/include/wx-3.2/wx/cmdproc.h \
-  /opt/homebrew/include/wx-3.2/wx/txtstrm.h \
-  /opt/homebrew/include/wx-3.2/wx/position.h \
-  /opt/homebrew/include/wx-3.2/wx/caret.h \
-  /opt/homebrew/include/wx-3.2/wx/generic/caret.h \
-  /opt/homebrew/include/wx-3.2/wx/overlay.h \
-  /opt/homebrew/include/wx-3.2/wx/dnd.h \
-  /opt/homebrew/include/wx-3.2/wx/osx/dnd.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/profile_win.h \
+  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+  /opt/homebrew/include/wx-3.2/wx/splitter.h \
+  /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
   /Users/dmitro/data/Code/new/cpp/ex/include/card.h \
