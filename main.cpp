@@ -20,9 +20,8 @@ namespace Application {
   bool MApplication::OnInit() {
     wxInitAllImageHandlers();
     read_user_data();
+
     DBControll* db_controller = new DBControll("host=localhost dbname=trpz_db user=trpz password=ex1234");
-    // OfferWinAdd* ow = new OfferWinAdd(db_controller, this->user_data[0], this->user_data[1], this->user_data[2]);
-    // ow->Show();
     if(this->user_data.empty()) {
       LoginWindow* login_window = new LoginWindow(db_controller);
       login_window->Show();

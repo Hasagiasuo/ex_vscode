@@ -1,19 +1,5 @@
 #include "signupWin.h"
 
-Application::SignWindow::~SignWindow() {
-  delete this->name;
-  delete this->name_l;
-  delete this->email;
-  delete this->password;  
-  delete this->email_l;
-  delete this->password_l;
-  delete this->btn_commit;
-  delete this->error_message;
-  delete this->btn_close;
-  delete this->panel;
-  delete this->sizer;
-}
-
 Application::SignWindow::SignWindow(DBControll* db_controll) : wxFrame(nullptr, wxID_ANY, "Реєстрація", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 250, wxDisplay().GetGeometry().GetSize().y / 2 - 170), wxSize(500, 270), wxBORDER_NONE) {
   this->db_controller = db_controll;
   this->gen_widgets();

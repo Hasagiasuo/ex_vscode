@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/dmitro/data/Code/new/cpp/ex/build"
+			"value" : "/Users/dmitro/data/code/new/cpp/ex/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -495,7 +495,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -1147,7 +1147,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitro/data/Code/new/cpp/ex/build"
+			"value" : "/Users/dmitro/data/code/new/cpp/ex/build"
 		},
 		{
 			"name" : "Examen_IS_TOP_LEVEL",
@@ -1171,7 +1171,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitro/data/Code/new/cpp/ex"
+			"value" : "/Users/dmitro/data/code/new/cpp/ex"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig",

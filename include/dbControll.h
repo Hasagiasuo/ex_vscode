@@ -18,9 +18,12 @@ public:
   void push_offer(std::string owner, std::string path_img, std::string offer_title, std::string offer_desc, std::string offer_note);
   void set_value_users(std::string target, std::string n_value, std::string clue_name, std::string clue);
   void push_user(std::string email, std::string password, std::string name);
+  void delete_offer_by_description(std::string description, std::string owner_id);
   void create_user_table();
   std::vector<std::string> get_user_by_login(std::string email, std::string password);
   void show_table(std::string table_name);
+  std::string get_id_by_description(std::string description);
+  std::string get_id_by_name(std::string name);
 };
 
 #endif

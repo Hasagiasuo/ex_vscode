@@ -20,7 +20,6 @@ namespace Application {
     void close_callback(wxCommandEvent&);
   public:
     CardViewDialog(wxWindow* parent, std::string path, std::string title, std::string description, std::string note);
-    ~CardViewDialog();
   }; 
 }
 

@@ -54,6 +54,8 @@ namespace Application {
     wxButton* btn_add;
     void add_callback(wxCommandEvent&);
 
+    void delete_callback(wxMouseEvent&);
+
     wxScrolledWindow* user_cards;
     wxFlexGridSizer* cards_sizer;
 
@@ -64,7 +66,6 @@ namespace Application {
     void update_cu();
   public:
     ProfileWindow(DBControll* db_controller, std::string name, std::string email, std::string password);
-    ~ProfileWindow();
   };
 }
 

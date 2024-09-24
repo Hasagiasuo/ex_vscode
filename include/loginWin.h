@@ -29,7 +29,6 @@ namespace Application {
   public:
     LoginWindow() = delete;
     LoginWindow(DBControll* db_controll);
-    ~LoginWindow();
   };
 }
 

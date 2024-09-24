@@ -26,7 +26,6 @@ namespace Application {
     void registr_user(wxCommandEvent&);
   public:
     SignWindow(DBControll* db_controll);
-    ~SignWindow();
   };
 }
 

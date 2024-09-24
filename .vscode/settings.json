@@ -62,6 +62,10 @@
     "variant": "cpp",
     "vector": "cpp",
     "algorithm": "cpp",
-    "strstream": "cpp"
+    "strstream": "cpp",
+    "memory": "cpp",
+    "forward_list": "cpp",
+    "print": "cpp",
+    "hash_map": "cpp"
   }
 }

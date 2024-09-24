@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.30.3/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dmitro/data/Code/new/cpp/ex
+CMAKE_SOURCE_DIR = /Users/dmitro/data/code/new/cpp/ex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dmitro/data/Code/new/cpp/ex/build
+CMAKE_BINARY_DIR = /Users/dmitro/data/code/new/cpp/ex/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -70,130 +70,130 @@ include CMakeFiles/main.dir/progress.make
 include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/main.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/main.cpp
+CMakeFiles/main.dir/main.cpp.o: /Users/dmitro/data/code/new/cpp/ex/main.cpp
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.o -MF CMakeFiles/main.dir/main.cpp.o.d -o CMakeFiles/main.dir/main.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.o -MF CMakeFiles/main.dir/main.cpp.o.d -o CMakeFiles/main.dir/main.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 CMakeFiles/main.dir/src/add_offer_win.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/add_offer_win.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/add_offer_win.cpp
+CMakeFiles/main.dir/src/add_offer_win.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/add_offer_win.cpp
 CMakeFiles/main.dir/src/add_offer_win.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/add_offer_win.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/add_offer_win.cpp.o -MF CMakeFiles/main.dir/src/add_offer_win.cpp.o.d -o CMakeFiles/main.dir/src/add_offer_win.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/add_offer_win.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/add_offer_win.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/add_offer_win.cpp.o -MF CMakeFiles/main.dir/src/add_offer_win.cpp.o.d -o CMakeFiles/main.dir/src/add_offer_win.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/add_offer_win.cpp
 
 CMakeFiles/main.dir/src/add_offer_win.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/add_offer_win.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/add_offer_win.cpp > CMakeFiles/main.dir/src/add_offer_win.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/add_offer_win.cpp > CMakeFiles/main.dir/src/add_offer_win.cpp.i
 
 CMakeFiles/main.dir/src/add_offer_win.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/add_offer_win.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/add_offer_win.cpp -o CMakeFiles/main.dir/src/add_offer_win.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/add_offer_win.cpp -o CMakeFiles/main.dir/src/add_offer_win.cpp.s
 
 CMakeFiles/main.dir/src/card.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/card.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/card.cpp
+CMakeFiles/main.dir/src/card.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/card.cpp
 CMakeFiles/main.dir/src/card.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/card.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/card.cpp.o -MF CMakeFiles/main.dir/src/card.cpp.o.d -o CMakeFiles/main.dir/src/card.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/card.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/card.cpp.o -MF CMakeFiles/main.dir/src/card.cpp.o.d -o CMakeFiles/main.dir/src/card.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/card.cpp
 
 CMakeFiles/main.dir/src/card.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/card.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/card.cpp > CMakeFiles/main.dir/src/card.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/card.cpp > CMakeFiles/main.dir/src/card.cpp.i
 
 CMakeFiles/main.dir/src/card.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/card.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/card.cpp -o CMakeFiles/main.dir/src/card.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/card.cpp -o CMakeFiles/main.dir/src/card.cpp.s
 
 CMakeFiles/main.dir/src/card_view.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/card_view.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/card_view.cpp
+CMakeFiles/main.dir/src/card_view.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/card_view.cpp
 CMakeFiles/main.dir/src/card_view.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/card_view.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/card_view.cpp.o -MF CMakeFiles/main.dir/src/card_view.cpp.o.d -o CMakeFiles/main.dir/src/card_view.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/card_view.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/card_view.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/card_view.cpp.o -MF CMakeFiles/main.dir/src/card_view.cpp.o.d -o CMakeFiles/main.dir/src/card_view.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/card_view.cpp
 
 CMakeFiles/main.dir/src/card_view.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/card_view.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/card_view.cpp > CMakeFiles/main.dir/src/card_view.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/card_view.cpp > CMakeFiles/main.dir/src/card_view.cpp.i
 
 CMakeFiles/main.dir/src/card_view.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/card_view.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/card_view.cpp -o CMakeFiles/main.dir/src/card_view.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/card_view.cpp -o CMakeFiles/main.dir/src/card_view.cpp.s
 
 CMakeFiles/main.dir/src/dbControll.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/dbControll.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp
+CMakeFiles/main.dir/src/dbControll.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/dbControll.cpp
 CMakeFiles/main.dir/src/dbControll.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/dbControll.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/dbControll.cpp.o -MF CMakeFiles/main.dir/src/dbControll.cpp.o.d -o CMakeFiles/main.dir/src/dbControll.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/dbControll.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/dbControll.cpp.o -MF CMakeFiles/main.dir/src/dbControll.cpp.o.d -o CMakeFiles/main.dir/src/dbControll.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/dbControll.cpp
 
 CMakeFiles/main.dir/src/dbControll.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/dbControll.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp > CMakeFiles/main.dir/src/dbControll.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/dbControll.cpp > CMakeFiles/main.dir/src/dbControll.cpp.i
 
 CMakeFiles/main.dir/src/dbControll.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/dbControll.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp -o CMakeFiles/main.dir/src/dbControll.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/dbControll.cpp -o CMakeFiles/main.dir/src/dbControll.cpp.s
 
 CMakeFiles/main.dir/src/loginWin.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/loginWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp
+CMakeFiles/main.dir/src/loginWin.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/loginWin.cpp
 CMakeFiles/main.dir/src/loginWin.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/loginWin.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/loginWin.cpp.o -MF CMakeFiles/main.dir/src/loginWin.cpp.o.d -o CMakeFiles/main.dir/src/loginWin.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/loginWin.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/loginWin.cpp.o -MF CMakeFiles/main.dir/src/loginWin.cpp.o.d -o CMakeFiles/main.dir/src/loginWin.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/loginWin.cpp
 
 CMakeFiles/main.dir/src/loginWin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/loginWin.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp > CMakeFiles/main.dir/src/loginWin.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/loginWin.cpp > CMakeFiles/main.dir/src/loginWin.cpp.i
 
 CMakeFiles/main.dir/src/loginWin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/loginWin.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/loginWin.cpp -o CMakeFiles/main.dir/src/loginWin.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/loginWin.cpp -o CMakeFiles/main.dir/src/loginWin.cpp.s
 
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
+CMakeFiles/main.dir/src/mainFrame.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/mainFrame.cpp
 CMakeFiles/main.dir/src/mainFrame.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mainFrame.cpp.o -MF CMakeFiles/main.dir/src/mainFrame.cpp.o.d -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/mainFrame.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mainFrame.cpp.o -MF CMakeFiles/main.dir/src/mainFrame.cpp.o.d -o CMakeFiles/main.dir/src/mainFrame.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/mainFrame.cpp
 
 CMakeFiles/main.dir/src/mainFrame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/mainFrame.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp > CMakeFiles/main.dir/src/mainFrame.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/mainFrame.cpp > CMakeFiles/main.dir/src/mainFrame.cpp.i
 
 CMakeFiles/main.dir/src/mainFrame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/mainFrame.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/mainFrame.cpp -o CMakeFiles/main.dir/src/mainFrame.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/mainFrame.cpp -o CMakeFiles/main.dir/src/mainFrame.cpp.s
 
 CMakeFiles/main.dir/src/profile_win.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/profile_win.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/profile_win.cpp
+CMakeFiles/main.dir/src/profile_win.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/profile_win.cpp
 CMakeFiles/main.dir/src/profile_win.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/profile_win.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/profile_win.cpp.o -MF CMakeFiles/main.dir/src/profile_win.cpp.o.d -o CMakeFiles/main.dir/src/profile_win.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/profile_win.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/profile_win.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/profile_win.cpp.o -MF CMakeFiles/main.dir/src/profile_win.cpp.o.d -o CMakeFiles/main.dir/src/profile_win.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/profile_win.cpp
 
 CMakeFiles/main.dir/src/profile_win.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/profile_win.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/profile_win.cpp > CMakeFiles/main.dir/src/profile_win.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/profile_win.cpp > CMakeFiles/main.dir/src/profile_win.cpp.i
 
 CMakeFiles/main.dir/src/profile_win.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/profile_win.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/profile_win.cpp -o CMakeFiles/main.dir/src/profile_win.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/profile_win.cpp -o CMakeFiles/main.dir/src/profile_win.cpp.s
 
 CMakeFiles/main.dir/src/signupWin.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp
+CMakeFiles/main.dir/src/signupWin.cpp.o: /Users/dmitro/data/code/new/cpp/ex/src/signupWin.cpp
 CMakeFiles/main.dir/src/signupWin.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/signupWin.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/signupWin.cpp.o -MF CMakeFiles/main.dir/src/signupWin.cpp.o.d -o CMakeFiles/main.dir/src/signupWin.cpp.o -c /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/src/signupWin.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/signupWin.cpp.o -MF CMakeFiles/main.dir/src/signupWin.cpp.o.d -o CMakeFiles/main.dir/src/signupWin.cpp.o -c /Users/dmitro/data/code/new/cpp/ex/src/signupWin.cpp
 
 CMakeFiles/main.dir/src/signupWin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/signupWin.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp > CMakeFiles/main.dir/src/signupWin.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dmitro/data/code/new/cpp/ex/src/signupWin.cpp > CMakeFiles/main.dir/src/signupWin.cpp.i
 
 CMakeFiles/main.dir/src/signupWin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/signupWin.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/Code/new/cpp/ex/src/signupWin.cpp -o CMakeFiles/main.dir/src/signupWin.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dmitro/data/code/new/cpp/ex/src/signupWin.cpp -o CMakeFiles/main.dir/src/signupWin.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -221,7 +221,7 @@ main: CMakeFiles/main.dir/src/profile_win.cpp.o
 main: CMakeFiles/main.dir/src/signupWin.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -233,6 +233,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /Users/dmitro/data/Code/new/cpp/ex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dmitro/data/Code/new/cpp/ex /Users/dmitro/data/Code/new/cpp/ex /Users/dmitro/data/Code/new/cpp/ex/build /Users/dmitro/data/Code/new/cpp/ex/build /Users/dmitro/data/Code/new/cpp/ex/build/CMakeFiles/main.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/dmitro/data/code/new/cpp/ex/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dmitro/data/code/new/cpp/ex /Users/dmitro/data/code/new/cpp/ex /Users/dmitro/data/code/new/cpp/ex/build /Users/dmitro/data/code/new/cpp/ex/build /Users/dmitro/data/code/new/cpp/ex/build/CMakeFiles/main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/main.dir/depend
 

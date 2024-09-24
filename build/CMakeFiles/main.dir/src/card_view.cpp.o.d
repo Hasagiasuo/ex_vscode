@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/src/card_view.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/card_view.cpp \
-  /Users/dmitro/data/Code/new/cpp/ex/include/card_view.h \
+  /Users/dmitro/data/code/new/cpp/ex/src/card_view.cpp \
+  /Users/dmitro/data/code/new/cpp/ex/include/card_view.h \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \

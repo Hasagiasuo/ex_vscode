@@ -18,8 +18,9 @@ class OfferWinAdd : public wxFrame {
   wxStaticText* under_text;
   wxBitmap* choice_img;
   wxTextCtrl* title;
-  wxTextCtrl* description;
+  wxRichTextCtrl* description;
   wxRichTextCtrl* note;
+  wxStaticText* error_message;
 
   void draw_img(wxPaintEvent& ev);
   void file_picked(wxFileDirPickerEvent&);
@@ -27,7 +28,6 @@ class OfferWinAdd : public wxFrame {
   void close_callback(wxCommandEvent&);
 public:
   OfferWinAdd(DBControll* db_controller, std::string name, std::string email, std::string password);
-  ~OfferWinAdd();
 };
 
 #endif

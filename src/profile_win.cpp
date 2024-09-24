@@ -1,21 +1,5 @@
 #include "profile_win.h"
 
-Application::ProfileWindow::~ProfileWindow() {
-  delete this->btn_close;
-
-  delete this->_name;
-  delete this->name_l;
-  delete this->btn_nedit;
-
-  delete this->_email;
-  delete this->email_l;
-
-  delete this->_password;
-  delete this->password_l;
-
-  delete this->user_cards;
-}
-
 Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string name, std::string email, std::string password)
 : wxFrame(nullptr, wxID_ANY, "", wxPoint(CENTER_DISPLAY_X - 400, CENTER_DISPLAY_Y - 300), wxSize(800, 600), wxBORDER_NONE) {
   this->card_x = 0;
@@ -51,10 +35,9 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->btn_add->Bind(wxEVT_BUTTON, &ProfileWindow::add_callback, this);
 
   this->user_cards = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 200), wxSize(800, 770), wxBORDER_SUNKEN);
-  this->user_cards->SetBackgroundColour(wxColour(54, 53, 51));
   this->user_cards->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
-  this->cards_sizer = new wxFlexGridSizer(0, 2, 0, 0);
-  this->user_cards->SetScrollRate(10, 10);
+  this->cards_sizer = new wxFlexGridSizer(2);
+  this->user_cards->SetScrollRate(1, 1);
   this->user_cards->SetVirtualSize(wxSize(800, 800));
   this->user_cards->SetSizer(this->cards_sizer);
   this->user_cards->Layout();
@@ -63,6 +46,7 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->btn_close = new wxButton(this, wxID_ANY, "X", wxPoint(775, 5), wxSize(20, 20), wxBORDER_NONE);
   this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &ProfileWindow::close_callback, this);
+  this->Bind(wxEVT_RIGHT_DOWN, &ProfileWindow::delete_callback, this);
 }
 
 void Application::ProfileWindow::close_callback(wxCommandEvent&) {
@@ -194,7 +178,6 @@ void Application::ProfileWindow::close_pedit_window(wxCommandEvent&) {
   this->pedit_window->Close();
 }
 
-
 void Application::ProfileWindow::update_cu() {
   std::ofstream file("../data/cu");
   if(file.is_open()) file << this->name << "|" << this->email << "|" << this->password << "|";
@@ -207,7 +190,7 @@ void Application::ProfileWindow::draw_cards() {
       this->card_y += 400;
       this->card_x = 0;
     } else this->card_x += 400;
-    Card* tmp_card = new Card(row[0], row[1], row[2], row[3], this->user_cards, wxPoint(this->card_x, this->card_y));
+    Card* tmp_card = new Card(this->db_controller, row[0], row[1], row[2], row[3], row[4], this->user_cards, wxPoint(this->card_x, this->card_y));
     this->cards_sizer->Add(tmp_card);
   }
   this->user_cards->SetVirtualSize(wxSize(800, this->offers.size() / 2 * 400));
@@ -223,4 +206,13 @@ void Application::ProfileWindow::add_callback(wxCommandEvent&) {
   } catch (const std::exception& ex) {
     std::cout << ex.what() << std::endl;
   }
+}
+
+void Application::ProfileWindow::delete_callback(wxMouseEvent &) {
+  this->offers = this->db_controller->get_offers(this->name);
+  this->cards_sizer->Clear(true);
+  this->draw_cards();
+  this->user_cards->Layout();
+  this->user_cards->Refresh();
+  this->user_cards->Update();
 }

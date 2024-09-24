@@ -20,6 +20,12 @@ namespace Application {
   };
   class MainFrame : public wxFrame {
     int card_x, card_y;
+
+    wxDialog* dialog_s;
+    wxScrolledWindow* scrl_win_dialog;
+    wxFlexGridSizer*  sizer_dialog;
+    void close_dialog_callback(wxCommandEvent&);
+
     // another data
     DBControll* db_controller;
     std::string username;
@@ -51,10 +57,10 @@ namespace Application {
     void gen_burger(wxCommandEvent&);
     void search_open(wxCommandEvent&);
     void search_some(wxKeyEvent& ev);
-    void add_card(std::string path_to_img, std::string title, std::string description, std::string note);
+    void search_callback();
+    void add_card(std::string owner_id, std::string path_to_img, std::string title, std::string description, std::string note);
   public:
     MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password);
-    ~MainFrame();
     void set_title(std::string new_val);
   };
 }; 

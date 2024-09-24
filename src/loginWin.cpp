@@ -1,19 +1,5 @@
 #include "loginWin.h"
 
-Application::LoginWindow::~LoginWindow() {
-  delete this->email;
-  delete this->password;  
-  delete this->email_l;
-  delete this->password_l;
-  delete this->btn_commit;
-  delete this->error_message;
-  delete this->message_for_signup;
-  delete this->btn_signup;
-  delete this->btn_close;
-  delete this->panel;
-  delete this->sizer;
-}
-
 Application::LoginWindow::LoginWindow(DBControll* db_controll) : wxFrame(nullptr, wxID_ANY, "Увійти", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 250, wxDisplay().GetGeometry().GetSize().y / 2 - 145), wxSize(500, 250), wxBORDER_NONE), db_controller(db_controll) {
   this->gen_widgets();
   this->Hide();

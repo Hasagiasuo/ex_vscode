@@ -1,6 +1,6 @@
 CMakeFiles/main.dir/src/dbControll.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/src/dbControll.cpp \
-  /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
+  /Users/dmitro/data/code/new/cpp/ex/src/dbControll.cpp \
+  /Users/dmitro/data/code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/version \

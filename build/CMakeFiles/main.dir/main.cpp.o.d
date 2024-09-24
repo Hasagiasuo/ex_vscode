@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/main.cpp.o: \
-  /Users/dmitro/data/Code/new/cpp/ex/main.cpp \
+  /Users/dmitro/data/code/new/cpp/ex/main.cpp \
   /opt/homebrew/include/wx-3.2/wx/wx.h \
   /opt/homebrew/include/wx-3.2/wx/defs.h \
   /opt/homebrew/include/wx-3.2/wx/platform.h \
@@ -1209,7 +1209,7 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/osx/filedlg.h \
   /opt/homebrew/include/wx-3.2/wx/mdi.h \
   /opt/homebrew/include/wx-3.2/wx/osx/mdi.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/dbControll.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/dbControll.h \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/pqxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-pre.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/config-public-compiler.h \
@@ -1358,15 +1358,15 @@ CMakeFiles/main.dir/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/transactor.hxx \
   /opt/homebrew/Cellar/libpqxx/7.9.2/include/pqxx/internal/header-post.hxx \
-  /Users/dmitro/data/Code/new/cpp/ex/include/loginWin.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/loginWin.h \
   /opt/homebrew/include/wx-3.2/wx/display.h \
   /opt/homebrew/include/wx-3.2/wx/vidmode.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
-  /Users/dmitro/data/Code/new/cpp/ex/include/mainFrame.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/mainFrame.h \
   /opt/homebrew/include/wx-3.2/wx/splitter.h \
   /opt/homebrew/include/wx-3.2/wx/generic/splitter.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/profile_win.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/add_offer_win.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/profile_win.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/add_offer_win.h \
   /opt/homebrew/include/wx-3.2/wx/filepicker.h \
   /opt/homebrew/include/wx-3.2/wx/pickerbase.h \
   /opt/homebrew/include/wx-3.2/wx/filename.h \
@@ -1383,6 +1383,6 @@ CMakeFiles/main.dir/main.cpp.o: \
   /opt/homebrew/include/wx-3.2/wx/overlay.h \
   /opt/homebrew/include/wx-3.2/wx/dnd.h \
   /opt/homebrew/include/wx-3.2/wx/osx/dnd.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/signupWin.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/card.h \
-  /Users/dmitro/data/Code/new/cpp/ex/include/card_view.h
+  /Users/dmitro/data/code/new/cpp/ex/include/signupWin.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/card.h \
+  /Users/dmitro/data/code/new/cpp/ex/include/card_view.h
