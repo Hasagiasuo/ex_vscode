@@ -249,6 +249,54 @@ src/dbControll.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dbControll.cpp.s
 .PHONY : src/dbControll.cpp.s
 
+src/edit_card.o: src/edit_card.cpp.o
+.PHONY : src/edit_card.o
+
+# target to build an object file
+src/edit_card.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/edit_card.cpp.o
+.PHONY : src/edit_card.cpp.o
+
+src/edit_card.i: src/edit_card.cpp.i
+.PHONY : src/edit_card.i
+
+# target to preprocess a source file
+src/edit_card.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/edit_card.cpp.i
+.PHONY : src/edit_card.cpp.i
+
+src/edit_card.s: src/edit_card.cpp.s
+.PHONY : src/edit_card.s
+
+# target to generate assembly for a file
+src/edit_card.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/edit_card.cpp.s
+.PHONY : src/edit_card.cpp.s
+
+src/info.o: src/info.cpp.o
+.PHONY : src/info.o
+
+# target to build an object file
+src/info.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/info.cpp.o
+.PHONY : src/info.cpp.o
+
+src/info.i: src/info.cpp.i
+.PHONY : src/info.i
+
+# target to preprocess a source file
+src/info.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/info.cpp.i
+.PHONY : src/info.cpp.i
+
+src/info.s: src/info.cpp.s
+.PHONY : src/info.s
+
+# target to generate assembly for a file
+src/info.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/info.cpp.s
+.PHONY : src/info.cpp.s
+
 src/loginWin.o: src/loginWin.cpp.o
 .PHONY : src/loginWin.o
 
@@ -296,6 +344,30 @@ src/mainFrame.s: src/mainFrame.cpp.s
 src/mainFrame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mainFrame.cpp.s
 .PHONY : src/mainFrame.cpp.s
+
+src/order.o: src/order.cpp.o
+.PHONY : src/order.o
+
+# target to build an object file
+src/order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/order.cpp.o
+.PHONY : src/order.cpp.o
+
+src/order.i: src/order.cpp.i
+.PHONY : src/order.i
+
+# target to preprocess a source file
+src/order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/order.cpp.i
+.PHONY : src/order.cpp.i
+
+src/order.s: src/order.cpp.s
+.PHONY : src/order.s
+
+# target to generate assembly for a file
+src/order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/order.cpp.s
+.PHONY : src/order.cpp.s
 
 src/profile_win.o: src/profile_win.cpp.o
 .PHONY : src/profile_win.o
@@ -369,12 +441,21 @@ help:
 	@echo "... src/dbControll.o"
 	@echo "... src/dbControll.i"
 	@echo "... src/dbControll.s"
+	@echo "... src/edit_card.o"
+	@echo "... src/edit_card.i"
+	@echo "... src/edit_card.s"
+	@echo "... src/info.o"
+	@echo "... src/info.i"
+	@echo "... src/info.s"
 	@echo "... src/loginWin.o"
 	@echo "... src/loginWin.i"
 	@echo "... src/loginWin.s"
 	@echo "... src/mainFrame.o"
 	@echo "... src/mainFrame.i"
 	@echo "... src/mainFrame.s"
+	@echo "... src/order.o"
+	@echo "... src/order.i"
+	@echo "... src/order.s"
 	@echo "... src/profile_win.o"
 	@echo "... src/profile_win.i"
 	@echo "... src/profile_win.s"

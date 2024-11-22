@@ -7,12 +7,22 @@
 #include "mainFrame.h"
 #include "add_offer_win.h"
 
+#if defined(__APPLE__) || defined(__MACH__)
+  #define M_KEY wxACCEL_CMD
+#else 
+  #define M_KEY wxACCEL_CTRL
+#endif
+
 #define CENTER_DISPLAY_X wxDisplay().GetGeometry().GetSize().x / 2
 #define CENTER_DISPLAY_Y wxDisplay().GetGeometry().GetSize().y / 2
 
 namespace Application {
   class ProfileWindow : public wxFrame {
+    enum {
+      id_REFRESH = 1
+    };
     std::vector<std::vector<std::string>> offers;
+    std::vector<std::vector<std::string>> favorites;
     int card_x, card_y;
     DBControll* db_controller;
     std::string name;
@@ -39,7 +49,6 @@ namespace Application {
     void eedit_callback(wxCommandEvent&);
     void _eedit_callback(wxCommandEvent&);
 
-
     wxStaticText* _password;
     wxStaticText* password_l;
     wxBitmapButton* btn_pedit;
@@ -51,20 +60,28 @@ namespace Application {
     void _pedit_callback(wxCommandEvent&);
     std::string convert_password();
 
-    wxButton* btn_add;
+    wxBitmapButton* btn_add;
     void add_callback(wxCommandEvent&);
 
-    void delete_callback(wxMouseEvent&);
+    void delete_callback(wxCommandEvent&);
+    void refresh_callback(wxMouseEvent&);
 
     wxScrolledWindow* user_cards;
     wxFlexGridSizer* cards_sizer;
 
+    wxScrolledWindow* favorite_cards;
+    wxFlexGridSizer* favorite_sizer;
+
     wxButton* btn_close;
     void close_callback(wxCommandEvent&);
 
+    wxMenuBar* menubar;
+
     void draw_cards();
+    void draw_favorite();
     void update_cu();
-  public:
+    void gen_menu_bar();
+public:
     ProfileWindow(DBControll* db_controller, std::string name, std::string email, std::string password);
   };
 }

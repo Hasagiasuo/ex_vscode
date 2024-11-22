@@ -6,7 +6,7 @@ CXX_DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ 
 
 CXX_INCLUDES = -I/opt/homebrew/Cellar/libpqxx/7.9.2/include -I/Users/dmitro/data/code/new/cpp/ex/include -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2
 
-CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
 
-CXX_FLAGS = -g -std=gnu++17 -arch arm64
+CXX_FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
 

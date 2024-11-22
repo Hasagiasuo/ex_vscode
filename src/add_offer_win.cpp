@@ -74,6 +74,10 @@ void OfferWinAdd::btn_callback(wxCommandEvent&) {
     this->error_message->SetLabel("Детальніше опишіть пропозицію!");
     return;
   }
+  if(!this->db_controller->exists_card(std::string(this->title->GetValue()))) {
+    wxMessageBox("Така пропозиція вже існує!");
+    return;
+  } 
   this->db_controller->push_offer(
     this->name, 
     std::string(this->path_img->GetPath()),

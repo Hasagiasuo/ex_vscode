@@ -10,6 +10,15 @@
 #include <sstream>
 
 namespace Application {
+  std::string encrypt(std::string target) {
+    // std::string result;
+    // for(char ch : target) {
+    //   result.push_back((char)((int)ch - 2));
+    // }
+    // return result;
+    return target;
+  }
+
   class MApplication : public wxApp {
     std::vector<std::string> user_data;
     void read_user_data();
@@ -26,7 +35,7 @@ namespace Application {
       LoginWindow* login_window = new LoginWindow(db_controller);
       login_window->Show();
     } else {
-      MainFrame* mf = new MainFrame(db_controller, this->user_data[0], this->user_data[1], this->user_data[2]);
+      MainFrame* mf = new MainFrame(db_controller, encrypt(this->user_data[0]), encrypt(this->user_data[1]), encrypt(this->user_data[2]));
       mf->Show();
     }
     return 1;

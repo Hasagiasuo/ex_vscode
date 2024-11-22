@@ -12,11 +12,13 @@
 #include "loginWin.h"
 #include "signupWin.h"
 #include "card.h"
+#include "info.h"
 
 namespace Application {
   enum MainFrameID {
     idPROFILE = 1,
-    idLOGOUT = 2
+    idLOGOUT = 2,
+    idINFO = 3
   };
   class MainFrame : public wxFrame {
     int card_x, card_y;
@@ -51,6 +53,7 @@ namespace Application {
     void gen_widgets();
     void gen_top_bar();
     void gen_main_menu();
+    void info_callback(wxCommandEvent&);
     void logout_profile(wxCommandEvent&);
     void profile_callback(wxCommandEvent&);
     void close_window(wxCommandEvent&);

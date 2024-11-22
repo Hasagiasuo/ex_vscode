@@ -14,7 +14,6 @@ Application::Card::Card(DBControll* db_controller, std::string owner_id, std::st
   this->card_description->SetFont(wxFont(11, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->Bind(wxEVT_PAINT, &Card::draw_image, this);
   this->Bind(wxEVT_LEFT_DOWN, &Card::press_callback, this);
-  this->Bind(wxEVT_RIGHT_DOWN, &Card::delete_callback, this);
 }
 
 void Application::Card::draw_image(wxPaintEvent& ev) {
@@ -25,28 +24,7 @@ void Application::Card::draw_image(wxPaintEvent& ev) {
 }
 
 void Application::Card::press_callback(wxMouseEvent& ev) {
-  this->dialog = new CardViewDialog(this, this->path_img, std::string(this->card_title->GetLabel()), std::string(this->card_description->GetLabel()), this->note);
+  this->dialog = new CardViewDialog(this->db_controller, this->owner_id, this, this->path_img, std::string(this->card_title->GetLabel()), std::string(this->card_description->GetLabel()), this->note);
   this->dialog->ShowModal();
   this->dialog->Destroy();
-}
-
-void Application::Card::delete_callback(wxMouseEvent&) {
-  std::ifstream file("../data/cu");
-  std::stringstream ss;
-  ss << file.rdbuf();
-  std::string data_from_file = ss.str();
-  std::string tmp;
-  std::vector<std::string> user_data;
-  for(char ch : data_from_file) {
-    if(ch == '|') {
-      user_data.push_back(tmp);
-      tmp = "";
-    } else {
-      tmp.push_back(ch);
-    }
-  }
-  file.close();
-  std::string uid = this->db_controller->get_id_by_name(user_data[0]);
-  if(this->owner_id == uid) this->db_controller->delete_offer_by_description(std::string(this->card_description->GetLabel()), uid);
-  return;
 }

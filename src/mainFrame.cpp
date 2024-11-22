@@ -1,5 +1,6 @@
 #include "mainFrame.h"
 
+
 Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password) : wxFrame(nullptr, wxID_ANY, "Index", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 400), wxSize(800, 800), wxBORDER_NONE) {
   this->db_controller = db_controll; 
   this->card_x = 0;
@@ -13,7 +14,7 @@ Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std
 }
 
 void Application::MainFrame::draw_offers() {
-  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers();
+  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
   for(std::vector<std::string> row : offers) this->add_card(row[0], row[1], row[2], row[3], row[4]);
 }
 
@@ -48,9 +49,11 @@ void Application::MainFrame::gen_top_bar() {
 void Application::MainFrame::gen_burger(wxCommandEvent&) {
   this->burger_menu = new wxMenu;
   this->burger_menu->Append(MainFrameID::idPROFILE, "Профіль");
+    this->burger_menu->Append(MainFrameID::idINFO, "Інфо");
   this->burger_menu->Append(MainFrameID::idLOGOUT, "Вийти");
   Bind(wxEVT_MENU, &MainFrame::profile_callback, this, idPROFILE);
   Bind(wxEVT_MENU, &MainFrame::logout_profile, this, idLOGOUT);
+  Bind(wxEVT_MENU, &MainFrame::info_callback, this, idINFO);
   this->PopupMenu(this->burger_menu, wxPoint(0, 30));
 }
 
@@ -140,7 +143,7 @@ void Application::MainFrame::search_callback() {
   scrl_win_dialog->Layout();
   int c_x = 0;
   int c_y = 0;
-  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers();
+  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
   this->sizer_dialog->Clear();
   scrl_win_dialog->Layout();
   scrl_win_dialog->SetSizer(this->sizer_dialog);
@@ -172,4 +175,10 @@ void Application::MainFrame::search_callback() {
 void Application::MainFrame::close_dialog_callback(wxCommandEvent&) {
   this->dialog_s->Close();
   this->Show();
+}
+
+void Application::MainFrame::info_callback(wxCommandEvent&) {
+  Info* info = new Info();
+  info->ShowModal();
+  info->Destroy();
 }

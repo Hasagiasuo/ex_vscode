@@ -2,6 +2,11 @@
 
 Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string name, std::string email, std::string password)
 : wxFrame(nullptr, wxID_ANY, "", wxPoint(CENTER_DISPLAY_X - 400, CENTER_DISPLAY_Y - 300), wxSize(800, 600), wxBORDER_NONE) {
+  wxAcceleratorEntry hot_keys[1];
+  hot_keys[0].Set(M_KEY, (int)'R', id_REFRESH);
+  wxAcceleratorTable hot_keys_table(1, hot_keys);
+  this->SetAcceleratorTable(hot_keys_table);
+
   this->card_x = 0;
   this->card_y = 0;
   this->db_controller = db_controller;
@@ -9,6 +14,7 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->email = email;
   this->password = password;
   this->offers = this->db_controller->get_offers(this->name);
+  this->favorites = this->db_controller->get_favorite(this->name);
 
   this->_name = new wxStaticText(this, wxID_ANY, "Імʼя користувача:", wxPoint(20, 20), wxSize(135, 20), wxBORDER_NONE);
   this->_name->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
@@ -31,8 +37,19 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->btn_pedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(95 + (this->password.length() * 10) - 5, 60), wxSize(15, 15), wxBORDER_NONE);
   this->btn_pedit->Bind(wxEVT_BUTTON, &ProfileWindow::pedit_callback, this);
 
-  this->btn_add = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(20, 100), wxSize(200, 20));
+  wxImage img("../assets/add.png", wxBITMAP_TYPE_PNG);
+  wxBitmap add_bitmap(img);
+  this->btn_add = new wxBitmapButton(this, wxID_ANY, add_bitmap, wxPoint(20, 100), wxSize(20, 20), wxBORDER_NONE);
   this->btn_add->Bind(wxEVT_BUTTON, &ProfileWindow::add_callback, this);
+
+  this->favorite_cards = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 200), wxSize(800, 770), wxBORDER_SUNKEN);
+  this->favorite_cards->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
+  this->favorite_sizer = new wxFlexGridSizer(2);
+  this->favorite_cards->SetScrollRate(1, 1);
+  this->favorite_cards->SetVirtualSize(wxSize(800, 800));
+  this->favorite_cards->SetSizer(this->favorite_sizer);
+  this->favorite_cards->Hide();
+  this->draw_favorite();
 
   this->user_cards = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 200), wxSize(800, 770), wxBORDER_SUNKEN);
   this->user_cards->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
@@ -46,7 +63,22 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->btn_close = new wxButton(this, wxID_ANY, "X", wxPoint(775, 5), wxSize(20, 20), wxBORDER_NONE);
   this->btn_close->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->btn_close->Bind(wxEVT_BUTTON, &ProfileWindow::close_callback, this);
-  this->Bind(wxEVT_RIGHT_DOWN, &ProfileWindow::delete_callback, this);
+
+  wxImage img_refresh("../assets/refresh.png", wxBITMAP_TYPE_PNG);
+  img_refresh.Rescale(20, 20);
+  wxBitmap bitmap_refresh(img_refresh);
+  wxBitmapButton* btn_refresh = new wxBitmapButton(this, wxID_ANY, bitmap_refresh, wxPoint(750, 5), wxSize(20, 20), wxBORDER_NONE);
+  btn_refresh->Bind(wxEVT_BUTTON, &ProfileWindow::delete_callback, this);
+  this->Bind(wxEVT_LEFT_DOWN, &ProfileWindow::refresh_callback, this);
+  this->Bind(wxEVT_MENU, &ProfileWindow::delete_callback, this, id_REFRESH);
+}
+
+void Application::ProfileWindow::gen_menu_bar() {
+  this->menubar = new wxMenuBar;
+  wxMenu* window_menu = new wxMenu;
+  window_menu->Append(id_REFRESH, "&Refresh\tCtrl+R", "Refresh the window");
+  this->menubar->Append(window_menu, "Window");
+  SetMenuBar(this->menubar);
 }
 
 void Application::ProfileWindow::close_callback(wxCommandEvent&) {
@@ -208,11 +240,31 @@ void Application::ProfileWindow::add_callback(wxCommandEvent&) {
   }
 }
 
-void Application::ProfileWindow::delete_callback(wxMouseEvent &) {
+void Application::ProfileWindow::delete_callback(wxCommandEvent&) {
   this->offers = this->db_controller->get_offers(this->name);
   this->cards_sizer->Clear(true);
-  this->draw_cards();
   this->user_cards->Layout();
-  this->user_cards->Refresh();
-  this->user_cards->Update();
+  this->draw_cards();
+}
+
+void Application::ProfileWindow::refresh_callback(wxMouseEvent&) {
+  this->offers = this->db_controller->get_offers(this->name);
+  this->cards_sizer->Clear(true);
+  this->user_cards->Layout();
+  this->draw_cards();
+}
+
+void Application::ProfileWindow::draw_favorite() {
+  if(this->favorites.empty()) return;
+  for(std::vector<std::string> row : this->favorites) {
+    if(this->card_x == 400) {
+      this->card_y += 400;
+      this->card_x = 0;
+    } else this->card_x += 400;
+    Card* tmp_card = new Card(this->db_controller, row[0], row[1], row[2], row[3], row[4], this->user_cards, wxPoint(this->card_x, this->card_y));
+    this->cards_sizer->Add(tmp_card);
+  }
+  this->user_cards->SetVirtualSize(wxSize(800, this->offers.size() / 2 * 400));
+  this->user_cards->SetSizer(this->cards_sizer);
+  this->user_cards->Layout();
 }

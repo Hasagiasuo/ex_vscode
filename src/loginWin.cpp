@@ -1,5 +1,23 @@
 #include "loginWin.h"
 
+std::string decrypt(std::string target) {
+  // std::string result;
+  // for(char ch : target) {
+  //   result.push_back((char)((int)ch + 2));
+  // }
+  // return result;
+  return target;
+}
+
+std::string encrypt(std::string target) {
+  // std::string result;
+  // for(char ch : target) {
+  //   result.push_back((char)((int)ch - 2));
+  // }
+  // return result;
+  return target;
+}
+
 Application::LoginWindow::LoginWindow(DBControll* db_controll) : wxFrame(nullptr, wxID_ANY, "Увійти", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 250, wxDisplay().GetGeometry().GetSize().y / 2 - 145), wxSize(500, 250), wxBORDER_NONE), db_controller(db_controll) {
   this->gen_widgets();
   this->Hide();
@@ -38,9 +56,9 @@ void Application::LoginWindow::check_user_in_system(wxCommandEvent&) {
   std::vector<std::string> user_data = this->db_controller->get_user_by_login(std::string(this->email->GetValue()), std::string(this->password->GetValue()));
   if(!user_data.empty()) {
     std::ofstream file("../data/cu");
-    if(file.is_open()) file << user_data[2] << "|" << user_data[0] << "|" << user_data[1] << "|";
+    if(file.is_open()) file << decrypt(user_data[2]) << "|" << decrypt(user_data[0]) << "|" << decrypt(user_data[1]) << "|";
     file.close();
-    MainFrame* mf = new MainFrame(this->db_controller, user_data[2], user_data[0], user_data[1]);
+    MainFrame* mf = new MainFrame(this->db_controller, (user_data[2]), (user_data[0]), (user_data[1]));
     this->Close();
     mf->Show();
   } else {
