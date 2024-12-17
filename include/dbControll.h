@@ -7,6 +7,8 @@
 #include <vector>
 #include <sstream>
 
+#include "ads.h"
+
 class DBControll {
   pqxx::connection* con;
   pqxx::work* curs;
@@ -15,22 +17,17 @@ class DBControll {
 public:
   DBControll() = delete;
   DBControll(std::string connecting_format); ~DBControll();
-  std::vector<int> get_favorite_array_by_name(std::string name);
-  void add_favorite(std::string u_name, std::string offer_id);
-  std::vector<std::vector<std::string>> get_all_offers(std::string uid);
-  std::vector<std::vector<std::string>> get_offers(std::string owner);
-  std::vector<std::vector<std::string>> get_favorite(std::string owner);
-  void push_offer(std::string owner, std::string path_img, std::string offer_title, std::string offer_desc, std::string offer_note);
+  std::vector<Advertisment*> get_all_offers(std::string uid);
+  std::vector<Advertisment*> get_offers(std::string owner);
+  void push_offer(std::string owner, std::string category, std::string offer_title, std::string offer_desc, float price, float amount, std::vector<char> img);
   void set_value_users(std::string target, std::string n_value, std::string clue_name, std::string clue);
-  void push_user(std::string email, std::string password, std::string name);
+  void push_user(std::string email, std::string password, std::string name, std::string phone_number, int role_id);
   void delete_offer_by_description(std::string description, std::string owner_id);
-  void create_user_table();
   std::vector<std::string> get_user_by_login(std::string email, std::string password);
-  void show_table(std::string table_name);
   std::string get_id_by_description(std::string description);
   std::string get_id_by_name(std::string name);
-  std::vector<std::string> getcard_data_by_title(std::string title);
-  void update_card_by_title(std::string title, std::string n_path_img, std::string n_title, std::string n_desc, std::string n_note);
+  Advertisment get_card_data_by_title(std::string title);
+  void update_card_by_title(Advertisment& n_ads);
   bool exists_card(std::string title);
 };
 

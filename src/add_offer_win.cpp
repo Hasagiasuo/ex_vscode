@@ -1,6 +1,6 @@
 #include "add_offer_win.h"
 
-OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::string email, std::string password) 
+OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::string email, std::string password)
 : wxFrame(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 300, wxDisplay().GetGeometry().GetSize().y / 2 - 300), wxSize(600, 600), wxBORDER_NONE){
   this->db_controller = db_controller;
   this->name = name;
@@ -28,12 +28,31 @@ OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::strin
   this->description->SetFont(wxFont(13, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
   this->description->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
 
-  wxStaticText* info_note = new wxStaticText(this, wxID_ANY, "Детально опишіть пропозицію", wxPoint(20, 410), wxSize(150, 20));
-  info_note->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
-  this->note = new wxRichTextCtrl(this, wxID_ANY, "", wxPoint(20, 430), wxSize(400, 60), wxBORDER_SUNKEN);
-  this->note->SetFont(wxFont(13, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+  wxStaticText* price_info = new wxStaticText(this, wxID_ANY, "Введіть ціну за одиницю", wxPoint(20, 400), wxSize(100, 20));
+  price_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->price = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(40, 425), wxSize(150, 20), wxBORDER_NONE);
+  this->price->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
 
-  wxButton* btn_commit = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(60, 510), wxSize(480, 25), wxBORDER_DOUBLE);
+  wxStaticText* amount_info = new wxStaticText(this, wxID_ANY, "Введіть одиниць товару для продажу", wxPoint(20, 450), wxSize(100, 20));
+  amount_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->amount = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(40, 475), wxSize(150, 20), wxBORDER_NONE);
+  this->amount->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+
+  const wxString choices[] = {
+    "Protective equipment",
+    "Tactical equipment",
+    "Communication equipment and electronics",
+    "Medical support",
+    "Engineering equipment",
+    "Logistics and field support",
+    "Camouflage and deception equipment",
+    "Means for survival"
+  };
+  wxStaticText* category_info = new wxStaticText(this, wxID_ANY, "Категорія товару", wxPoint(20, 500), wxSize(100, 20));
+  category_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  this->category = new wxChoice(this, wxID_ANY, wxPoint(40, 520), wxSize(100, 40), 0, choices);
+
+  wxButton* btn_commit = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(60, 560), wxSize(480, 20), wxBORDER_DOUBLE);
   btn_commit->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
   btn_commit->Bind(wxEVT_BUTTON, &OfferWinAdd::btn_callback, this);
 
@@ -41,7 +60,7 @@ OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::strin
   btn_close->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
   btn_close->Bind(wxEVT_BUTTON, &OfferWinAdd::close_callback, this);
 
-  this->error_message = new wxStaticText(this, wxID_ANY, "", wxPoint(0, 560), wxSize(600, 10), wxTE_CENTRE);
+  this->error_message = new wxStaticText(this, wxID_ANY, "", wxPoint(0, 580), wxSize(600, 10), wxTE_CENTRE);
   this->error_message->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
   this->error_message->SetForegroundColour(*wxRED);
 }
@@ -70,20 +89,19 @@ void OfferWinAdd::btn_callback(wxCommandEvent&) {
   } else if(this->description->GetValue() == wxEmptyString || std::string(this->description->GetValue()).length() < 5) {
     this->error_message->SetLabel("Опишіть пропозицію!");
     return;
-  } else if(this->description->GetValue() == wxEmptyString || std::string(this->description->GetValue()).length() < 10) {
-    this->error_message->SetLabel("Детальніше опишіть пропозицію!");
-    return;
   }
   if(!this->db_controller->exists_card(std::string(this->title->GetValue()))) {
     wxMessageBox("Така пропозиція вже існує!");
     return;
-  } 
+  }
   this->db_controller->push_offer(
-    this->name, 
-    std::string(this->path_img->GetPath()),
+    this->name,
+    std::string(this->category->GetName()),
     std::string(this->title->GetValue()),
-    std::string(this->description->GetValue()), 
-    std::string(this->note->GetValue())
+    std::string(this->description->GetValue()),
+    this->price->GetValue(),
+    this->amount->GetValue(),
+    this->load_image(std::string(this->path_img->GetPath()))
   );
   Application::ProfileWindow* pw = new Application::ProfileWindow(this->db_controller, this->name, this->email, this->password);
   pw->Show();
@@ -97,4 +115,12 @@ void OfferWinAdd::draw_img(wxPaintEvent& ev) {
     this->under_text->Hide();
   }
   ev.Skip();
+}
+
+std::vector<char> OfferWinAdd::load_image(std::string path) {
+  std::ifstream file(path, std::ios::binary);
+  if (!file) {
+    throw std::runtime_error("Unable to open file: " + path);
+  }
+  return std::vector<char>((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 }

@@ -17,16 +17,16 @@ file(GLOB SOURCES ${SRC_DIR}/*.cpp)
 include_directories(${LIBPQXX_INCLUDE_DIRS})
 link_directories(${LIBPQXX_LIBRARY_DIRS})
 
-add_executable(main 
-  main.cpp  
+add_executable(main
+  main.cpp
   ${SOURCES}
 )
 
-target_link_libraries(main PRIVATE 
+target_link_libraries(main PRIVATE
   ${wxWidgets_LIBRARIES}
   ${LIBPQXX_LIBRARIES}
 )
-target_include_directories(main PRIVATE 
+target_include_directories(main PRIVATE
   ${wxWidgets_INCLUDE_DIRS}
   ${INCL_DIR}
 )

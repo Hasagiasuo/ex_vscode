@@ -14,8 +14,8 @@ Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std
 }
 
 void Application::MainFrame::draw_offers() {
-  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
-  for(std::vector<std::string> row : offers) this->add_card(row[0], row[1], row[2], row[3], row[4]);
+  std::vector<Advertisment*> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
+  for(Advertisment* ad : offers) this->add_card(ad);
 }
 
 void Application::MainFrame::gen_widgets() {
@@ -49,7 +49,7 @@ void Application::MainFrame::gen_top_bar() {
 void Application::MainFrame::gen_burger(wxCommandEvent&) {
   this->burger_menu = new wxMenu;
   this->burger_menu->Append(MainFrameID::idPROFILE, "Профіль");
-    this->burger_menu->Append(MainFrameID::idINFO, "Інфо");
+  this->burger_menu->Append(MainFrameID::idINFO, "Інфо");
   this->burger_menu->Append(MainFrameID::idLOGOUT, "Вийти");
   Bind(wxEVT_MENU, &MainFrame::profile_callback, this, idPROFILE);
   Bind(wxEVT_MENU, &MainFrame::logout_profile, this, idLOGOUT);
@@ -101,8 +101,8 @@ void Application::MainFrame::search_some(wxKeyEvent& ev) {
   ev.Skip();
 }
 
-void Application::MainFrame::add_card(std::string owner_id, std::string path_to_img, std::string title, std::string description, std::string note) {
-  Card* tmp_card = new Card(this->db_controller, owner_id, path_to_img, title, description, note, this->main_menu, wxPoint(this->card_x, this->card_y));
+void Application::MainFrame::add_card(Advertisment* ad) {
+  Card* tmp_card = new Card(this->db_controller, *ad, this->main_menu, wxPoint(this->card_x, this->card_y));
   this->cards.push_back(tmp_card);
   if(this->cards.size() > 6 && this->cards.size() % 2 == 0) {
     int x, y;
@@ -143,14 +143,14 @@ void Application::MainFrame::search_callback() {
   scrl_win_dialog->Layout();
   int c_x = 0;
   int c_y = 0;
-  std::vector<std::vector<std::string>> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
+  std::vector<Advertisment*> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
   this->sizer_dialog->Clear();
   scrl_win_dialog->Layout();
   scrl_win_dialog->SetSizer(this->sizer_dialog);
   std::vector<Card*> cards;
-  for(std::vector<std::string> row : offers) {
-    if(row[2].find(search_value) != std::string::npos) {
-      Card* tmp_card = new Card(this->db_controller, row[0], row[1], row[2], row[3], row[4], this->scrl_win_dialog, wxPoint(c_x, c_y));
+  for(Advertisment* row : offers) {
+    if(row->title.find(search_value) != std::string::npos) {
+      Card* tmp_card = new Card(this->db_controller, *row, this->scrl_win_dialog, wxPoint(c_x, c_y));
       cards.push_back(tmp_card);
       if(cards.size() > 6 && cards.size() % 2 == 0) {
         int x, y;

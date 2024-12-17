@@ -15,9 +15,7 @@ namespace Application {
     wxTextCtrl* name;
     wxTextCtrl* email;
     wxTextCtrl* password;
-    wxStaticText* name_l;
-    wxStaticText* email_l;
-    wxStaticText* password_l;
+    wxTextCtrl* phone_number;
     wxButton* btn_commit;
     wxStaticText* error_message;
     DBControll* db_controller;

@@ -21,8 +21,7 @@ namespace Application {
     enum {
       id_REFRESH = 1
     };
-    std::vector<std::vector<std::string>> offers;
-    std::vector<std::vector<std::string>> favorites;
+    std::vector<Advertisment*> offers;
     int card_x, card_y;
     DBControll* db_controller;
     std::string name;
@@ -68,17 +67,12 @@ namespace Application {
 
     wxScrolledWindow* user_cards;
     wxFlexGridSizer* cards_sizer;
-
-    wxScrolledWindow* favorite_cards;
-    wxFlexGridSizer* favorite_sizer;
-
     wxButton* btn_close;
     void close_callback(wxCommandEvent&);
 
     wxMenuBar* menubar;
 
     void draw_cards();
-    void draw_favorite();
     void update_cu();
     void gen_menu_bar();
 public:

@@ -61,7 +61,7 @@ namespace Application {
     void search_open(wxCommandEvent&);
     void search_some(wxKeyEvent& ev);
     void search_callback();
-    void add_card(std::string owner_id, std::string path_to_img, std::string title, std::string description, std::string note);
+    void add_card(Advertisment* ad);
   public:
     MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password);
     void set_title(std::string new_val);

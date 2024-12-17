@@ -13,17 +13,16 @@
 
 namespace Application {
   class CardViewDialog : public wxDialog {
-    wxBitmap* img;
-    std::string uid;
-    std::string owner_id;
-    std::string u_name;
+    std::string cid;
+    Advertisment ads;
     DBControll* db_controller;
     wxStaticText* title;
     wxStaticText* desc;
-    wxStaticText* note;
+    wxStaticText* category;
+    wxStaticText* price;
+    wxStaticText* amount;
     wxBitmapButton* btn_close;
     wxButton* btn_buy;
-    std::string path_img;
     std::string encrypt(std::string target);
     void draw_image(wxPaintEvent&);
     void close_callback(wxCommandEvent&);
@@ -31,7 +30,7 @@ namespace Application {
     void edit_dialog(wxCommandEvent&);
     void buy_callback(wxCommandEvent&);
   public:
-    CardViewDialog(DBControll* db_controller, std::string owner_id, wxWindow* parent, std::string path, std::string title, std::string description, std::string note);
+    CardViewDialog(DBControll* db_controller, wxWindow* parent, Advertisment& ads);
   }; 
 }
 

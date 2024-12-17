@@ -12,17 +12,14 @@
 namespace Application {
   class Card : public wxPanel {
     DBControll* db_controller;
-    std::string owner_id;
-    wxBitmap* img;
-    std::string path_img;
-    std::string note;
+    Advertisment ads;
     wxStaticText* card_title;
     wxStaticText* card_description;
     CardViewDialog* dialog;
     void draw_image(wxPaintEvent&);
     void press_callback(wxMouseEvent&);
   public:
-    Card(DBControll* db_controller, std::string owner_id, std::string path_to_img, std::string c_title, std::string c_description, std::string hidden_note, wxWindow* parent, wxPoint position);
+    Card(DBControll* db_controller, Advertisment& ads, wxWindow* parent, wxPoint position);
   };
 };
 
