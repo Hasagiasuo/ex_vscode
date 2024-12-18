@@ -1,7 +1,7 @@
 #include "info.h"
 
 Info::Info() : wxDialog(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().width / 2 - 200, wxDisplay().GetGeometry().height / 2 - 200), wxSize(400, 400), wxBORDER_NONE) { 
-  
+  this->SetBackgroundColour(wxColor(38, 42, 48));
   wxStaticText* project_name = new wxStaticText(this, wxID_ANY, "MTP: Military Trading Platform", wxPoint(0, 40), wxSize(400, 20), wxTE_CENTRE);
   project_name->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 

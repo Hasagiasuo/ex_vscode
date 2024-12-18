@@ -26,16 +26,24 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
   this->ads = ads;
   this->db_controller = db_controller;
   this->SetBackgroundColour(wxColor(38, 42, 48));
-  this->title = new wxStaticText(this, wxID_ANY, ads.title, wxPoint(220, 30), wxSize(170, 50), wxBORDER_NONE);
+  this->title = new wxStaticText(this, wxID_ANY, ads.title, wxPoint(230, 50), wxSize(170, 50), wxBORDER_NONE);
   this->title->SetFont(wxFont(16, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->desc = new wxStaticText(this, wxID_ANY, ads.description, wxPoint(220, 90), wxSize(170, 100), wxBORDER_NONE);
-  this->desc->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->category = new wxStaticText(this, wxID_ANY, ads.category, wxPoint(220, 200), wxSize(150, 20));
-  this->category->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->price = new wxStaticText(this, wxID_ANY, wxString(std::to_string(ads.price)), wxPoint(220, 230), wxSize(100, 20));
-  this->price->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->amount = new wxStaticText(this, wxID_ANY, wxString(std::to_string(ads.amount)), wxPoint(220, 260), wxSize(100, 20));
-  this->amount->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  wxStaticText* desc_info = new wxStaticText(this, wxID_ANY, "Опис товару", wxPoint(220, 110), wxSize(100, 20));
+  desc_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->desc = new wxStaticText(this, wxID_ANY, ads.description, wxPoint(230, 130), wxSize(170, 100), wxBORDER_NONE);
+  this->desc->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  wxStaticText* cat_info = new wxStaticText(this, wxID_ANY, "Категорія товару", wxPoint(40, 240), wxSize(100, 20));
+  cat_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->category = new wxStaticText(this, wxID_ANY, ads.category, wxPoint(240, 240), wxSize(150, 20));
+  this->category->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  wxStaticText* pri_info = new wxStaticText(this, wxID_ANY, "Ціна товару", wxPoint(40, 270), wxSize(100, 20));
+  pri_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->price = new wxStaticText(this, wxID_ANY, wxString::Format("%.0f грн.", ads.price), wxPoint(240, 270), wxSize(100, 20));
+  this->price->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  wxStaticText* amo_info = new wxStaticText(this, wxID_ANY, "Кількість товару", wxPoint(40, 300), wxSize(100, 20));
+  amo_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->amount = new wxStaticText(this, wxID_ANY, wxString::Format("%d шт.", ads.amount), wxPoint(240, 300), wxSize(100, 20));
+  this->amount->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   std::ifstream file1("../data/cu");
   std::stringstream ss1;
   ss1 << file1.rdbuf();
@@ -51,10 +59,6 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
     }
   }
   file1.close();
-
-  this->btn_buy = new wxButton(this, wxID_ANY, "Замовити", wxPoint(0, 375), wxSize(500, 20), wxTE_CENTRE);
-  this->btn_buy->Bind(wxEVT_BUTTON, &CardViewDialog::buy_callback, this);
-
   wxImage close_img("../assets/close.png", wxBITMAP_TYPE_PNG);
   close_img.Rescale(20, 20);
   wxBitmap* close_bit = new wxBitmap(close_img);
@@ -85,7 +89,10 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
     wxBitmap* edit_bit = new wxBitmap(img_edit);
     wxBitmapButton* btn_edit = new wxBitmapButton(this, wxID_ANY, *edit_bit, wxPoint(450, 5), wxSize(20, 20), wxBORDER_NONE);
     btn_edit->Bind(wxEVT_BUTTON, &CardViewDialog::edit_dialog, this);
-  }        
+  } else {
+    this->btn_buy = new wxButton(this, wxID_ANY, "Замовити", wxPoint(0, 375), wxSize(500, 20), wxTE_CENTRE);
+    this->btn_buy->Bind(wxEVT_BUTTON, &CardViewDialog::buy_callback, this);
+  }    
 }
 
 void Application::CardViewDialog::edit_dialog(wxCommandEvent&) {

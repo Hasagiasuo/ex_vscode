@@ -128,7 +128,6 @@ void Application::MainFrame::search_callback() {
   std::string search_value = std::string(this->search_entry->GetValue());
   if(search_value.length() == 0) return;
   this->dialog_s = new wxDialog(this, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 300), wxSize(800, 600), wxBORDER_NONE);
-  // this->dialog_s->SetBackgroundColour(wxColor(38, 42, 48));
   wxStaticText* info_dialog = new wxStaticText(this->dialog_s, wxID_ANY, "Результат пошуку '" + search_value + "':", wxPoint(50, 5), wxSize(700, 30), wxTE_CENTRE);
   info_dialog->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   wxButton* btn_close_dialog = new wxButton(this->dialog_s, wxID_ANY, "X", wxPoint(775, 5), wxSize(20, 20), wxBORDER_NONE);

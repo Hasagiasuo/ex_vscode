@@ -30,27 +30,31 @@ OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::strin
 
   wxStaticText* price_info = new wxStaticText(this, wxID_ANY, "Введіть ціну за одиницю", wxPoint(20, 400), wxSize(100, 20));
   price_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
-  this->price = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(40, 425), wxSize(150, 20), wxBORDER_NONE);
+  this->price = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(20, 425), wxSize(150, 20), wxBORDER_NONE);
+  this->price->SetRange(1, 1000000);
   this->price->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  wxStaticText* pr_in = new wxStaticText(this, wxID_ANY, "грн.", wxPoint(175, 425), wxSize(50, 20));
+  pr_in->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
 
   wxStaticText* amount_info = new wxStaticText(this, wxID_ANY, "Введіть одиниць товару для продажу", wxPoint(20, 450), wxSize(100, 20));
   amount_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
-  this->amount = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(40, 475), wxSize(150, 20), wxBORDER_NONE);
+  this->amount = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(20, 475), wxSize(150, 20), wxBORDER_NONE);
+  this->amount->SetRange(1, 1000);
   this->amount->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
 
   const wxString choices[] = {
-    "Protective equipment",
-    "Tactical equipment",
-    "Communication equipment and electronics",
-    "Medical support",
-    "Engineering equipment",
-    "Logistics and field support",
-    "Camouflage and deception equipment",
-    "Means for survival"
+    "Засоби захисту",
+    "Тактичне спорядження",
+    "Засоби зв'язку та електроніка",
+    "Медичне забезпечення",
+    "Інженерне обладнання",
+    "Логістика та польове забезпечення",
+    "Засоби маскування та введення в оману",
+    "Засоби для виживання"
   };
   wxStaticText* category_info = new wxStaticText(this, wxID_ANY, "Категорія товару", wxPoint(20, 500), wxSize(100, 20));
   category_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
-  this->category = new wxChoice(this, wxID_ANY, wxPoint(40, 520), wxSize(100, 40), 0, choices);
+  this->category = new wxChoice(this, wxID_ANY, wxPoint(20, 520), wxSize(150, 40), sizeof(choices) / sizeof(wxString), choices);
 
   wxButton* btn_commit = new wxButton(this, wxID_ANY, "Додати пропозицію", wxPoint(60, 560), wxSize(480, 20), wxBORDER_DOUBLE);
   btn_commit->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
@@ -96,7 +100,7 @@ void OfferWinAdd::btn_callback(wxCommandEvent&) {
   }
   this->db_controller->push_offer(
     this->name,
-    std::string(this->category->GetName()),
+    std::string(this->category->GetStringSelection()),
     std::string(this->title->GetValue()),
     std::string(this->description->GetValue()),
     this->price->GetValue(),

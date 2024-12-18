@@ -27,7 +27,7 @@ public:
   std::string get_id_by_description(std::string description);
   std::string get_id_by_name(std::string name);
   Advertisment get_card_data_by_title(std::string title);
-  void update_card_by_title(Advertisment& n_ads);
+  void update_card_by_title(Advertisment* n_ads);
   bool exists_card(std::string title);
 };
 

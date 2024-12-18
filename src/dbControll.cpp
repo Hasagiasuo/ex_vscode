@@ -148,16 +148,17 @@ std::vector<Advertisment*> DBControll::get_offers(std::string owner) {
     std::vector<Advertisment*> res;
     this->curs = new pqxx::work(*this->con);
     pqxx::result user_id = this->curs->exec("SELECT id FROM users WHERE username = '" + owner +"';");
-    pqxx::result offers = this->curs->exec("SELECT user_id, category, description, price, status_id, amount, img FROM ads WHERE user_id = " + std::string(user_id.at(0).at(0).c_str()) + ";");
+    pqxx::result offers = this->curs->exec("SELECT user_id, category, title, description, price, status_id, amount, img FROM ads WHERE user_id = " + std::string(user_id.at(0).at(0).c_str()) + ";");
     for(auto col : offers) {
       Advertisment* tmp = new Advertisment;
       tmp->uid = std::stoi(col.at(0).c_str());
       tmp->category = std::string(col.at(1).c_str());
-      tmp->description = std::string(col.at(2).c_str());
-      tmp->price = std::stof(col.at(3).c_str());
-      tmp->status_id = std::stoi(col.at(4).c_str());
-      tmp->amount = std::stof(col.at(5).c_str());
-      std::string bytea = col.at(6).as<std::string>();
+      tmp->title = std::string(col.at(2).c_str());
+      tmp->description = std::string(col.at(3).c_str());
+      tmp->price = std::stof(col.at(4).c_str());
+      tmp->status_id = std::stoi(col.at(5).c_str());
+      tmp->amount = std::stof(col.at(6).c_str());
+      std::string bytea = col.at(7).as<std::string>();
       pqxx::binarystring tmp_a(bytea);
       tmp->image.assign(tmp_a.begin(), tmp_a.end());
       res.push_back(tmp);
@@ -204,11 +205,12 @@ std::vector<Advertisment*> DBControll::get_all_offers(std::string uid) {
       Advertisment* tmp = new Advertisment;
       tmp->uid = std::stoi(col.at(0).c_str());
       tmp->category = std::string(col.at(1).c_str());
-      tmp->description = std::string(col.at(2).c_str());
-      tmp->price = std::stof(col.at(3).c_str());
-      tmp->status_id = std::stoi(col.at(4).c_str());
-      tmp->amount = std::stof(col.at(5).c_str());
-      std::string bytea = col.at(6).as<std::string>();
+      tmp->title = std::string(col.at(2).c_str());
+      tmp->description = std::string(col.at(3).c_str());
+      tmp->price = std::stof(col.at(4).c_str());
+      tmp->status_id = std::stoi(col.at(5).c_str());
+      tmp->amount = std::stof(col.at(6).c_str());
+      std::string bytea = col.at(7).as<std::string>();
       pqxx::binarystring tmp_a(bytea);
       tmp->image.assign(tmp_a.begin(), tmp_a.end());
       res.push_back(tmp);
@@ -222,7 +224,7 @@ std::vector<Advertisment*> DBControll::get_all_offers(std::string uid) {
   }
 }
 
-void DBControll::update_card_by_title(Advertisment& n_ads) {
+void DBControll::update_card_by_title(Advertisment* n_ads) {
   try {
     // title = this->encrypt(title);
     // n_path_img = this->encrypt(n_path_img);
@@ -230,8 +232,8 @@ void DBControll::update_card_by_title(Advertisment& n_ads) {
     // n_desc = this->encrypt(n_desc);
     // n_note = this->encrypt(n_note);
     this->curs = new pqxx::work(*this->con);
-    this->curs->exec("UPDATE ads SET category = '" + n_ads.category + "', description = '" + n_ads.description + "', price = " + std::to_string(n_ads.price) + ", status_id = " + std::to_string(n_ads.status_id) + ", amount = " + std::to_string(n_ads.amount) + " WHERE title = '" + n_ads.title + "';");
-    this->curs->exec("UPDATE ads SET title = '" + n_ads.title + "' WHERE description = '" + n_ads.description + "';");
+    this->curs->exec("UPDATE ads SET category = '" + n_ads->category + "', description = '" + n_ads->description + "', price = " + std::to_string(n_ads->price) + ", status_id = " + std::to_string(n_ads->status_id) + ", amount = " + std::to_string(n_ads->amount) + " WHERE title = '" + n_ads->title + "';");
+    this->curs->exec("UPDATE ads SET title = '" + n_ads->title + "' WHERE description = '" + n_ads->description + "';");
     this->curs->commit();
   } catch (const std::exception& ex) {
     std::cout << "update_card_by_title: " << ex.what() << std::endl;
