@@ -13,11 +13,15 @@ Application::Card::Card(DBControll* db_controller, Advertisment& ads, wxWindow* 
 
 void Application::Card::draw_image(wxPaintEvent& ev) {
   wxPaintDC dc(this);
-  wxImage img(200, 200, this->ads.image.data(), wxBITMAP_TYPE_PNG);
-  wxBitmap* bitimg = new wxBitmap(img);
-  if(bitimg)
-    dc.DrawBitmap(*bitimg, wxPoint(25, 25), 1);
-  ev.Skip();
+  wxMemoryInputStream stream(this->ads.image.data(), this->ads.image.size());
+  wxImage img;
+  if (img.LoadFile(stream, wxBITMAP_TYPE_PNG)) {
+    img.Rescale(180, 180);
+    wxBitmap bitimg(img);
+    dc.DrawBitmap(bitimg, wxPoint(25, 25), true);
+  } else {
+    std::cerr << "Failed to load image from data." << std::endl;
+  }
 }
 
 void Application::Card::press_callback(wxMouseEvent& ev) {

@@ -3,6 +3,7 @@
 namespace Application {
   Order::~Order() {}
   Order::Order() : wxDialog(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().width / 2 - 300, wxDisplay().GetGeometry().height / 2 - 225), wxSize(600, 450), wxBORDER_NONE) {
+    this->SetBackgroundColour(wxColor(38, 42, 48));
     wxStaticText* info = new wxStaticText(this, wxID_ANY, "Заповніть форму замолення", wxPoint(0, 5), wxSize(600, 20), wxTE_CENTRE);
     info->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 

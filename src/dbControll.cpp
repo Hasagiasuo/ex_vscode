@@ -159,8 +159,16 @@ std::vector<Advertisment*> DBControll::get_offers(std::string owner) {
       tmp->status_id = std::stoi(col.at(5).c_str());
       tmp->amount = std::stof(col.at(6).c_str());
       std::string bytea = col.at(7).as<std::string>();
-      pqxx::binarystring tmp_a(bytea);
-      tmp->image.assign(tmp_a.begin(), tmp_a.end());
+      if (bytea.size() >= 2 && bytea[0] == '\\' && bytea[1] == 'x') {
+        bytea = bytea.substr(2); // Відкидаємо "\\x"
+      }
+      std::vector<unsigned char> image_data;
+      for (size_t i = 0; i < bytea.size(); i += 2) {
+        std::string byte_str = bytea.substr(i, 2);
+        unsigned char byte = static_cast<unsigned char>(std::stoi(byte_str, nullptr, 16));
+        image_data.push_back(byte);
+      }
+      tmp->image = image_data;
       res.push_back(tmp);
     }
     this->curs->commit();
@@ -211,8 +219,16 @@ std::vector<Advertisment*> DBControll::get_all_offers(std::string uid) {
       tmp->status_id = std::stoi(col.at(5).c_str());
       tmp->amount = std::stof(col.at(6).c_str());
       std::string bytea = col.at(7).as<std::string>();
-      pqxx::binarystring tmp_a(bytea);
-      tmp->image.assign(tmp_a.begin(), tmp_a.end());
+      if (bytea.size() >= 2 && bytea[0] == '\\' && bytea[1] == 'x') {
+        bytea = bytea.substr(2);
+      }
+      std::vector<unsigned char> image_data;
+      for (size_t i = 0; i < bytea.size(); i += 2) {
+        std::string byte_str = bytea.substr(i, 2);
+        unsigned char byte = static_cast<unsigned char>(std::stoi(byte_str, nullptr, 16));
+        image_data.push_back(byte);
+      }
+      tmp->image = image_data;
       res.push_back(tmp);
     }
     this->curs->commit();

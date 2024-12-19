@@ -14,8 +14,12 @@ Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std
 }
 
 void Application::MainFrame::draw_offers() {
-  std::vector<Advertisment*> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
-  for(Advertisment* ad : offers) this->add_card(ad);
+  if(this->ads.size() > 0) {
+    for(Advertisment* ad : this->ads) this->add_card(ad);
+  } else {
+    this->ads = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
+    for(Advertisment* ad : this->ads) this->add_card(ad);
+  }
 }
 
 void Application::MainFrame::gen_widgets() {

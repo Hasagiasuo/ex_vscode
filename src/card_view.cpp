@@ -10,12 +10,16 @@ std::string Application::CardViewDialog::encrypt(std::string target) {
 }
 
 void Application::CardViewDialog::draw_image(wxPaintEvent&) {
-  wxImage image(200, 200, this->ads.image.data(), wxBITMAP_TYPE_PNG);
-  image.Rescale(200, 200);
-  wxBitmap* bitimg = new wxBitmap(image);
   wxPaintDC dc(this);
-  if(bitimg)
-    dc.DrawBitmap(*bitimg, wxPoint(10, 10), 1);
+  wxMemoryInputStream stream(this->ads.image.data(), this->ads.image.size());
+  wxImage img;
+  if (img.LoadFile(stream, wxBITMAP_TYPE_PNG)) {
+    img.Rescale(180, 180);
+    wxBitmap bitimg(img);
+    dc.DrawBitmap(bitimg, wxPoint(25, 25), true);
+  } else {
+    std::cerr << "Failed to load image from data." << std::endl;
+  }
 }
 
 void Application::CardViewDialog::close_callback(wxCommandEvent &) {

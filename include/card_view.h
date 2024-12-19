@@ -7,6 +7,7 @@
 #include <string>
 #include <fstream>
 
+#include <wx/mstream.h>
 #include "dbControll.h"
 #include "edit_card.h"
 #include "order.h"

@@ -8,6 +8,7 @@
 
 #include "card_view.h"
 #include "dbControll.h"
+#include <wx/mstream.h>
 
 namespace Application {
   class Card : public wxPanel {

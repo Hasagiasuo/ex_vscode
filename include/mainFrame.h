@@ -22,7 +22,7 @@ namespace Application {
   };
   class MainFrame : public wxFrame {
     int card_x, card_y;
-
+    std::vector<Advertisment*> ads;
     wxDialog* dialog_s;
     wxScrolledWindow* scrl_win_dialog;
     wxFlexGridSizer*  sizer_dialog;
