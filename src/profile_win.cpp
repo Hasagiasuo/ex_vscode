@@ -15,36 +15,44 @@ Application::ProfileWindow::ProfileWindow(DBControll* db_controller, std::string
   this->password = password;
   this->offers = this->db_controller->get_offers(this->name);
 
-  this->_name = new wxStaticText(this, wxID_ANY, "Імʼя користувача:", wxPoint(20, 20), wxSize(135, 20), wxBORDER_NONE);
+  wxStaticText* info_l = new wxStaticText(this, wxID_ANY, "Ваш профіль", wxPoint(0, 10), wxSize(800, 20), wxTE_CENTRE);
+  info_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+
+  this->_name = new wxStaticText(this, wxID_ANY, "Імʼя користувача:", wxPoint(20, 50), wxSize(135, 20), wxBORDER_NONE);
   this->_name->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->name_l = new wxStaticText(this, wxID_ANY, this->name, wxPoint(165, 20), wxSize(this->name.length() * 10 - 5, 20));
+  this->name_l = new wxStaticText(this, wxID_ANY, this->name, wxPoint(165, 50), wxSize(this->name.length() * 10 - 5, 20));
   this->name_l->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_SLANT, wxFONTWEIGHT_BOLD));
-  this->btn_nedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(165 + (this->name.length() * 10 - 5), 20), wxSize(15, 15), wxBORDER_NONE);
+  this->btn_nedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(170 + (this->name.length() * 10 - 5), 50), wxSize(15, 15), wxBORDER_NONE);
   this->btn_nedit->Bind(wxEVT_BUTTON, &ProfileWindow::nedit_callback, this);
 
-  this->_email = new wxStaticText(this, wxID_ANY, "Ел. пошта:", wxPoint(20, 40), wxSize(75, 20), wxBORDER_NONE);
+  this->_email = new wxStaticText(this, wxID_ANY, "Ел. пошта:", wxPoint(20, 70), wxSize(75, 20), wxBORDER_NONE);
   this->_email->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->email_l = new wxStaticText(this, wxID_ANY, this->email, wxPoint(105, 40), wxSize(this->email.length() * 10 - 5, 20));
+  this->email_l = new wxStaticText(this, wxID_ANY, this->email, wxPoint(105, 70), wxSize(this->email.length() * 10 - 5, 20));
   this->email_l->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_SLANT, wxFONTWEIGHT_BOLD));
-  this->btn_eedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(105 + (this->email.length() * 10 - 5), 40), wxSize(15, 15), wxBORDER_NONE);
+  this->btn_eedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(105 + (this->email.length() * 10 - 5), 70), wxSize(15, 15), wxBORDER_NONE);
   this->btn_eedit->Bind(wxEVT_BUTTON, &ProfileWindow::eedit_callback, this);
 
-  this->_password = new wxStaticText(this, wxID_ANY, "Пароль:", wxPoint(20, 60), wxSize(65, 20), wxBORDER_NONE);
+  this->_password = new wxStaticText(this, wxID_ANY, "Пароль:", wxPoint(20, 90), wxSize(65, 20), wxBORDER_NONE);
   this->_password->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-  this->password_l = new wxStaticText(this, wxID_ANY, this->convert_password(), wxPoint(95, 60), wxSize(password.length() * 10 - 10, 20));
+  this->password_l = new wxStaticText(this, wxID_ANY, this->convert_password(), wxPoint(85, 90), wxSize(password.length() * 10 - 10, 20));
   this->password_l->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_SLANT, wxFONTWEIGHT_BOLD));
-  this->btn_pedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(95 + (this->password.length() * 10) - 5, 60), wxSize(15, 15), wxBORDER_NONE);
+  this->btn_pedit = new wxBitmapButton(this, wxID_ANY, wxBitmap("../assets/edit.png", wxBITMAP_TYPE_PNG), wxPoint(85 + (this->password.length() * 10) - 5, 90), wxSize(15, 15), wxBORDER_NONE);
   this->btn_pedit->Bind(wxEVT_BUTTON, &ProfileWindow::pedit_callback, this);
 
+  wxStaticText* add_info = new wxStaticText(this, wxID_ANY, "Додати оголошення", wxPoint(20, 132), wxSize(100, 20));
+  add_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   wxImage img("../assets/add.png", wxBITMAP_TYPE_PNG);
   wxBitmap add_bitmap(img);
-  this->btn_add = new wxBitmapButton(this, wxID_ANY, add_bitmap, wxPoint(20, 100), wxSize(20, 20), wxBORDER_NONE);
+  this->btn_add = new wxBitmapButton(this, wxID_ANY, add_bitmap, wxPoint(165, 130), wxSize(20, 20), wxBORDER_NONE);
   this->btn_add->Bind(wxEVT_BUTTON, &ProfileWindow::add_callback, this);
+
+  wxStaticText* cards_info = new wxStaticText(this, wxID_ANY, "Ваші оголошення", wxPoint(0, 175), wxSize(800, 20), wxTE_CENTRE);
+  cards_info->SetFont(wxFont(16, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->user_cards = new wxScrolledWindow(this, wxID_ANY, wxPoint(0, 200), wxSize(800, 770), wxBORDER_SUNKEN);
   this->user_cards->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
   this->cards_sizer = new wxFlexGridSizer(2);
-  this->user_cards->SetScrollRate(1, 1);
+  this->user_cards->SetScrollRate(5, 5);
   this->user_cards->SetVirtualSize(wxSize(800, 800));
   this->user_cards->SetSizer(this->cards_sizer);
   this->user_cards->Layout();
@@ -215,7 +223,7 @@ void Application::ProfileWindow::draw_cards() {
     Card* tmp_card = new Card(this->db_controller, *row, this->user_cards, wxPoint(this->card_x, this->card_y));
     this->cards_sizer->Add(tmp_card);
   }
-  this->user_cards->SetVirtualSize(wxSize(800, this->offers.size() / 2 * 400));
+  this->user_cards->SetVirtualSize(wxSize(800, this->offers.size() / 2 * 400 + 200));
   this->user_cards->SetSizer(this->cards_sizer);
   this->user_cards->Layout();
 }

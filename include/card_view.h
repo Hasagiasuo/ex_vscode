@@ -14,6 +14,7 @@
 
 namespace Application {
   class CardViewDialog : public wxDialog {
+    std::string username;
     std::string cid;
     Advertisment ads;
     DBControll* db_controller;

@@ -3,27 +3,27 @@
 Application::EditCardDialog::EditCardDialog(DBControll* db_controller, wxWindow* parent, std::string owner_id, std::string card_title) : wxDialog(parent, wxID_ANY, "", wxPoint(C_X - 350, C_Y - 300), wxSize(700, 520), wxBORDER_NONE) {
   this->db_controller = db_controller;
   this->true_title = card_title;
-  Advertisment card_data = this->db_controller->get_card_data_by_title(card_title);
-  this->uid = card_data.uid;
-  this->status_id = card_data.status_id;
+  this->card_data = this->db_controller->get_card_data_by_title(card_title);
+  this->uid = card_data->uid;
+  this->status_id = card_data->status_id;
   this->SetBackgroundColour(wxColor(38, 42, 48));
   wxStaticText* info = new wxStaticText(this, wxID_ANY, "За необхідності змініть параметри вашої пропозиції!", wxPoint(20, 20), wxSize(640, 20), wxTE_CENTRE);
   info->SetFont(wxFont(18, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
  
-  this->title_e = new wxTextCtrl(this, wxID_ANY, card_data.title, wxPoint(50, 60), wxSize(150, 20), wxBORDER_NONE);
+  this->title_e = new wxTextCtrl(this, wxID_ANY, card_data->title, wxPoint(50, 60), wxSize(150, 20), wxBORDER_NONE);
   wxStaticText* title_info = new wxStaticText(this, wxID_ANY, "Заголовок пропозиції", wxPoint(400, 60), wxSize(300, 20));
   title_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   
-  this->desc_e = new wxRichTextCtrl(this, wxID_ANY, card_data.description, wxPoint(50, 90), wxSize(300, 40), wxBORDER_NONE);
+  this->desc_e = new wxRichTextCtrl(this, wxID_ANY, card_data->description, wxPoint(50, 90), wxSize(300, 40), wxBORDER_NONE);
   wxStaticText* desc_info = new wxStaticText(this, wxID_ANY, "Опис пропозиції", wxPoint(400, 90), wxSize(200, 20));
   desc_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
  
-  this->price_e = new wxSpinCtrlDouble(this, wxID_ANY, wxString(std::to_string(card_data.price)), wxPoint(50, 140), wxSize(150, 20));
+  this->price_e = new wxSpinCtrlDouble(this, wxID_ANY, wxString(std::to_string(card_data->price)), wxPoint(50, 140), wxSize(150, 20));
   this->price_e->SetRange(1, 1000000);
   wxStaticText* note_info = new wxStaticText(this, wxID_ANY, "Ціна товару (грн.)", wxPoint(400, 140), wxSize(200, 20));
   note_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
-  this->amount_e = new wxSpinCtrlDouble(this, wxID_ANY, wxString(std::to_string(card_data.amount)), wxPoint(50, 170), wxSize(150, 20));
+  this->amount_e = new wxSpinCtrlDouble(this, wxID_ANY, wxString(std::to_string(card_data->amount)), wxPoint(50, 170), wxSize(150, 20));
   this->amount_e->SetRange(1, 1000);
   wxStaticText* amount_info = new wxStaticText(this, wxID_ANY, "Кількість товару (шт.)", wxPoint(400, 170), wxSize(200, 20));
   amount_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
@@ -34,15 +34,15 @@ Application::EditCardDialog::EditCardDialog(DBControll* db_controller, wxWindow*
     "Засоби зв'язку та електроніка",
     "Медичне забезпечення",
     "Інженерне обладнання",
-    "Логістика та польове забезпечення",
-    "Засоби маскування та введення в оману",
+    "Логістика",
+    "Засоби маскування",
     "Засоби для виживання"
   };
   wxStaticText* category_info = new wxStaticText(this, wxID_ANY, "Оберіть категорію товару", wxPoint(290, 290), wxSize(100, 20));
   category_info->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
   this->category_e = new wxChoice(this, wxID_ANY, wxPoint(290, 320), wxSize(200, 20), sizeof(choices) / sizeof(wxString), choices);
 
-  wxImage img(200, 200, card_data.image.data(), wxBITMAP_TYPE_PNG);
+  wxImage img(200, 200, card_data->image.data(), wxBITMAP_TYPE_PNG);
   this->choice_img = new wxBitmap(img);
   
   this->file_path = new wxFilePickerCtrl(this, wxID_ANY, "", "", "", wxPoint(270, 240), wxSize(350, 20));
@@ -71,12 +71,6 @@ void Application::EditCardDialog::commit_handle(wxCommandEvent&) {
   n_ads->category = this->category_e->GetStringSelection();
   n_ads->uid = this->uid;
   n_ads->status_id = this->status_id;
-  if(this->file_path->GetPath().empty()) {
-    wxStaticText* error_message = new wxStaticText(this, wxID_ANY, "Вкажіть зображення", wxPoint(0, 500), wxSize(700, 10), wxTE_CENTRE);
-    error_message->SetForegroundColour(wxColour(255, 0, 0, 255));
-    error_message->SetFont(wxFont(10, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-    return;
-  }
   std::ifstream file(this->file_path->GetPath(), std::ios::binary);
   if (!file) {
     throw std::runtime_error("Unable to open file: " + this->file_path->GetPath());
@@ -97,10 +91,15 @@ void Application::EditCardDialog::close_handle(wxCommandEvent&) {
 
 void Application::EditCardDialog::draw_image(wxPaintEvent& ev) {
   wxPaintDC dc(this);
-  if(this->choice_img) {
-    dc.DrawBitmap(*this->choice_img, wxPoint(40, 230));
+  wxMemoryInputStream stream(this->card_data->image.data(), this->card_data->image.size());
+  wxImage img;
+  if (img.LoadFile(stream, wxBITMAP_TYPE_PNG)) {
+    img.Rescale(180, 180);
+    wxBitmap bitimg(img);
+    dc.DrawBitmap(bitimg, wxPoint(40, 230), true);
+  } else {
+    std::cerr << "Failed to load image from data." << std::endl;
   }
-  ev.Skip();
 }
 
 void Application::EditCardDialog::file_picked(wxFileDirPickerEvent&) {
@@ -109,4 +108,17 @@ void Application::EditCardDialog::file_picked(wxFileDirPickerEvent&) {
   this->choice_img = new wxBitmap(img);
   this->Bind(wxEVT_PAINT, &EditCardDialog::draw_image, this);
   this->Refresh();
+  // std::ifstream file(this->file_path->GetPath(), std::ios::binary);
+  // if (!file) {
+  //   throw std::runtime_error("Unable to open file: " + this->file_path->GetPath());
+  // }
+  // std::vector<char> img_data = std::vector<char>((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+  // std::string byte_str;
+  // for(char c : img_data) byte_str.push_back(c);
+  // std::vector<unsigned char> image_data;
+  // for (size_t i = 0; i < img_data.size(); i += 2) {
+  //   unsigned char byte = static_cast<unsigned char>(std::stoi(byte_str, nullptr, 16));
+  //   image_data.push_back(byte);
+  // }
+  // this->card_data->image = image_data;
 }

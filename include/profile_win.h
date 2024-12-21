@@ -9,7 +9,7 @@
 
 #if defined(__APPLE__) || defined(__MACH__)
   #define M_KEY wxACCEL_CMD
-#else 
+#else
   #define M_KEY wxACCEL_CTRL
 #endif
 

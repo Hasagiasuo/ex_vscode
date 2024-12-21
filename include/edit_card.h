@@ -8,6 +8,7 @@
 #include <wx/spinctrl.h>
 #include "dbControll.h"
 #include <fstream>
+#include <wx/mstream.h>
 
 #define C_X wxDisplay().GetGeometry().GetSize().x / 2
 #define C_Y wxDisplay().GetGeometry().GetSize().y / 2
@@ -16,6 +17,7 @@ namespace Application {
   class EditCardDialog : public wxDialog {
     int uid;
     int status_id;
+    Advertisment* card_data;
     std::string true_title;
     DBControll* db_controller;
     wxTextCtrl* title_e;

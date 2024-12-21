@@ -14,7 +14,16 @@
 #include "card.h"
 #include "info.h"
 
+#if defined(__APPLE__) || defined(__MACH__)
+  #define M_KEY wxACCEL_CMD
+#else 
+  #define M_KEY wxACCEL_CTRL
+#endif
+
 namespace Application {
+  enum Utils {
+    id_REFRESH
+  };
   enum MainFrameID {
     idPROFILE = 1,
     idLOGOUT = 2,
@@ -62,6 +71,7 @@ namespace Application {
     void search_some(wxKeyEvent& ev);
     void search_callback();
     void add_card(Advertisment* ad);
+    void refresh_callback(wxCommandEvent&);
   public:
     MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password);
     void set_title(std::string new_val);

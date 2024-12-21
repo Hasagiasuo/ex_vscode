@@ -35,19 +35,19 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
   wxStaticText* desc_info = new wxStaticText(this, wxID_ANY, "Опис товару", wxPoint(220, 110), wxSize(100, 20));
   desc_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->desc = new wxStaticText(this, wxID_ANY, ads.description, wxPoint(230, 130), wxSize(170, 100), wxBORDER_NONE);
-  this->desc->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->desc->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
   wxStaticText* cat_info = new wxStaticText(this, wxID_ANY, "Категорія товару", wxPoint(40, 240), wxSize(100, 20));
   cat_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->category = new wxStaticText(this, wxID_ANY, ads.category, wxPoint(240, 240), wxSize(150, 20));
-  this->category->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->category->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
   wxStaticText* pri_info = new wxStaticText(this, wxID_ANY, "Ціна товару", wxPoint(40, 270), wxSize(100, 20));
   pri_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->price = new wxStaticText(this, wxID_ANY, wxString::Format("%.0f грн.", ads.price), wxPoint(240, 270), wxSize(100, 20));
-  this->price->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->price->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
   wxStaticText* amo_info = new wxStaticText(this, wxID_ANY, "Кількість товару", wxPoint(40, 300), wxSize(100, 20));
   amo_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->amount = new wxStaticText(this, wxID_ANY, wxString::Format("%d шт.", ads.amount), wxPoint(240, 300), wxSize(100, 20));
-  this->amount->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->amount->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
   std::ifstream file1("../data/cu");
   std::stringstream ss1;
   ss1 << file1.rdbuf();
@@ -74,14 +74,12 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
   std::stringstream ss;
   ss << file.rdbuf();
   std::string cu = ss.str();
-  std::string username;
   for(char ch : cu) {
     if(ch == '|') break;
-    username.push_back(ch); 
+    this->username.push_back(ch); 
   }
   this->cid = this->db_controller->get_id_by_name(username);
-
-  if(std::to_string(this->ads.uid) == cid) {
+  if(std::to_string(this->ads.uid) == cid || this->username == "admin" || this->username == "ADMIN") {
     wxImage delete_img("../assets/del.png", wxBITMAP_TYPE_PNG);
     delete_img.Rescale(20, 20);
     wxBitmap* delete_bit = new wxBitmap(delete_img);
@@ -107,7 +105,7 @@ void Application::CardViewDialog::edit_dialog(wxCommandEvent&) {
 }
 
 void Application::CardViewDialog::delete_callback(wxCommandEvent&) {
-  if(std::to_string(this->ads.uid) == this->cid) 
+  if(std::to_string(this->ads.uid) == this->cid || this->username == "admin" || this->username == "ADMIN") 
     this->db_controller->delete_offer_by_description(std::string(this->desc->GetLabel()), std::to_string(this->ads.uid));
   this->Close();
 }

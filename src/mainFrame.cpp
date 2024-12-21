@@ -1,7 +1,8 @@
 #include "mainFrame.h"
 
-
 Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std::string email, std::string password) : wxFrame(nullptr, wxID_ANY, "Index", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 400), wxSize(800, 800), wxBORDER_NONE) {
+  wxAcceleratorEntry hot_keys[1];
+  hot_keys[0].Set(M_KEY, (int)'R', id_REFRESH);
   this->db_controller = db_controll; 
   this->card_x = 0;
   this->card_y = 0;
@@ -10,6 +11,7 @@ Application::MainFrame::MainFrame(DBControll* db_controll, std::string name, std
   this->user_password = password;
   wxIcon icon("../assets/icon.png", wxBITMAP_TYPE_PNG);
   this->SetIcon(icon);
+  this->Bind(wxEVT_MENU, &MainFrame::refresh_callback, this, id_REFRESH);
   this->gen_widgets();
 }
 
@@ -30,6 +32,12 @@ void Application::MainFrame::gen_widgets() {
 void Application::MainFrame::gen_top_bar() {
   this->top_menu_bar = new wxPanel(this, wxID_ANY, wxPoint(0, 0), wxSize(800, 30), wxBORDER_SUNKEN);
 
+  wxImage img_refresh("../assets/refresh.png", wxBITMAP_TYPE_PNG);
+  img_refresh.Rescale(20, 20);
+  wxBitmap bitmap_refresh(img_refresh);
+  wxBitmapButton* btn_refresh = new wxBitmapButton(this->top_menu_bar, wxID_ANY, bitmap_refresh, wxPoint(750, 5), wxSize(20, 20), wxBORDER_NONE);
+  btn_refresh->Bind(wxEVT_BUTTON, &MainFrame::refresh_callback, this);
+
   this->img_for_profbtn = new wxBitmap("../assets/profile.png", wxBITMAP_TYPE_PNG);
   this->btn_profile = new wxBitmapButton(this->top_menu_bar, wxID_ANY, *this->img_for_profbtn, wxPoint(5, 7), wxSize(20, 20), wxBORDER_NONE);
   this->btn_profile->Bind(wxEVT_BUTTON, &MainFrame::gen_burger, this);
@@ -42,7 +50,7 @@ void Application::MainFrame::gen_top_bar() {
   this->search_entry->Hide();
   this->btn_search->Bind(wxEVT_BUTTON, &MainFrame::search_open, this);
 
-  this->username_l = new wxStaticText(this->top_menu_bar, wxID_ANY, "MTP|" + this->username, wxPoint(350, 5), wxSize(100, 20), wxTE_CENTRE);
+  this->username_l = new wxStaticText(this->top_menu_bar, wxID_ANY, "MTP|" + this->username, wxPoint(330, 5), wxSize(100, 20), wxTE_CENTRE);
   this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->btn_close = new wxButton(this->top_menu_bar, wxID_CLOSE, "X", wxPoint(770, 5), wxSize(25, 20), wxBORDER_NONE);
@@ -124,6 +132,18 @@ void Application::MainFrame::add_card(Advertisment* ad) {
   }
 }
 
+void Application::MainFrame::refresh_callback(wxCommandEvent &) {
+  for (Card* card : this->cards) {
+    delete card;
+  }
+  this->cards.clear();
+  this->ads.clear();
+  this->ads = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
+  for(Advertisment* ad : this->ads) this->add_card(ad);
+  this->sizer_main->Clear();
+  this->main_menu->Layout();
+}
+
 void Application::MainFrame::set_title(std::string new_val) {
   this->username_l->SetLabel(new_val);
 }
@@ -140,7 +160,7 @@ void Application::MainFrame::search_callback() {
   this->scrl_win_dialog = new wxScrolledWindow(this->dialog_s, wxID_ANY, wxPoint(0, 70), wxSize(800, 770), wxBORDER_SUNKEN);
   scrl_win_dialog->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
   this->sizer_dialog = new wxFlexGridSizer(2);
-  scrl_win_dialog->SetScrollRate(1, 1);
+  scrl_win_dialog->SetScrollRate(5, 5);
   scrl_win_dialog->SetVirtualSize(wxSize(800, 800));
   scrl_win_dialog->SetSizer(this->sizer_dialog);
   scrl_win_dialog->Layout();

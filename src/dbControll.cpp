@@ -180,27 +180,27 @@ std::vector<Advertisment*> DBControll::get_offers(std::string owner) {
   }
 }
 
-Advertisment DBControll::get_card_data_by_title(std::string title) {
+Advertisment* DBControll::get_card_data_by_title(std::string title) {
   try {
     title = this->encrypt(title);
     this->curs = new pqxx::work(*this->con);
     pqxx::result card_data = this->curs->exec("SELECT user_id, category, description, price, status_id, amount, img FROM ads WHERE title = '" + title + "';");
     pqxx::binarystring image_data(card_data.at(0).at(6));
-    Advertisment result;
-    result.uid = std::stoi(card_data.at(0).at(0).c_str());
-    result.category = card_data.at(0).at(1).c_str();
-    result.title = title;
-    result.description = card_data.at(0).at(2).c_str();
-    result.price = std::stof(card_data.at(0).at(3).c_str());
-    result.status_id = std::stoi(card_data.at(0).at(4).c_str());
-    result.amount = std::stoi(card_data.at(0).at(5).c_str());
-    result.image = std::vector<unsigned char>(image_data.begin(), image_data.end());
+    Advertisment* result = new Advertisment;
+    result->uid = std::stoi(card_data.at(0).at(0).c_str());
+    result->category = card_data.at(0).at(1).c_str();
+    result->title = title;
+    result->description = card_data.at(0).at(2).c_str();
+    result->price = std::stof(card_data.at(0).at(3).c_str());
+    result->status_id = std::stoi(card_data.at(0).at(4).c_str());
+    result->amount = std::stoi(card_data.at(0).at(5).c_str());
+    result->image = std::vector<unsigned char>(image_data.begin(), image_data.end());
     this->curs->commit();
     return result;
   } catch (const std::exception& ex) {
     std::cout << "get_card_data_by_title: " << ex.what() << std::endl;
     this->curs->commit();
-    return Advertisment {};
+    return new Advertisment;
   }
 }
 
@@ -249,6 +249,12 @@ void DBControll::update_card_by_title(Advertisment* n_ads) {
     // n_note = this->encrypt(n_note);
     this->curs = new pqxx::work(*this->con);
     this->curs->exec("UPDATE ads SET category = '" + n_ads->category + "', description = '" + n_ads->description + "', price = " + std::to_string(n_ads->price) + ", status_id = " + std::to_string(n_ads->status_id) + ", amount = " + std::to_string(n_ads->amount) + " WHERE title = '" + n_ads->title + "';");
+    if(n_ads->image.size() > 0) {
+      this->curs->exec_params("UPDATE ads SET img = $1 WHERE title = $2;",
+        pqxx::binarystring(n_ads->image.data(), n_ads->image.size()),
+        n_ads->title
+      );
+    }
     this->curs->exec("UPDATE ads SET title = '" + n_ads->title + "' WHERE description = '" + n_ads->description + "';");
     this->curs->commit();
   } catch (const std::exception& ex) {

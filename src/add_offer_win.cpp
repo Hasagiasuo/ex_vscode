@@ -41,6 +41,8 @@ OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::strin
   this->amount = new wxSpinCtrlDouble(this, wxID_ANY, wxEmptyString, wxPoint(20, 475), wxSize(150, 20), wxBORDER_NONE);
   this->amount->SetRange(1, 1000);
   this->amount->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
+  wxStaticText* amo_in = new wxStaticText(this, wxID_ANY, "шт.", wxPoint(175, 475), wxSize(50, 20));
+  amo_in->SetFont(wxFont(17, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRABOLD));
 
   const wxString choices[] = {
     "Засоби захисту",
@@ -48,8 +50,8 @@ OfferWinAdd::OfferWinAdd(DBControll* db_controller, std::string name, std::strin
     "Засоби зв'язку та електроніка",
     "Медичне забезпечення",
     "Інженерне обладнання",
-    "Логістика та польове забезпечення",
-    "Засоби маскування та введення в оману",
+    "Логістика",
+    "Засоби маскування",
     "Засоби для виживання"
   };
   wxStaticText* category_info = new wxStaticText(this, wxID_ANY, "Категорія товару", wxPoint(20, 500), wxSize(100, 20));
