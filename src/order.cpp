@@ -45,8 +45,12 @@ namespace Application {
   }   
 
   void Order::commit_callback(wxCommandEvent&) {
-    wxMessageBox("Ваше замовлення додано! Очікуйте на звінок оператора!", "", wxBORDER_NONE);
-    this->Close();
+    if(this->customer->GetLabel() != "" || this->address_entry->GetLabel() != "") {
+      wxMessageBox("Ваше замовлення додано! Очікуйте на звінок оператора!", "Успішно", wxICON_NONE);
+      this->Close();
+    } else {
+      wxMessageBox("Будь ласка заповніть форму замовлення", "Помилка заповнення", wxICON_NONE);
+    }
   }
  
   void Order::close_callback(wxCommandEvent&) {

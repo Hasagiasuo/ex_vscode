@@ -92,7 +92,7 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
     wxBitmapButton* btn_edit = new wxBitmapButton(this, wxID_ANY, *edit_bit, wxPoint(450, 5), wxSize(20, 20), wxBORDER_NONE);
     btn_edit->Bind(wxEVT_BUTTON, &CardViewDialog::edit_dialog, this);
   } else {
-    this->btn_buy = new wxButton(this, wxID_ANY, "Замовити", wxPoint(0, 375), wxSize(500, 20), wxTE_CENTRE);
+    this->btn_buy = new wxButton(this, wxID_ANY, "Замовити", wxPoint(25, 365), wxSize(450, 20), wxTE_CENTRE);
     this->btn_buy->Bind(wxEVT_BUTTON, &CardViewDialog::buy_callback, this);
   }    
 }

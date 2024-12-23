@@ -66,7 +66,7 @@ void Application::SignWindow::registr_user(wxCommandEvent&) {
   this->password->SetValue("");
   this->name->SetValue("");
   this->phone_number->SetValue("");
-  wxMessageBox("Успішно зареєстровано! Тепер увійдіть в акаунт!", "info", wxBORDER_NONE);
+  wxMessageBox("Успішно зареєстровано! Тепер увійдіть в акаунт!", "Успішна реєстрація", wxICON_NONE);
   LoginWindow* lw = new LoginWindow(this->db_controller);
   this->Close();
   lw->Show();
