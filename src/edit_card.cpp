@@ -71,16 +71,18 @@ void Application::EditCardDialog::commit_handle(wxCommandEvent&) {
   n_ads->category = this->category_e->GetStringSelection();
   n_ads->uid = this->uid;
   n_ads->status_id = this->status_id;
-  std::ifstream file(this->file_path->GetPath(), std::ios::binary);
-  if (!file) {
-    throw std::runtime_error("Unable to open file: " + this->file_path->GetPath());
-    wxStaticText* error_message = new wxStaticText(this, wxID_ANY, "Неможливо відкрити файл", wxPoint(0, 500), wxSize(700, 10), wxTE_CENTRE);
-    error_message->SetForegroundColour(wxColour(255, 0, 0, 255));
-    error_message->SetFont(wxFont(10, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
-    return;
-  }
-  auto tmp = std::vector<char>((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-  n_ads->image = std::vector<unsigned char>(tmp.begin(), tmp.end());
+  if(this->file_path->GetPath() != "") {
+    std::ifstream file(this->file_path->GetPath(), std::ios::binary);
+    if (!file) {
+      throw std::runtime_error("Unable to open file: " + this->file_path->GetPath());
+      wxStaticText* error_message = new wxStaticText(this, wxID_ANY, "Неможливо відкрити файл", wxPoint(0, 500), wxSize(700, 10), wxTE_CENTRE);
+      error_message->SetForegroundColour(wxColour(255, 0, 0, 255));
+      error_message->SetFont(wxFont(10, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+      return;
+    }
+    auto tmp = std::vector<char>((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+    n_ads->image = std::vector<unsigned char>(tmp.begin(), tmp.end());
+  } else { n_ads->image = std::vector<unsigned char>(); }
   this->db_controller->update_card_by_title(n_ads);
   this->Close();
 }

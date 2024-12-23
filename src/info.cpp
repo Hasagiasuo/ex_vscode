@@ -5,7 +5,7 @@ Info::Info() : wxDialog(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry()
   wxStaticText* project_name = new wxStaticText(this, wxID_ANY, "MTP: Military Trading Platform", wxPoint(0, 40), wxSize(400, 20), wxTE_CENTRE);
   project_name->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
-  wxStaticText* version = new wxStaticText(this, wxID_ANY, "version: 0.2", wxPoint(0, 80), wxSize(400, 20), wxTE_CENTRE);
+  wxStaticText* version = new wxStaticText(this, wxID_ANY, "version: 0.2.1", wxPoint(0, 80), wxSize(400, 20), wxTE_CENTRE);
   version->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
   this->btn_close = new wxButton(this, wxID_ANY, "X", wxPoint(375, 5), wxSize(20, 20), wxBORDER_NONE);
