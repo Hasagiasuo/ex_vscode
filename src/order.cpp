@@ -2,7 +2,9 @@
 
 namespace Application {
   Order::~Order() {}
-  Order::Order() : wxDialog(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().width / 2 - 300, wxDisplay().GetGeometry().height / 2 - 225), wxSize(600, 450), wxBORDER_NONE) {
+  Order::Order(Advertisment& ads, DBControll* db_controller) : wxDialog(nullptr, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().width / 2 - 300, wxDisplay().GetGeometry().height / 2 - 225), wxSize(600, 450), wxBORDER_NONE) {
+    this->ads = ads;
+    this->db_controller = db_controller;
     this->SetBackgroundColour(wxColor(38, 42, 48));
     wxStaticText* info = new wxStaticText(this, wxID_ANY, "Заповніть форму замолення", wxPoint(0, 5), wxSize(600, 20), wxTE_CENTRE);
     info->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
@@ -45,8 +47,10 @@ namespace Application {
   }   
 
   void Order::commit_callback(wxCommandEvent&) {
-    if(this->customer->GetLabel() != "" || this->address_entry->GetLabel() != "") {
+    if(this->customer->GetValue() != "" || this->address_entry->GetValue() != "") {
       wxMessageBox("Ваше замовлення додано! Очікуйте на звінок оператора!", "Успішно", wxICON_NONE);
+      this->ads.status_id = 1;
+      this->db_controller->udpate_state_by_title(this->ads.title, this->ads.status_id);
       this->Close();
     } else {
       wxMessageBox("Будь ласка заповніть форму замовлення", "Помилка заповнення", wxICON_NONE);

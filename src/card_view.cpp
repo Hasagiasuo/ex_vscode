@@ -1,11 +1,6 @@
 #include "card_view.h"
 
 std::string Application::CardViewDialog::encrypt(std::string target) {
-  // std::string result;
-  // for(char ch : target) {
-  //   result.push_back((char)((int)ch - 2));
-  // }
-  // return result;
   return target;
 }
 
@@ -48,6 +43,16 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
   amo_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
   this->amount = new wxStaticText(this, wxID_ANY, wxString::Format("%d шт.", ads.amount), wxPoint(240, 300), wxSize(100, 20));
   this->amount->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+
+  std::map<int, std::string> dict;
+  dict[0] = "В наявності";
+  dict[1] = "Замовлено";
+  dict[2] = "Не активно";
+  wxStaticText* stat_info = new wxStaticText(this, wxID_ANY, "Статус замовлення", wxPoint(40, 330), wxSize(100, 20));
+  stat_info->SetFont(wxFont(14, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  this->amount = new wxStaticText(this, wxID_ANY, dict[this->ads.status_id], wxPoint(240, 330), wxSize(100, 20));
+  this->amount->SetFont(wxFont(12, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+
   std::ifstream file1("../data/cu");
   std::stringstream ss1;
   ss1 << file1.rdbuf();
@@ -91,6 +96,10 @@ Application::CardViewDialog::CardViewDialog(DBControll* db_controller, wxWindow*
     wxBitmap* edit_bit = new wxBitmap(img_edit);
     wxBitmapButton* btn_edit = new wxBitmapButton(this, wxID_ANY, *edit_bit, wxPoint(450, 5), wxSize(20, 20), wxBORDER_NONE);
     btn_edit->Bind(wxEVT_BUTTON, &CardViewDialog::edit_dialog, this);
+    if(this->ads.status_id != 1) {
+      this->btn_dac = new wxButton(this, wxID_ANY, this->ads.status_id == 0 ? "Деактивувати" : "Активувати", wxPoint(25, 365), wxSize(450, 20), wxTE_CENTRE);
+      this->btn_dac->Bind(wxEVT_BUTTON, &CardViewDialog::deactiv, this);
+    }
   } else {
     this->btn_buy = new wxButton(this, wxID_ANY, "Замовити", wxPoint(25, 365), wxSize(450, 20), wxTE_CENTRE);
     this->btn_buy->Bind(wxEVT_BUTTON, &CardViewDialog::buy_callback, this);
@@ -111,7 +120,12 @@ void Application::CardViewDialog::delete_callback(wxCommandEvent&) {
 }
 
 void Application::CardViewDialog::buy_callback(wxCommandEvent&) {
-  Order* tmp = new Order();
+  Order* tmp = new Order(this->ads, this->db_controller);
   tmp->ShowModal();
   tmp->Destroy();
+}
+
+void Application::CardViewDialog::deactiv(wxCommandEvent&) {
+  this->db_controller->udpate_state_by_title(this->ads.title, this->ads.status_id == 0 ? 2 : 0);
+  this->Refresh();
 }

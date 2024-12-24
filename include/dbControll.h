@@ -23,6 +23,7 @@ public:
   void set_value_users(std::string target, std::string n_value, std::string clue_name, std::string clue);
   void push_user(std::string email, std::string password, std::string name, std::string phone_number, int role_id);
   void delete_offer_by_description(std::string description, std::string owner_id);
+  void udpate_state_by_title(std::string title, int state_code);
   std::vector<std::string> get_user_by_login(std::string email, std::string password);
   std::string get_id_by_description(std::string description);
   std::string get_id_by_name(std::string name);

@@ -30,6 +30,8 @@ namespace Application {
     idINFO = 3
   };
   class MainFrame : public wxFrame {
+    int search_id;
+    wxChoice* category_search;
     int card_x, card_y;
     std::vector<Advertisment*> ads;
     wxDialog* dialog_s;
@@ -70,6 +72,8 @@ namespace Application {
     void search_open(wxCommandEvent&);
     void search_some(wxKeyEvent& ev);
     void search_callback();
+    void category_callback(wxCommandEvent& event);
+    void category_search_callback(wxString target);
     void add_card(Advertisment* ad);
     void refresh_callback(wxCommandEvent&);
   public:

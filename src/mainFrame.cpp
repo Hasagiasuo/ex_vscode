@@ -50,6 +50,21 @@ void Application::MainFrame::gen_top_bar() {
   this->search_entry->Hide();
   this->btn_search->Bind(wxEVT_BUTTON, &MainFrame::search_open, this);
 
+  const wxString choices[] = {
+    "Усі",
+    "Засоби захисту",
+    "Тактичне спорядження",
+    "Засоби зв'язку та електроніка",
+    "Медичне забезпечення",
+    "Інженерне обладнання",
+    "Логістика",
+    "Засоби маскування",
+    "Засоби для виживання"
+  };
+  this->category_search = new wxChoice(this, wxID_ANY, wxPoint(65, 8), wxSize(150, 20), sizeof(choices) / sizeof(wxString), choices);
+  this->category_search->Bind(wxEVT_CHOICE, &MainFrame::category_callback, this);
+  this->category_search->Hide();
+  
   this->username_l = new wxStaticText(this->top_menu_bar, wxID_ANY, "MTP|" + this->username, wxPoint(330, 5), wxSize(100, 20), wxTE_CENTRE);
   this->username_l->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
@@ -100,8 +115,16 @@ void Application::MainFrame::close_window(wxCommandEvent&) {
 }
 
 void Application::MainFrame::search_open(wxCommandEvent&) {
-  if(this->search_entry->IsShown()) this->search_entry->Hide();
-  else this->search_entry->Show();
+  if(this->search_id++ == 2) this->search_id = 0;
+  if(this->search_id == 1) {
+    this->search_entry->Show();
+  } else if(this->search_id == 2) {
+    this->search_entry->Hide();
+    this->category_search->Show();
+  } else {
+    this->search_entry->Hide();
+    this->category_search->Hide();
+  }
 } 
 
 void Application::MainFrame::search_some(wxKeyEvent& ev) {
@@ -204,4 +227,59 @@ void Application::MainFrame::info_callback(wxCommandEvent&) {
   Info* info = new Info();
   info->ShowModal();
   info->Destroy();
+}
+
+void Application::MainFrame::category_callback(wxCommandEvent& event) {
+  wxChoice* choice = dynamic_cast<wxChoice*>(event.GetEventObject());
+  if (choice) {
+    wxString selected = choice->GetString(choice->GetSelection());
+    this->category_search->SetSelection(0);
+    this->category_search_callback(selected);
+  }
+}
+
+void Application::MainFrame::category_search_callback(wxString target) {
+  if(target == "Усі") return;
+  this->dialog_s = new wxDialog(this, wxID_ANY, "", wxPoint(wxDisplay().GetGeometry().GetSize().x / 2 - 400, wxDisplay().GetGeometry().GetSize().y / 2 - 300), wxSize(800, 600), wxBORDER_NONE);
+  wxStaticText* info_dialog = new wxStaticText(this->dialog_s, wxID_ANY, "Результат пошуку за категорією '" + target + "':", wxPoint(50, 5), wxSize(700, 30), wxTE_CENTRE);
+  info_dialog->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  wxButton* btn_close_dialog = new wxButton(this->dialog_s, wxID_ANY, "X", wxPoint(775, 5), wxSize(20, 20), wxBORDER_NONE);
+  btn_close_dialog->SetFont(wxFont(20, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+  btn_close_dialog->Bind(wxEVT_BUTTON, &MainFrame::close_dialog_callback, this);
+  this->scrl_win_dialog = new wxScrolledWindow(this->dialog_s, wxID_ANY, wxPoint(0, 70), wxSize(800, 770), wxBORDER_SUNKEN);
+  scrl_win_dialog->ShowScrollbars(wxSHOW_SB_NEVER, wxSHOW_SB_NEVER);
+  this->sizer_dialog = new wxFlexGridSizer(2);
+  scrl_win_dialog->SetScrollRate(5, 5);
+  scrl_win_dialog->SetVirtualSize(wxSize(800, 800));
+  scrl_win_dialog->SetSizer(this->sizer_dialog);
+  scrl_win_dialog->Layout();
+  int c_x = 0;
+  int c_y = 0;
+  std::vector<Advertisment*> offers = this->db_controller->get_all_offers(this->db_controller->get_id_by_name(this->username));
+  this->sizer_dialog->Clear();
+  scrl_win_dialog->Layout();
+  scrl_win_dialog->SetSizer(this->sizer_dialog);
+  std::vector<Card*> cards;
+  for(Advertisment* row : offers) {
+    if(row->category == target) {
+      Card* tmp_card = new Card(this->db_controller, *row, this->scrl_win_dialog, wxPoint(c_x, c_y));
+      cards.push_back(tmp_card);
+      if(cards.size() > 6 && cards.size() % 2 == 0) {
+        int x, y;
+        scrl_win_dialog->GetVirtualSize(&x, &y);
+        scrl_win_dialog->SetVirtualSize(x, y + 200);
+      }
+      this->sizer_dialog->Add(tmp_card);
+      this->scrl_win_dialog->SetSizer(this->sizer_dialog);
+      this->scrl_win_dialog->Layout();
+      if(c_x == 380) {
+        c_y += 210;
+        c_x = 0;
+      } else {
+        c_x += 400;
+      }   
+    }
+  }   
+  this->dialog_s->Show();
+  this->Hide();
 }

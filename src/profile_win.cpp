@@ -119,7 +119,7 @@ void Application::ProfileWindow::_nedit_callback(wxCommandEvent&) {
   this->db_controller->set_value_users("username", std::string(this->nedit_entry->GetValue()), "email", this->email);
   this->name_l->SetLabel(std::string(this->nedit_entry->GetValue()));
   this->name = std::string(this->nedit_entry->GetValue());
-  this->btn_nedit->SetPosition(wxPoint(165 + (this->name.length() * 10 - 5), 20));
+  this->btn_nedit->SetPosition(wxPoint(165 + (this->name.length() * 10 - 5), 70));
   this->update_cu();
   delete this->nedit_entry;
   this->nedit_window->Close();
@@ -158,7 +158,7 @@ void Application::ProfileWindow::_eedit_callback(wxCommandEvent&) {
   this->db_controller->set_value_users("email", std::string(this->eedit_entry->GetValue()), "username", this->name);
   this->email_l->SetLabel(std::string(this->eedit_entry->GetValue()));
   this->email = std::string(this->eedit_entry->GetValue());
-  this->btn_eedit->SetPosition(wxPoint(105 + (this->email.length() * 10 - 5), 40));
+  this->btn_eedit->SetPosition(wxPoint(105 + (this->email.length() * 10 - 5), 90));
   this->update_cu();
   delete this->eedit_entry;
   this->eedit_window->Close();
@@ -197,7 +197,7 @@ void Application::ProfileWindow::_pedit_callback(wxCommandEvent&) {
   this->db_controller->set_value_users("password", std::string(this->pedit_entry->GetValue()), "username", this->name);
   this->password = std::string(this->pedit_entry->GetValue());
   this->password_l->SetLabel(this->convert_password());
-  this->btn_pedit->SetPosition(wxPoint(95 + (this->password.length() * 10) - 5, 60));
+  this->btn_pedit->SetPosition(wxPoint(95 + (this->password.length() * 10) - 5, 110));
   this->update_cu();
   delete this->pedit_entry;
   this->pedit_window->Close();

@@ -2,21 +2,11 @@
 #include "ads.h"
 
 std::string DBControll::decrypt(std::string target) {
-  // std::string result;
-  // for(char ch : target) {
-  //   result.push_back((char)((int)ch + 2));
-  // }
-  // return result;
-  return target;
+ return target;
 }
 
 std::string DBControll::encrypt(std::string target) {
-  // std::string result;
-  // for(char ch : target) {
-  //   result.push_back((char)((int)ch - 2));
-  // }
-  // return result;
-  return target;
+ return target;
 }
 
 DBControll::~DBControll() {
@@ -274,5 +264,16 @@ bool DBControll::exists_card(std::string title) {
     std::cout << "exists_card: " << ex.what() << std::endl;
     this->curs->commit();
     return false;
+  }
+}
+
+void DBControll::udpate_state_by_title(std::string title, int state_code) {
+  try {
+    this->curs = new pqxx::work(*this->con);
+    this->curs->exec("UPDATE ads SET status_id = " + std::to_string(state_code) + " WHERE title = '" + title + "';");
+    this->curs->commit();
+  } catch (const std::exception& ex) {
+    std::cout << "udpate_state_by_title: " << ex.what() << std::endl;
+    this->curs->commit();
   }
 }

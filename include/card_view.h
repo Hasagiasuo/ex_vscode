@@ -6,6 +6,7 @@
 #include <wx/display.h>
 #include <string>
 #include <fstream>
+#include <map>
 
 #include <wx/mstream.h>
 #include "dbControll.h"
@@ -25,12 +26,14 @@ namespace Application {
     wxStaticText* amount;
     wxBitmapButton* btn_close;
     wxButton* btn_buy;
+    wxButton* btn_dac;
     std::string encrypt(std::string target);
     void draw_image(wxPaintEvent&);
     void close_callback(wxCommandEvent&);
     void delete_callback(wxCommandEvent&);
     void edit_dialog(wxCommandEvent&);
     void buy_callback(wxCommandEvent&);
+    void deactiv(wxCommandEvent&);
   public:
     CardViewDialog(DBControll* db_controller, wxWindow* parent, Advertisment& ads);
   }; 

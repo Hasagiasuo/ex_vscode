@@ -5,8 +5,13 @@
 #include <wx/display.h>
 #include <wx/radiobut.h>
 
+#include "dbControll.h"
+#include "ads.h"
+
 namespace Application {
   class Order : public wxDialog {
+    Advertisment ads;
+    DBControll* db_controller;
     wxRadioBox* delivery;
     wxTextCtrl* address_entry;
     wxRadioBox* payment;
@@ -17,7 +22,7 @@ namespace Application {
     void commit_callback(wxCommandEvent&);
   public:
     ~Order(); 
-    Order();
+    Order(Advertisment& ads, DBControll* db_controller);
   };
 }
 #endif
