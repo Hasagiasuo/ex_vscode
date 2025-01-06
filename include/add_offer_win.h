@@ -9,7 +9,7 @@
 #include <wx/choice.h>
 #include "dbControll.h"
 #include "profile_win.h"
-
+//offerwind
 class OfferWinAdd : public wxFrame {
   std::string name;
   std::string email;
@@ -26,7 +26,6 @@ class OfferWinAdd : public wxFrame {
   wxSpinCtrlDouble* price;
   wxSpinCtrlDouble* amount;
   wxChoice* category;
-
   std::vector<char> load_image(std::string path);
   void draw_img(wxPaintEvent& ev);
   void file_picked(wxFileDirPickerEvent&);
