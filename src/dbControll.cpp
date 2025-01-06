@@ -13,7 +13,7 @@ DBControll::~DBControll() {
   delete this->con;
   delete this->curs;
 }
-
+//postgre control header
 DBControll::DBControll(std::string connecting_format) {
   this->con = new pqxx::connection(connecting_format);
   if(!this->con->is_open()) std::cout << "ERROR: Database not connection!" << std::endl;
